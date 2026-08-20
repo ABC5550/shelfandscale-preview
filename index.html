@@ -122,6 +122,7 @@
   .diagram-scroll { overflow-x: auto; }
   .diagram-svg { display: block; min-width: 980px; width: 100%; height: auto; }
   .diagram-caption { text-align: center; font-size: 13px; color: var(--smoke); text-transform: uppercase; padding: 18px 0 0; }
+  .swipe-hint { display: none; text-align: center; font-size: 11px; color: var(--smoke); text-transform: uppercase; margin: -6px 0 10px; }
   @media (prefers-reduced-motion: reduce) { .chips { display: none; } }
 
   /* ---------- Sections ---------- */
@@ -302,6 +303,42 @@
     .gap-prose { font-size: 20px; }
     .calc { padding: 32px 24px; }
   }
+  @media (max-width: 640px) {
+    .announce .wrap { font-size: 12px; line-height: 1.4; padding: 9px 44px 9px 20px; justify-content: flex-start; text-align: left; min-height: 0; }
+    .announce .pill { display: none; }
+    nav .wrap { height: 62px; gap: 12px; }
+    .logo { font-size: 21px; gap: 8px; }
+    .logo svg { width: 20px; height: 20px; }
+    .nav-actions .btn { padding: 9px 16px; font-size: 12px; }
+    .hero { padding: 40px 0 40px; }
+    .hero-tag { font-size: 11px; margin-bottom: 20px; max-width: 94%; }
+    .hero h1 br { display: none; }
+    .hero h1 { font-size: clamp(31px, 9.2vw, 40px); margin-bottom: 16px; }
+    .hero p { font-size: 15px; margin-bottom: 26px; }
+    .hero-qual { font-size: 12px; margin: -8px 0 24px; text-align: left; }
+    .hero-cta { flex-direction: column; align-items: stretch; gap: 12px; }
+    .hero-cta .btn { justify-content: center; }
+    .price-teaser { flex-direction: column; align-items: stretch; border-radius: 28px; width: 100%; }
+    .price-teaser span { border-left: none; border-top: 1px solid var(--ash); text-align: center; padding: 10px 14px; }
+    .price-teaser span:first-child { border-top: none; }
+    .section-title { font-size: clamp(26px, 7.6vw, 34px); }
+    .section-sub { font-size: 15px; }
+    .gap-stat { padding: 28px 30px; }
+    .gap-stat b { font-size: 54px; }
+    .compare thead { display: none; }
+    .compare tr { display: block; padding: 18px 24px; border-top: 1px solid var(--ash); }
+    .compare tbody tr:first-child { border-top: none; }
+    .compare td { display: block; padding: 2px 0; border: none; }
+    .compare td.opt { font-size: 19px; margin-bottom: 2px; }
+    .compare td:nth-child(2)::before { content: 'per SKU · '; color: var(--smoke); font-size: 11px; text-transform: uppercase; }
+    .diagram-caption { font-size: 11px; }
+    .swipe-hint { display: block; }
+    .final h2 { font-size: clamp(26px, 7.6vw, 36px); }
+    .final .hero-cta .btn { font-size: 12px; }
+    .ba-card { padding: 28px 24px; }
+    .proof, .scope { padding: 30px 26px; }
+    .calc-out .sum { font-size: 34px; }
+  }
 </style>
 </head>
 <body>
@@ -366,6 +403,7 @@
         <span>A+ content <b>£100–150</b></span>
       </div>
     </div>
+    <div class="swipe-hint">Swipe the pipeline sideways →</div>
     <div class="diagram-scroll reveal">
       <svg class="diagram-svg" viewBox="0 0 1360 620" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Mono, monospace" aria-label="Data flows in — search demand, competitor pages, sales data, price lists, brand assets — and live listings, A+ content, brand store, advertising and reports come out.">
         <defs>
