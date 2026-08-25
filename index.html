@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shelf &amp; Scale — Amazon Brand Management</title>
-<meta name="description" content="Put your full catalogue on Amazon and keep it selling. 500 SKUs live within a fortnight of sign-off — copy, images, filed product data — then storefront, A+ and advertising, run as one managed channel.">
+<meta name="description" content="Put your full catalogue on Amazon and keep it selling. Your first 50–100 SKUs live within 10 working days of clean data and sign-off — copy, images, filed product data — then storefront, A+ and advertising, run as one managed channel.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://abc5550.github.io/shelfandscale-preview/">
+<meta property="og:url" content="https://shelfandscale.com/">
 <meta property="og:title" content="Shelf &amp; Scale — Amazon Catalogue &amp; Brand Management">
-<meta property="og:description" content="Put your full catalogue on Amazon and keep it selling. 500 SKUs live in a fortnight, at a published price — £10–70 per SKU.">
-<meta property="og:image" content="https://abc5550.github.io/shelfandscale-preview/og.png">
+<meta property="og:description" content="Put your full catalogue on Amazon and keep it selling. First 50–100 SKUs live in 10 working days, at a published price — £10–70 per SKU.">
+<meta property="og:image" content="https://shelfandscale.com/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Shelf &amp; Scale — Amazon Catalogue &amp; Brand Management">
-<meta name="twitter:description" content="Put your full catalogue on Amazon and keep it selling. 500 SKUs live in a fortnight, at a published price.">
-<meta name="twitter:image" content="https://abc5550.github.io/shelfandscale-preview/og.png">
+<meta name="twitter:description" content="Put your full catalogue on Amazon and keep it selling. First 50–100 SKUs live in 10 working days, at a published price.">
+<meta name="twitter:image" content="https://shelfandscale.com/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -230,6 +230,7 @@
 
   /* ---------- Steps ---------- */
   .steps { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ash); }
+  .steps-4 { grid-template-columns: repeat(4, 1fr); }
   .step { padding: 48px 32px 8px 32px; border-left: 1px solid var(--ash); }
   .step:first-child { border-left: none; padding-left: 0; }
   .step .n { font-size: 13px; color: var(--smoke); text-transform: uppercase; display: block; margin-bottom: 20px; }
@@ -292,7 +293,7 @@
     .ba-grid, .ladder { grid-template-columns: 1fr; }
     .rung { border-left: none; }
     .rung:nth-child(2) { border-top: 1px solid var(--ash); }
-    .steps { grid-template-columns: 1fr; }
+    .steps, .steps-4 { grid-template-columns: 1fr; }
     .step { border-left: none; padding-left: 0; border-top: 1px solid var(--ash); }
     .step:first-child { border-top: none; }
     .announce .close { right: 16px; }
@@ -346,7 +347,7 @@
 <!-- Announcement -->
 <div class="announce" id="announce">
   <div class="wrap">
-    <span>Reply within 48 hours — and 5 of your SKUs rebuilt free, hero image included</span>
+    <span>Reply within 48 hours — and 5 production-standard listing previews rebuilt free, hero image included. No discovery call required.</span>
     <a class="pill" href="#contact">Send your catalogue</a>
     <button class="close" aria-label="Close" onclick="document.getElementById('announce').style.display='none'">×</button>
   </div>
@@ -383,7 +384,7 @@
   <div class="wrap">
     <div class="hero-tag reveal"><i></i>Amazon catalogue &amp; brand management · United Kingdom</div>
     <h1 class="reveal">Put your full catalogue on Amazon —<br>and <em>keep it selling</em>.</h1>
-    <p class="reveal">500 SKUs live within a fortnight of sign-off: copy, images and filed product data — on your own account, so you keep everything. Then the storefront, A+ content and advertising, run as one managed channel.</p>
+    <p class="reveal">Your first 50–100 SKUs live within 10 working days of clean data and sign-off — copy, images and filed product data, on your own account, so you keep everything. The full catalogue follows in agreed waves; then the storefront, A+ content and advertising, run as one managed channel.</p>
     <div class="hero-qual reveal">For established brands and distributors with 100–1,000+ SKUs. Not built for single-product launches.</div>
     <div class="hero-cta reveal">
       <a class="btn btn-accent" href="#contact">Send your catalogue</a>
@@ -578,7 +579,7 @@
   <div class="wrap">
     <span class="kicker reveal">Beyond listings</span>
     <h2 class="section-title reveal">The listing is the door, not the room.</h2>
-    <p class="section-sub reveal">Most clients arrive with a catalogue problem and end up owning a managed brand channel. It is built in this order, because brand content, advertising and management only work when the pages underneath them are ready.</p>
+    <p class="section-sub reveal">Most clients arrive with a catalogue problem and end up owning a managed brand channel. It is built in this order, because brand content, advertising and management only work when the pages underneath them are ready.<br><br><b style="font-weight:500;color:var(--off-black)">Listings put the range live. Catalogue Care and Channel Growth keep it selling.</b></p>
     <div class="ladder reveal">
       <div class="rung entry">
         <div class="n">Stage 01 <span class="badge">The entry</span></div>
@@ -634,19 +635,22 @@
     <p class="section-sub reveal">Trade · GBP ex VAT · per SKU at one hundred SKUs and above · E&amp;OE</p>
 
     <div class="price-rows reveal">
+      <div class="price-row"><span class="code">SS-00</span><span class="name">Catalogue setup</span><span class="desc">One-off, fixed after the free sample: mapping your source data to Amazon's category schema and variation structure. One standard product type included; additional catalogue structures and legacy remediation quoted after the sample. Once the structure exists, every SKU using it stays at the published rate.</span><span class="cost">fixed after<br>the sample<small>one-off</small></span></div>
       <div class="price-row"><span class="code">SS-01</span><span class="name">Listing copy</span><span class="desc">Title, bullets, description, backend keywords, prohibited-claims audit.</span><span class="cost">£10–15<small>/ SKU</small></span></div>
       <div class="price-row"><span class="code">SS-02</span><span class="name">Listing copy + hero image</span><span class="desc">Everything above, plus the main image that decides whether anyone clicks.</span><span class="cost">£25–35<small>/ SKU</small></span></div>
       <div class="price-row"><span class="code">SS-03</span><span class="name">Full listing</span><span class="desc">Copy plus five to seven images: hero, infographics, how-to-use, lifestyle.</span><span class="cost">£50–70<small>/ SKU</small></span></div>
       <div class="price-row"><span class="code">SS-04</span><span class="name">A+ content</span><span class="desc">Added to a selected set of hero SKUs, not across the whole range.</span><span class="cost">£100–150<small>/ SKU</small></span></div>
       <div class="price-row"><span class="code">SS-05</span><span class="name">Channel retainer</span><span class="desc">Once the catalogue is live: listing maintenance, reporting, and advertising within an agreed ad-budget band. Scope fixed in writing before it starts.</span><span class="cost">from £1,500<small>/ month</small></span></div>
+      <div class="price-row"><span class="code">SS-06</span><span class="name">Catalogue Care</span><span class="desc">Keeping a live range live: suppressions cleared, new SKUs added, cases handled, content refreshed, monthly report. For catalogues that are built and need looking after, without the advertising.</span><span class="cost">priced after<br>the pilot<small>/ month</small></span></div>
     </div>
+    <p class="price-meta reveal" style="margin-top:16px;color:var(--off-black)">Estimated total = catalogue setup + SKU count × package price.</p>
     <p class="price-meta reveal">Where a price lands inside its range depends on source-data quality, category complexity and image requirements — and the quote is fixed before work starts. Smaller runs are quoted individually; larger catalogues are priced on volume. One round of revisions is included. Prices exclude VAT.</p>
 
     <!-- Calculator -->
     <div class="calc reveal">
       <div>
         <h3>Do the maths — live</h3>
-        <div class="hint">Drag the slider, pick a package. The number updates.</div>
+        <div class="hint">Drag the slider, pick a package. The number updates. Add catalogue setup, fixed after the sample.</div>
         <label class="lbl" for="skuRange">SKUs in the catalogue <output id="skuOut">200</output></label>
         <input type="range" id="skuRange" min="100" max="1000" step="10" value="200">
         <div class="pkg">
@@ -657,7 +661,7 @@
       </div>
       <div class="calc-out">
         <div class="sum"><span id="calcSum">£10,000–14,000</span><small>Total, ex VAT</small></div>
-        <div class="days" id="calcDays">≈ 10 working days to live after sign-off — at 500 SKUs a fortnight</div>
+        <div class="days" id="calcDays">First wave (50–100 SKUs): live within 10 working days of sign-off · then further waves of 50–100, schedule fixed after the first wave</div>
       </div>
     </div>
 
@@ -668,7 +672,7 @@
         <tbody>
           <tr><td class="opt">ChatGPT</td><td>—</td><td>Search-volume data, a filed flat-file, a resolved 5665, or seven images to spec.</td></tr>
           <tr><td class="opt">Offshore data entry</td><td>£2–4</td><td>Keyword data, images, and copy anyone would want on their brand.</td></tr>
-          <tr><td class="opt">Agencies</td><td>£40–250</td><td>A price that scales to 500 SKUs — or a timescale that does.</td></tr>
+          <tr><td class="opt">Agencies</td><td>£40–250</td><td>A price that scales to a full range — or a timescale that does.</td></tr>
           <tr class="us"><td class="opt">Shelf &amp; Scale</td><td>£10–70</td><td>Nothing on this list. Packages run from copy-only to full listings — filed and live on your account.</td></tr>
         </tbody>
       </table>
@@ -681,8 +685,8 @@
 <section style="padding-top:0">
   <div class="wrap">
     <span class="kicker reveal">How it works</span>
-    <h2 class="section-title reveal">Three steps, and the first two cost you nothing.</h2>
-    <div class="steps" style="margin-top:48px">
+    <h2 class="section-title reveal">Four steps, and the first two cost you nothing.</h2>
+    <div class="steps steps-4" style="margin-top:48px">
       <div class="step reveal">
         <span class="n">Step 1 · <b>£0.00</b></span>
         <h3>Send the catalogue</h3>
@@ -691,12 +695,17 @@
       <div class="step reveal">
         <span class="n">Step 2 · <b>£0.00</b></span>
         <h3>48 hours later: a fixed quote — and 5 of your SKUs rebuilt, free</h3>
-        <p>Scope and price in writing, plus five of your products rebuilt — copy, keywords and a hero image each — ready to file. You judge finished work, not a proposal.</p>
+        <p>Scope and price in writing, plus five of your products rebuilt as production-standard previews — copy, keywords and a hero image each, ready to file where your data is complete. You judge finished work, not a proposal. No discovery call required.</p>
       </div>
       <div class="step reveal">
-        <span class="n">Step 3 · <b>the quote, fixed</b></span>
-        <h3>We build and file</h3>
-        <p>You approve the sample, we produce the rest, upload to your account and clear the errors. Nothing goes live without your explicit sign-off — and every wave ships with 30 days of live numbers: sessions, conversion, keyword rank.</p>
+        <span class="n">Step 3 · <b>pilot wave · deposit</b></span>
+        <h3>25–50 SKUs from one product family</h3>
+        <p>The first paid wave: one product family, built, filed and live on your account within 10 working days of clean data and sign-off. One round of revisions. It counts toward the rollout, and it is where the schedule for the rest gets fixed — on real numbers, not a proposal.</p>
+      </div>
+      <div class="step reveal">
+        <span class="n">Step 4 · <b>the quote, fixed</b></span>
+        <h3>Rollout in waves — then the channel</h3>
+        <p>Waves of 50–100 SKUs, each signed off before the next starts. Nothing goes live without your explicit sign-off — and every wave ships with 30 days of live numbers: sessions, conversion, keyword rank. Then Catalogue Care keeps the range live, and Channel Growth keeps it selling.</p>
       </div>
     </div>
   </div>
@@ -723,7 +732,7 @@
       </details>
       <details>
         <summary>How long does a 500-SKU catalogue actually take?<span class="chev">↓</span></summary>
-        <div class="a">Around a fortnight — and the clock starts when your data template and assets are approved, not when the contract is signed. Large catalogues go live in waves, so the early batches are producing metrics while the later ones are still in production — and those metrics feed back into the build.</div>
+        <div class="a">Your first 50–100 SKUs are live within 10 working days of clean data and sign-off — and the clock starts when your data template and assets are approved, not when the contract is signed. The rest follows in agreed waves of 50–100, with the schedule fixed after the first wave, on what the data and the category actually required. Early waves are producing metrics while later ones are still in production — and those metrics feed back into the build.</div>
       </details>
       <details>
         <summary>Do you need access to our Seller Central?<span class="chev">↓</span></summary>
@@ -768,12 +777,12 @@
       <div class="wash-3"></div>
       <span class="kicker">Next step</span>
       <h2>Send us your catalogue. We will tell you what it costs.</h2>
-      <p>No call required to get a number. If the price does not work for you, you will have lost one email and learned what the market rate should be.</p>
+      <p>No discovery call required to receive the sample or the number. If the price does not work for you, you will have lost one email and learned what the market rate should be.</p>
       <div class="hero-cta">
         <a class="btn btn-accent" href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a>
         <a class="btn btn-ghost" href="#pricing">Back to the price list</a>
       </div>
-      <div class="fine">Reply in 48 hrs · 5-SKU sample free, hero images included · no Seller Central access needed for the sample<br>Recruiting for an Amazon manager at the moment? There is a version of this for the months before they start.</div>
+      <div class="fine">Reply in 48 hrs · 5 production-standard listing previews free, hero images included · no Seller Central access needed for the sample<br>Recruiting for an Amazon manager at the moment? There is a version of this for the months before they start.</div>
     </div>
   </div>
 </section>
@@ -804,6 +813,7 @@
       <div class="foot-h">Contact &amp; privacy</div>
       <a href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a>
       <p>No cookies. No tracking. If you email us, we keep the thread only to reply to you, share it with no one, and delete it on request.</p>
+      <a href="privacy.html">Privacy notice</a>
     </div>
   </div>
 </footer>
@@ -831,7 +841,8 @@
     const pkg = document.querySelector('input[name=pkg]:checked').value.split(',').map(x => parseInt(x, 10));
     skuOut.textContent = n;
     sum.textContent = '£' + (n * pkg[0]).toLocaleString('en-GB') + '–' + (n * pkg[1]).toLocaleString('en-GB');
-    days.textContent = '≈ ' + Math.max(10, Math.ceil(n / 50)) + ' working days to live after sign-off — at 500 SKUs a fortnight';
+    const waves = Math.max(0, Math.ceil(n / 100) - 1);
+    days.textContent = 'First wave (50–100 SKUs): live within 10 working days of sign-off' + (waves > 0 ? ' · then ' + waves + ' further wave' + (waves === 1 ? '' : 's') + ' of 50–100, schedule fixed after the first wave' : '');
   }
   range.addEventListener('input', recalc);
   document.querySelectorAll('input[name=pkg]').forEach(r => r.addEventListener('change', recalc));
