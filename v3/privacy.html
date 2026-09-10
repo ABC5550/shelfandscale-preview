@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy notice — Shelf &amp; Scale</title>
+<meta name="description" content="How Shelf &amp; Scale handles the business contact details it uses to write to brands, and what this website does and does not collect.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f6f3f1;
+    --mint: #a7fccd;
+    --coral: #ff9473;
+    --off-black: #242424;
+    --graphite: #4e4d4d;
+    --smoke: #797776;
+    --ash: #cecac8;
+    --accent: #1e7a4a;
+    --accent-deep: #16603a;
+    --accent-text: #1d6f45;
+    --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --serif: 'Newsreader', ui-serif, Georgia, 'Times New Roman', serif;
+    --page-max: 1432px;
+    --btn-radius: 100px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--parchment); color: var(--off-black); font-family: var(--mono); font-size: 16px; line-height: 1.35; letter-spacing: -0.025em; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: -0.02em; line-height: 1.2; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--mint); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: var(--page-max); margin: 0 auto; padding: 0 40px; }
+
+  nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--parchment) 90%, transparent); backdrop-filter: blur(12px); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 80px; gap: 32px; }
+  .logo { display: inline-flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 24px; }
+  .logo svg { width: 26px; height: 26px; }
+  .nav-links { display: flex; gap: 28px; font-size: 14px; text-transform: uppercase; }
+  .nav-links a:hover { color: var(--smoke); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: -0.02em; border-radius: var(--btn-radius); padding: 10px 22px; border: 1px solid transparent; white-space: nowrap; transition: transform .2s, background .2s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-accent { background: var(--accent); color: #fff; }
+  .btn-accent:hover { background: var(--accent-deep); }
+  .btn-accent::after { content: '▸'; font-size: 12px; }
+
+  main { padding: 72px 0 104px; }
+  .kicker { display: inline-block; font-size: 13px; text-transform: uppercase; color: var(--smoke); border: 1px solid var(--ash); border-radius: 9999px; padding: 7px 18px; margin-bottom: 28px; }
+  h1 { font-size: clamp(32px, 3.4vw, 48px); max-width: 820px; margin-bottom: 20px; }
+  .lede { color: var(--graphite); max-width: 680px; font-size: 16px; line-height: 1.6; margin-bottom: 56px; }
+  .doc { max-width: 780px; }
+  .doc h2 { font-size: 26px; margin: 48px 0 14px; padding-top: 24px; border-top: 1px solid var(--ash); }
+  .doc p, .doc li { color: var(--graphite); font-size: 15px; line-height: 1.65; }
+  .doc p + p { margin-top: 12px; }
+  .doc ul { list-style: none; margin-top: 12px; }
+  .doc li { padding: 6px 0 6px 26px; position: relative; }
+  .doc li::before { content: '—'; position: absolute; left: 0; color: var(--accent-text); }
+  .doc b { font-weight: 500; color: var(--off-black); }
+  .doc .ph { background: color-mix(in srgb, var(--coral) 28%, transparent); padding: 1px 5px; border-radius: 4px; color: var(--off-black); }
+  .doc a { color: var(--accent-text); border-bottom: 1px solid color-mix(in srgb, var(--accent-text) 40%, transparent); }
+  .meta { font-size: 13px; color: var(--smoke); margin-top: 56px; line-height: 1.7; }
+
+  footer { border-top: 1px solid var(--ash); padding: 56px 0 64px; }
+  footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 48px; }
+  .foot-meta { font-size: 13px; color: var(--smoke); line-height: 1.9; margin-top: 16px; }
+  .foot-h { font-size: 12px; text-transform: uppercase; color: var(--smoke); margin-bottom: 16px; }
+  .foot-col a { display: block; font-size: 14px; padding: 5px 0; }
+  .foot-col a:hover { color: var(--smoke); }
+  .foot-col p { font-size: 13px; color: var(--smoke); line-height: 1.7; margin-top: 10px; }
+
+  @media (max-width: 1100px) { footer .wrap { grid-template-columns: 1fr; gap: 32px; } }
+  @media (max-width: 820px) { .wrap { padding: 0 24px; } main { padding: 48px 0 72px; } .nav-links { display: none; } }
+  @media (max-width: 640px) { nav .wrap { height: 62px; gap: 12px; } .logo { font-size: 20px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 26 26" aria-hidden="true">
+        <g fill="#242424">
+          <circle cx="13" cy="3.2" r="1.9"/><circle cx="19.9" cy="6.1" r="1.7"/><circle cx="22.8" cy="13" r="1.5"/>
+          <circle cx="19.9" cy="19.9" r="1.7"/><circle cx="13" cy="22.8" r="1.9"/><circle cx="6.1" cy="19.9" r="1.7"/>
+          <circle cx="3.2" cy="13" r="1.5"/><circle cx="6.1" cy="6.1" r="1.7"/>
+        </g>
+      </svg>
+      shelf&amp;scale</a>
+    <div class="nav-links">
+      <a href="index.html#gap">The catalogue gap</a>
+      <a href="index.html#beyond">Beyond listings</a>
+      <a href="index.html#pricing">Prices</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+    <div class="nav-actions">
+      <a class="btn btn-accent" href="index.html#contact">Send your catalogue</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <span class="kicker">Privacy notice</span>
+    <h1>What we hold about you, where it came from, and how to make us stop.</h1>
+    <p class="lede">This notice covers two things: the business contact details we use to write to brands about their Amazon catalogues, and what this website does. It is written to be read, not filed. Last updated <span class="ph">[DATE]</span>.</p>
+
+    <div class="doc">
+      <h2>Who we are</h2>
+      <p><b>Shelf &amp; Scale</b> is a trading name of <span class="ph">[COMPANY NAME]</span>, a company registered in England and Wales under number <span class="ph">[COMPANY NUMBER]</span>, registered office <span class="ph">[REGISTERED ADDRESS]</span>. We are the data controller for the information described here. Contact for anything in this notice: <a href="mailto:privacy@shelfandscale.com">privacy@shelfandscale.com</a>.</p>
+
+      <h2>Business contact details we use for outreach</h2>
+      <p>We write to people at brands and distributors whose product ranges we think we can help put on Amazon. To do that we hold a small amount of information about individuals in their working role:</p>
+      <ul>
+        <li>name and job title</li>
+        <li>work email address and, where published, a work phone number</li>
+        <li>the company you work for, its website and its public product range</li>
+        <li>whether you have replied to us, and what you asked us to do (for example, not to write again)</li>
+      </ul>
+      <p><b>Where it comes from.</b> Public sources only: your company's website, your public LinkedIn profile, Companies House records, and job advertisements your company has published. We do not buy lists and we do not scrape personal accounts.</p>
+      <p><b>Why we are allowed to.</b> Our lawful basis under UK GDPR is <b>legitimate interests</b>: introducing a business service that is relevant to your role, to a company that publicly sells products of the kind we work with. We have assessed this against your interests and rights and keep a record of that assessment. Where the law requires consent instead — for example, sole traders and some partnerships — we do not write without it.</p>
+      <p><b>How to make us stop.</b> Reply to any email with the word <b>unsubscribe</b>, or write to <a href="mailto:privacy@shelfandscale.com">privacy@shelfandscale.com</a>. We add you to a suppression list the same working day, and we keep that list so we do not contact you again by mistake.</p>
+      <p><b>How long we keep it.</b> If you do not reply, we delete your details <span class="ph">[12 months]</span> after our last message. If you reply, we keep the thread for as long as we are talking, and for <span class="ph">[12 months]</span> after it ends. Suppression-list entries are kept indefinitely, because that is the only way they work.</p>
+      <p><b>Who else sees it.</b> Nobody outside Shelf &amp; Scale, except the email and contact-management providers that carry our messages (<span class="ph">[PROVIDER NAMES]</span>), acting on our instructions. We do not sell or share contact details.</p>
+
+      <h2>This website</h2>
+      <p>No cookies. No analytics. No tracking pixels. Fonts are loaded from Google Fonts, which means your browser requests them from Google's servers; that is the only third-party request the page makes.</p>
+      <p>If you email us, we keep the thread only to reply to you, share it with no one, and delete it on request. If you send us a catalogue or product data for a sample, we use it to build that sample and for nothing else, and we delete it if you ask.</p>
+
+      <h2>Your rights</h2>
+      <p>Under UK GDPR you can ask us for a copy of what we hold about you, ask us to correct or delete it, and object to our using it. Write to <a href="mailto:privacy@shelfandscale.com">privacy@shelfandscale.com</a>; we answer within one month. If you are not satisfied with our answer you can complain to the Information Commissioner's Office at <a href="https://ico.org.uk/make-a-complaint/" rel="noopener">ico.org.uk</a>.</p>
+
+      <p class="meta">This notice applies to Shelf &amp; Scale's outreach and to shelfandscale.com. It will be updated when our practices change, with the date above. Text in <span class="ph">highlighted brackets</span> is to be completed before publication.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="index.html" style="font-size:21px">
+        <svg viewBox="0 0 26 26" aria-hidden="true" style="width:22px;height:22px">
+          <g fill="#242424">
+            <circle cx="13" cy="3.2" r="1.9"/><circle cx="19.9" cy="6.1" r="1.7"/><circle cx="22.8" cy="13" r="1.5"/>
+            <circle cx="19.9" cy="19.9" r="1.7"/><circle cx="13" cy="22.8" r="1.9"/><circle cx="6.1" cy="19.9" r="1.7"/>
+            <circle cx="3.2" cy="13" r="1.5"/><circle cx="6.1" cy="6.1" r="1.7"/>
+          </g>
+        </svg>
+        shelf&amp;scale</a>
+      <div class="foot-meta">Amazon catalogue &amp; brand management.<br>Whole ranges written, imaged, filed and live — then run as a channel, at a published price.<br>United Kingdom</div>
+    </div>
+    <div class="foot-col">
+      <div class="foot-h">Menu</div>
+      <a href="index.html#gap">The catalogue gap</a>
+      <a href="index.html#beyond">Beyond listings</a>
+      <a href="index.html#pricing">Prices</a>
+      <a href="index.html#faq">Fair questions</a>
+    </div>
+    <div class="foot-col">
+      <div class="foot-h">Contact &amp; privacy</div>
+      <a href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a>
+      <a href="mailto:privacy@shelfandscale.com">privacy@shelfandscale.com</a>
+      <p>No cookies. No tracking.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

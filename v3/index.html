@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shelf &amp; Scale — Amazon Catalogue &amp; Brand Management</title>
+<meta name="description" content="We research, write, image and file large catalogues on your own Amazon UK account, launch them in waves of 50–100 SKUs, then keep them live and selling. Published prices. First wave live in 10 working days.">
+<meta name="theme-color" content="#0B5C3B">
+<link rel="canonical" href="https://shelfandscale.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shelf &amp; Scale">
+<meta property="og:url" content="https://shelfandscale.com/">
+<meta property="og:title" content="Shelf &amp; Scale — Amazon Catalogue &amp; Brand Management">
+<meta property="og:description" content="Put your full catalogue on Amazon and keep it selling. First 50–100 SKUs live in 10 working days, at a published price.">
+<meta property="og:image" content="https://shelfandscale.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Martian+Mono:wght@300..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0B5C3B;
+  --green-dk:#083F29;
+  --dark:#12261D;
+  --mint:#7FD1A6;
+  --mist:#A9B8AF;
+  --ink:#101214;
+  --ink-2:#3F454C;
+  --ink-3:#5C626A;
+  --paper:#FFFFFF;
+  --wash:#F3F5F3;
+  --rule:#E1E5E2;
+  --rule-2:#EDF0EE;
+  --mint-wash:#EAF6EF;
+  --red:#B3412B;
+  --red-wash:#FBEDE9;
+  --sheet:1200px;
+  --gut:32px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font-family:"Familjen Grotesk",system-ui,sans-serif;
+  font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.sheet{max-width:var(--sheet);margin:0 auto;padding:0 var(--gut)}
+.mono{font-family:"Martian Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}
+.eyebrow{font-family:"Martian Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);font-weight:500}
+::selection{background:var(--mint)}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px}
+
+/* ── header ── */
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.93);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--rule)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:22px;height:68px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);font-weight:700;font-size:19px;letter-spacing:-.02em;white-space:nowrap}
+.brand svg{width:26px;height:26px;flex:none;color:var(--ink)}
+nav{display:flex;align-items:center;gap:24px}
+nav a:not(.btn){color:var(--ink-2);text-decoration:none;font-size:15px;font-weight:500;padding-bottom:2px;border-bottom:2px solid transparent;transition:.16s ease}
+nav a:not(.btn):hover{color:var(--green);border-bottom-color:var(--green)}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--green);color:#fff;text-decoration:none;font-size:15px;font-weight:600;
+  padding:12px 20px;border-radius:6px;border:1px solid var(--green);transition:background .16s ease,border-color .16s ease;white-space:nowrap;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--green-dk);border-color:var(--green-dk)}
+.btn-o{background:transparent;color:var(--ink);border-color:var(--rule)}
+.btn-o:hover{background:var(--wash);border-color:var(--ink-3)}
+.btn svg{width:12px;height:12px;flex:none}
+
+/* ── type ── */
+h1{font-size:clamp(38px,4.6vw,62px);font-weight:700;line-height:1.04;letter-spacing:-.035em;margin:20px 0 22px;max-width:15ch;text-wrap:balance}
+h1 .g{color:var(--green);display:block}
+h2{font-size:clamp(28px,3.2vw,42px);font-weight:700;line-height:1.06;letter-spacing:-.032em;max-width:20ch;text-wrap:balance}
+h3{font-size:19px;font-weight:600;letter-spacing:-.015em}
+.lede{font-size:18.5px;color:var(--ink-2);max-width:48ch;line-height:1.55}
+.small{font-size:14px;color:var(--ink-3)}
+.who{margin-top:22px;font-weight:600;font-size:17px;border-left:3px solid var(--green);padding-left:14px}
+
+section{padding:88px 0}
+.sec-head{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end;margin-bottom:44px}
+.sec-head p{color:var(--ink-2);max-width:44ch}
+.sec-head a,.a-link{color:var(--green);text-decoration:none;border-bottom:1px solid rgba(11,92,59,.4)}
+.sec-head a:hover,.a-link:hover{border-bottom-color:var(--green)}
+
+/* ── hero ── */
+.hero{padding:64px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.acts{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.hero-note{margin-top:16px}
+
+/* listing kit (mock; real images to follow) */
+.kit{border:1px solid var(--rule);border-radius:14px;padding:22px;background:var(--paper);box-shadow:0 20px 60px -30px rgba(16,18,20,.25)}
+.kit .head{display:flex;justify-content:space-between;gap:12px;color:var(--ink-3);margin-bottom:14px}
+.kit .head b{color:var(--green);font-weight:500}
+.kit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.ph{background:var(--wash);border:1px dashed var(--rule);border-radius:8px;display:flex;align-items:center;justify-content:center;
+  color:var(--ink-3);font-family:"Martian Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:8px;line-height:1.5}
+.ph.main{aspect-ratio:1/1}
+.ph.main svg{width:52%;height:auto;opacity:.5}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.thumbs .ph{aspect-ratio:1/1;font-size:8.5px}
+.kit-copy .t{font-size:15.5px;font-weight:600;line-height:1.35;letter-spacing:-.01em}
+.kit-copy .t u{text-decoration:none;border-bottom:2px solid var(--mint)}
+.kit-copy ul{list-style:none;margin:12px 0 0;padding:0}
+.kit-copy li{font-size:13px;color:var(--ink-2);padding:5px 0 5px 14px;position:relative;border-top:1px solid var(--rule-2)}
+.kit-copy li::before{content:'';position:absolute;left:0;top:13px;width:7px;height:2px;background:var(--green)}
+.kit-copy .kwl{margin-top:12px;display:flex;flex-wrap:wrap;gap:6px}
+.kit-copy .kwl span{font-size:11.5px;border:1px solid var(--rule);border-radius:4px;padding:2px 7px;color:var(--ink-2);background:#fff}
+.kit-copy .kwl b{color:var(--green);font-weight:600}
+.kit-foot{margin-top:16px;padding-top:12px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--ink-3)}
+.kit-foot b{color:var(--green);font-weight:500}
+
+/* ── trust strip ── */
+.trust{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:repeat(3,1fr);gap:40px;padding:26px 0;margin-top:52px}
+.trust h3{font-size:16.5px;margin-bottom:4px}
+.trust p{font-size:14.5px;color:var(--ink-3)}
+
+/* ── doors ── */
+.doors{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.door{border:1px solid var(--rule);border-radius:12px;padding:26px 28px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s}
+.door:hover{border-color:var(--ink-3)}
+.door .eyebrow{display:block}
+.door h3{font-size:22px;letter-spacing:-.02em;line-height:1.2}
+.door .q{font-size:16.5px;color:var(--ink-2);font-style:italic}
+.door .ex{font-size:14.5px;color:var(--ink-2);padding:12px 14px;background:var(--wash);border-radius:8px;border-left:2px solid var(--green)}
+.door .ex b{color:var(--ink);font-weight:600}
+.door dl{margin:4px 0 0;font-size:14.5px}
+.door dl div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:8px 0;border-top:1px solid var(--rule-2)}
+.door dt{color:var(--ink-3);font-family:"Martian Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+.door dd{margin:0;color:var(--ink-2)}
+.door dd b{color:var(--ink);font-weight:600}
+.doors-note{margin-top:22px;color:var(--ink-3);font-size:14.5px;max-width:80ch}
+
+/* shape strip */
+.shape{margin-top:56px;display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+.shape .prose{font-size:20px;line-height:1.45;letter-spacing:-.012em}
+.shape .prose p+p{margin-top:16px}
+.shape .prose .small{margin-top:18px;letter-spacing:0;line-height:1.6}
+.spec-plate{background:var(--dark);color:#fff;border-radius:14px;padding:26px 28px 0;overflow:hidden}
+.spec-plate .head{display:flex;justify-content:space-between;gap:16px;color:var(--mist);margin-bottom:14px}
+.spec-plate svg{width:100%;height:auto;display:block}
+.plate-cap{color:var(--mist);margin-top:12px;font-size:9.5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.plate-cap .k{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:2px}
+.k-live{background:#fff}.k-wave{background:var(--mint)}.k-dead{border:1px solid var(--mist);opacity:.6}
+#shelf rect{fill:none;stroke:rgba(169,184,175,.45);stroke-width:1;transition:fill .35s ease,stroke .35s ease}
+#shelf rect.live{fill:#fff;stroke:#fff}
+#shelf rect.wave{fill:var(--mint);stroke:var(--mint)}
+.plate-nums{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.14);margin:20px -28px 0}
+.plate-nums div{background:var(--dark);padding:20px 28px 24px}
+.plate-nums b{display:block;font-size:31px;font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--mint);font-variant-numeric:tabular-nums}
+.plate-nums b.dead{color:var(--mist)}
+.plate-nums b span{font-size:16px;font-weight:500;color:#fff;letter-spacing:0}
+.plate-nums p{font-size:13.5px;color:var(--mist);margin-top:8px}
+
+/* ── example ── */
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{border:1px solid var(--rule);border-radius:12px;padding:24px 26px;background:var(--paper);display:flex;flex-direction:column;gap:16px}
+.card.after{border-color:var(--mint);background:var(--mint-wash)}
+.tag{align-self:flex-start;font-family:"Martian Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:4px}
+.card.before .tag{background:var(--red-wash);color:var(--red)}
+.card.after .tag{background:#fff;color:var(--green);border:1px solid var(--mint)}
+.imgrow{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.imgrow .ph{aspect-ratio:1/1;font-size:8px;padding:4px}
+.imgrow .ph.miss{background:transparent;border-color:var(--red-wash);color:var(--red);opacity:.8}
+.card.after .ph{background:#fff}
+.ba-title{font-size:16px;line-height:1.5}
+.card.before .ba-title{color:var(--ink-2);font-family:"Martian Mono",monospace;font-size:13px}
+.ba-title mark{background:var(--red-wash);color:var(--red);padding:0 3px;border-radius:3px}
+.card.after .ba-title{font-size:19px;font-weight:600;letter-spacing:-.015em}
+.card.after .ba-title u{text-decoration:none;border-bottom:2px solid var(--mint)}
+.bul{list-style:none;margin:0;padding:0;font-size:14px;color:var(--ink-2)}
+.bul li{padding:5px 0 5px 14px;position:relative;border-top:1px solid var(--rule-2)}
+.bul li::before{content:'';position:absolute;left:0;top:13px;width:7px;height:2px;background:var(--green)}
+.card.before .bul li::before{background:var(--red)}
+.card.before .bul li{font-family:"Martian Mono",monospace;font-size:12px}
+.kw{display:flex;flex-wrap:wrap;gap:8px}
+.kw span{font-size:13px;border:1px solid var(--rule);background:#fff;border-radius:4px;padding:4px 10px;color:var(--ink-2)}
+.kw b{color:var(--green);font-weight:600;font-variant-numeric:tabular-nums}
+.ba-meta{margin-top:auto;color:var(--ink-3)}
+.ex-side{margin-top:28px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+.ex-side .note{color:var(--ink-2);font-size:15.5px;max-width:70ch}
+.incl{border-top:2px solid var(--green);padding-top:16px}
+.incl .eyebrow{display:block;margin-bottom:10px}
+.incl ul{list-style:none;margin:0;padding:0;font-size:14.5px;color:var(--ink-2)}
+.incl li{padding:6px 0;border-bottom:1px solid var(--rule-2);display:flex;justify-content:space-between;gap:12px}
+.incl li span:last-child{color:var(--ink-3);font-family:"Martian Mono",monospace;font-size:10px;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;padding-top:4px}
+
+/* ── proof band (dark) ── */
+.proof{background:var(--dark);color:#fff;padding:56px 0}
+.proof-row{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.proof-row>div{border-top:1px solid rgba(255,255,255,.22);padding-top:16px}
+.proof-row .v{font-size:34px;font-weight:700;letter-spacing:-.035em;line-height:1;color:var(--mint);font-variant-numeric:tabular-nums}
+.proof-row .v small{font-size:14px;font-weight:400;color:var(--mist);margin-left:4px;letter-spacing:0}
+.proof-row h3{color:#fff;margin:12px 0 6px}
+.proof-row p{font-size:14.5px;color:var(--mist)}
+
+/* ── services ── */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.cols3>div,.cols4>div{border-top:2px solid var(--green);padding-top:18px}
+.cols3 .n,.cols4 .n{color:var(--green);display:block;margin-bottom:10px}
+.cols3 .n b,.cols4 .n b{color:var(--ink);font-weight:500}
+.cols3 p,.cols4 p{font-size:15px;color:var(--ink-2);margin-top:7px}
+.cols3 .tarif{margin-top:14px;font-family:"Martian Mono",monospace;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink)}
+.cols3 ul{list-style:none;margin:10px 0 0;padding:0;font-size:14.5px;color:var(--ink-2)}
+.cols3 li{padding:4px 0 4px 14px;position:relative}
+.cols3 li::before{content:'';position:absolute;left:0;top:12px;width:7px;height:2px;background:var(--green)}
+.scope{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.scope>div{border:1px solid var(--rule);border-radius:12px;padding:26px 28px}
+.scope>div.ours{background:var(--mint-wash);border-color:var(--mint)}
+.scope .eyebrow{display:block;margin-bottom:10px}
+.scope h3{margin-bottom:8px}
+.scope p{font-size:15px;color:var(--ink-2)}
+
+/* ── pricing ── */
+.prices{background:var(--wash)}
+.rows{border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:64px 1.1fr 1.7fr auto;gap:28px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--rule)}
+.row .code{color:var(--ink-3)}
+.row .name{font-size:19px;font-weight:600;letter-spacing:-.015em}
+.row .desc{font-size:14.5px;color:var(--ink-2)}
+.row .cost{font-size:24px;font-weight:700;letter-spacing:-.03em;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+.row .cost small{display:block;font-family:"Martian Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:400;margin-top:5px}
+.meta{font-size:14px;color:var(--ink-3);margin-top:16px;max-width:76ch}
+.sub-h{margin-top:52px;margin-bottom:8px;font-size:22px}
+.sub-p{color:var(--ink-2);max-width:70ch;margin-bottom:22px}
+.inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px}
+.inc-grid>div{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:22px 24px}
+.inc-grid .eyebrow{display:block;margin-bottom:10px}
+.inc-grid ul{list-style:none;margin:0;padding:0;font-size:14.5px;color:var(--ink-2)}
+.inc-grid li{padding:5px 0 5px 16px;position:relative}
+.inc-grid li::before{content:'';position:absolute;left:0;top:13px;width:8px;height:2px;background:var(--green)}
+.inc-grid .no li::before{background:var(--ink-3);width:6px}
+.rates{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:12px;overflow:hidden}
+.rates>div{background:var(--paper);padding:20px 22px}
+.rates .eyebrow{display:block;margin-bottom:6px}
+.rates b{display:block;font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+.rates b small{font-family:"Martian Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:400;margin-left:4px}
+.rates p{font-size:13.5px;color:var(--ink-2);margin-top:6px}
+.totals{border-top:1px solid var(--rule)}
+.totals div{display:grid;grid-template-columns:120px 1fr auto;gap:24px;padding:16px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.totals .n{font-weight:600;font-size:18px;letter-spacing:-.015em}
+.totals .d{font-size:14.5px;color:var(--ink-2)}
+.totals .c{font-size:20px;font-weight:700;letter-spacing:-.03em;white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+.totals .c small{display:block;font-family:"Martian Mono",monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:400;margin-top:4px}
+
+/* ── faq ── */
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;cursor:pointer;list-style:none;font-size:19px;font-weight:600;letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .chev{width:24px;height:24px;flex:none;border:1px solid var(--rule);border-radius:50%;display:grid;place-items:center;font-size:14px;color:var(--green);transition:transform .25s;line-height:1}
+.faq details[open] summary .chev{transform:rotate(45deg)}
+.faq .a{padding:0 0 26px;color:var(--ink-2);font-size:15.5px;max-width:78ch}
+.faq .a ul{margin:12px 0 0;padding:0;list-style:none}
+.faq .a li{padding:5px 0 5px 22px;position:relative}
+.faq .a li::before{content:'';position:absolute;left:0;top:14px;width:10px;height:2px;background:var(--green)}
+
+/* ── next step ── */
+.sam{display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:start}
+.pack{border-top:1px solid var(--rule)}
+.pack .h{font-family:"Martian Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);padding:14px 0 6px}
+.pack div:not(.h){display:flex;gap:20px;padding:13px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.pack .n{font-family:"Martian Mono",monospace;font-size:11px;color:var(--green);flex:none}
+.pack span:last-child{font-size:16px;color:var(--ink-2)}
+
+/* ── footer ── */
+footer{border-top:1px solid var(--rule);padding:44px 0 54px}
+.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center;padding-bottom:26px;border-bottom:1px solid var(--rule)}
+.foot-bot{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;margin-top:24px}
+.foot-bot p{font-size:13px;color:var(--ink-3);line-height:1.65;max-width:62ch}
+footer a{color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--rule)}
+footer a:hover{color:var(--green);border-bottom-color:var(--green)}
+.foot-nav{display:flex;gap:24px;flex-wrap:wrap}
+.foot-nav a{font-size:15px;font-weight:500;padding-bottom:2px;border-bottom:2px solid transparent}
+.foot-nav a:hover{border-bottom-color:var(--green)}
+.foot-contact{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.foot-contact .mono{color:var(--green);margin-bottom:4px}
+.foot-contact a{font-size:15px;color:var(--ink);border-bottom:0}
+.foot-contact .cr{font-size:13px;color:var(--ink-3);margin-top:8px}
+
+/* ── motion ── */
+[data-rv]{opacity:0;transform:translateY(12px);transition:opacity .6s cubic-bezier(.22,.68,.3,1),transform .6s cubic-bezier(.22,.68,.3,1);transition-delay:calc(var(--i,0) * 70ms)}
+[data-rv].in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .hero-grid,.sec-head,.sam,.ex-grid,.ex-side,.shape,.scope,.inc-grid,.doors{grid-template-columns:1fr;gap:30px}
+  .trust,.cols3,.proof-row,.rates{grid-template-columns:1fr;gap:22px}
+  .rates{gap:1px}
+  .cols4{grid-template-columns:1fr 1fr;gap:26px}
+  nav a:not(.btn){display:none}
+  section{padding:60px 0}
+  .row{grid-template-columns:1fr auto;gap:8px 24px}
+  .row .code,.row .desc{grid-column:1/-1}
+  .totals div{grid-template-columns:1fr auto}
+  .totals .d{grid-column:1/-1}
+}
+@media(max-width:620px){
+  :root{--gut:20px}
+  .cols4,.kit-grid{grid-template-columns:1fr}
+  .imgrow{grid-template-columns:repeat(4,1fr)}
+  .acts .btn{width:100%;justify-content:center}
+  .door dl div{grid-template-columns:1fr;gap:4px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  [data-rv]{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="sheet bar">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 26 26" role="img" aria-label="Shelf and Scale">
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="1.8" y="1.8" width="6" height="6" rx="1.2"/><rect x="10" y="1.8" width="6" height="6" rx="1.2"/><rect x="18.2" y="1.8" width="6" height="6" rx="1.2"/>
+          <rect x="10" y="10" width="6" height="6" rx="1.2"/><rect x="18.2" y="10" width="6" height="6" rx="1.2"/>
+        </g>
+        <g fill="#0B5C3B">
+          <rect x="1.8" y="10" width="6" height="6" rx="1.2"/>
+          <rect x="1.8" y="18.2" width="6" height="6" rx="1.2"/><rect x="10" y="18.2" width="6" height="6" rx="1.2"/><rect x="18.2" y="18.2" width="6" height="6" rx="1.2"/>
+        </g>
+      </svg>
+      SHELF &amp; SCALE
+    </a>
+    <nav>
+      <a href="#which">Which one is you</a>
+      <a href="#example">Example</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn">Send your catalogue</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════ 1 · HERO ══════ -->
+<section class="hero" id="top">
+  <div class="sheet">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow" data-rv>Amazon catalogue &amp; brand management · United Kingdom</p>
+        <h1 data-rv style="--i:1">Put your full catalogue on Amazon.<span class="g">And keep it selling.</span></h1>
+        <p class="lede" data-rv style="--i:2">
+          We research, write, image and file your range on your own Amazon UK account, launch it in
+          waves of 50–100 SKUs, then keep it live and selling: catalogue care, A+ content and
+          advertising, run as one channel.
+        </p>
+        <p class="who" data-rv style="--i:2">For established brands and distributors with 100–1,000+ SKUs.</p>
+        <div class="acts" data-rv style="--i:3">
+          <a href="#contact" class="btn">Send your catalogue
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5"/></svg></a>
+          <a href="#pricing" class="btn btn-o">See pricing</a>
+        </div>
+        <p class="small hero-note" data-rv style="--i:3">On your account · you own every file · nothing goes live without your sign-off</p>
+      </div>
+
+      <div class="kit" data-rv style="--i:2">
+        <div class="head mono"><span>One SKU, as it goes live</span><span><b>Full listing</b> · SS-03</span></div>
+        <div class="kit-grid">
+          <div>
+            <div class="ph main" aria-label="Main image placeholder">
+              <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2"><rect x="24" y="14" width="32" height="56" rx="4"/><path d="M30 14v-6h20v6M24 30h32"/></svg>
+            </div>
+            <div class="thumbs">
+              <div class="ph">Hero</div><div class="ph">What's inside</div><div class="ph">How to use</div>
+              <div class="ph">Size &amp; volume</div><div class="ph">Lifestyle</div><div class="ph">Compare</div>
+            </div>
+          </div>
+          <div class="kit-copy">
+            <p class="t">Aldermere <u>Multi-Surface Cleaner</u> Spray 500 ml, <u>Antibacterial</u> Kitchen &amp; Bathroom Cleaner, Cuts Grease &amp; Limescale, Fresh Citrus</p>
+            <ul>
+              <li>Kills bacteria on worktops, hobs and tiles; safe on sealed surfaces</li>
+              <li>Cuts grease and limescale without scrubbing</li>
+              <li>500 ml trigger spray, about 700 sprays per bottle</li>
+              <li>Made in the UK; recyclable bottle</li>
+            </ul>
+            <div class="kwl">
+              <span>multi surface cleaner <b>18,100/mo</b></span>
+              <span>kitchen cleaner <b>8,100/mo</b></span>
+              <span>limescale remover <b>6,600/mo</b></span>
+            </div>
+          </div>
+        </div>
+        <div class="kit-foot mono"><span>Title · 5 bullets · description · backend keywords</span><span>7 images · product data filed · <b>live</b></span></div>
+      </div>
+    </div>
+
+    <div class="trust" data-rv>
+      <div><h3>Published prices, fixed quote</h3><p>£10–70 per SKU · Pilot Wave from £2,400 · no surprises after the sample</p></div>
+      <div><h3>First 50–100 SKUs live in 10 working days</h3><p>From clean data and sign-off; then waves of 50–100</p></div>
+      <div><h3>Your account, your files, your sign-off</h3><p>Copy, images and data delivered as files you keep</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 2 · WHICH ONE IS YOU ══════ -->
+<section id="which" style="padding-top:64px">
+  <div class="sheet">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-rv>01 / Which one is you</p>
+        <h2 data-rv style="--i:1">Four ways a catalogue goes missing on Amazon.</h2>
+      </div>
+      <p data-rv style="--i:2">Every brand we audited this year was in one of these. The first move and the first price depend on which.</p>
+    </div>
+
+    <div class="doors">
+      <div class="door" data-rv style="--i:1">
+        <span class="eyebrow">A · Not on Amazon yet</span>
+        <h3>"We sell through the trade and our own site. Amazon is the gap."</h3>
+        <p class="ex"><b>A Kent chocolatier, 100+ lines.</b> The only thing under its name on Amazon UK: five reseller pages from 2020, rated 3.7. "Hot chocolate" is a top-5,000 search all year.</p>
+        <dl>
+          <div><dt>First move</dt><dd>Brand Registry, then the 25–50 lines with proven search demand, filed and live in 10 working days.</dd></div>
+          <div><dt>Start with</dt><dd><b>Pilot Wave S £2,400</b> or <b>M £3,900</b>, fixed.</dd></div>
+        </dl>
+      </div>
+
+      <div class="door" data-rv style="--i:2">
+        <span class="eyebrow">B · Tried once, pages went dead</span>
+        <h3>"We listed years ago. The pages are still there. Nothing sells."</h3>
+        <p class="ex"><b>A Yorkshire confectioner, since 1840.</b> 117 pages on Amazon UK, none with a live offer, so Amazon hides them from search. "Fudge gift set" is a top-3,700 search all year.</p>
+        <dl>
+          <div><dt>First move</dt><dd>Inventory every dead ASIN: relist, merge or retire. Rebuild 50 in retail formats, A+ on the top 3, stock planned for FBA. We call it Catalogue Revival.</dd></div>
+          <div><dt>Start with</dt><dd><b>Pilot Wave M £3,900</b>, fixed, 10 working days.</dd></div>
+        </dl>
+      </div>
+
+      <div class="door" data-rv style="--i:3">
+        <span class="eyebrow">C · On Amazon, sold by someone else</span>
+        <h3>"Our brand is there. Resellers or Vendor set the price, the content and the stock."</h3>
+        <p class="ex"><b>A gift-food group on Vendor.</b> A store with eight categories and one item in stock. <b>A bath-bomb maker with Brand Registry.</b> One photo per page; a reseller with 34,000 reviews does the selling.</p>
+        <dl>
+          <div><dt>First move</dt><dd>Brand Registry, full content on the 50 lines that carry the range, then the seller question: your own account, hybrid, or resellers under rules. Leaving Vendor is a six-week job we call Vendor Exit.</dd></div>
+          <div><dt>Start with</dt><dd><b>Pilot Wave M £3,900</b> or <b>L £7,400</b>; Vendor Exit adds £1,500 migration setup.</dd></div>
+        </dl>
+      </div>
+
+      <div class="door" data-rv style="--i:4">
+        <span class="eyebrow">D · Live, and underperforming</span>
+        <h3>"We sell there ourselves. The catalogue is a tenth of the range, or written in trade language."</h3>
+        <p class="ex"><b>A British cosmetics brand.</b> 650 lines through the trade, 14 on Amazon. The other 636 are not absent because nobody wants them: shoppers search every month and buy something else.</p>
+        <dl>
+          <div><dt>First move</dt><dd>Rank the range by real search demand and launch in that order. Titles from what people type, seven images to spec, A+ on the top 3.</dd></div>
+          <div><dt>Start with</dt><dd><b>Pilot Wave M £3,900</b> or <b>L £7,400</b>, then waves of 100 at the per-SKU rate.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="doors-note" data-rv>Several brands in one group, and not sure which goes first? That is a question we answer in the sample. Single product, private-label test? Not us; a freelancer will serve you better.</p>
+
+    <div class="shape">
+      <div class="prose" data-rv>
+        <p>Whichever door it is, the shape is the same: a range with demand behind it, and pages that do not exist, do not sell, or belong to someone else.</p>
+        <p>What is missing is the work: a title written from what people actually type, images that answer the objection, a flat-file that validates. Multiplied by the size of the range.</p>
+        <p class="small">That is a volume problem. Volume problems are solved by a production line, not by another strategy deck. The first fifty go live in ten working days; the rest follow in the order shoppers ask for them.</p>
+      </div>
+      <div class="spec-plate" data-rv style="--i:2">
+        <div class="head mono"><span>Door D · British cosmetics brand</span><span>650 lines</span></div>
+        <svg id="shelf" viewBox="0 0 660 172" role="img" aria-label="A shelf of 650 tiles, one per product line: 14 lit today, the first wave of 50 lighting up"></svg>
+        <p class="plate-cap mono"><span class="k k-live"></span>Live today &nbsp;&nbsp; <span class="k k-wave"></span>First wave, 10 working days &nbsp;&nbsp; <span class="k k-dead"></span>Not on Amazon</p>
+        <div class="plate-nums">
+          <div><b class="dead">14 <span>live today</span></b><p>Of 650 lines sold through the trade</p></div>
+          <div><b>+50 <span>first wave</span></b><p>Chosen by search demand, not by the price list order</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 3 · EXAMPLE ══════ -->
+<section id="example" style="padding-top:0">
+  <div class="sheet">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-rv>02 / One SKU, rebuilt</p>
+        <h2 data-rv style="--i:1">Take one listing apart. See what each piece does.</h2>
+      </div>
+      <p data-rv style="--i:2">Same product. Same account. The left passes Amazon's checks and sells nothing. The right is assembled from recorded demand, in the order a shopper scans.</p>
+    </div>
+
+    <div class="ex-grid">
+      <div class="card before" data-rv style="--i:1">
+        <span class="tag">As it sits today</span>
+        <div class="imgrow">
+          <div class="ph">Trade sheet photo</div>
+          <div class="ph miss">—</div><div class="ph miss">—</div><div class="ph miss">—</div><div class="ph miss">—</div><div class="ph miss">—</div><div class="ph miss">—</div>
+        </div>
+        <div class="ba-title"><mark>CS-500</mark> Multi Surface Cleaner Spray <mark>Kitchen Bathroom Home Office Caravan</mark> Antibacterial <mark>Multi Purpose</mark> 500ml <mark>Pack of 1</mark></div>
+        <ul class="bul">
+          <li>MULTI SURFACE CLEANER 500ML</li>
+          <li>SUITABLE FOR KITCHEN AND BATHROOM</li>
+        </ul>
+        <div class="ba-meta mono">1 image of 7 · a stock code where the brand should be · 2 bullets · no backend keywords</div>
+      </div>
+
+      <div class="card after" data-rv style="--i:2">
+        <span class="tag">Rebuilt from search demand</span>
+        <div class="imgrow">
+          <div class="ph">Hero</div><div class="ph">Inside</div><div class="ph">How to</div><div class="ph">Size</div><div class="ph">Lifestyle</div><div class="ph">Compare</div><div class="ph">Pack</div>
+        </div>
+        <div class="ba-title">Aldermere <u>Multi-Surface Cleaner</u> Spray 500&nbsp;ml, <u>Antibacterial</u> <u>Kitchen &amp; Bathroom Cleaner</u>, Cuts Grease &amp; Limescale, Fresh Citrus</div>
+        <ul class="bul">
+          <li>Kills bacteria on worktops, hobs and tiles; safe on sealed surfaces</li>
+          <li>Cuts grease and limescale without scrubbing; wipe once</li>
+          <li>500 ml trigger spray, about 700 sprays per bottle</li>
+          <li>Fresh citrus, no bleach smell; made in the UK</li>
+          <li>Recyclable bottle; refills in the same range</li>
+        </ul>
+        <div class="kw">
+          <span>multi surface cleaner <b>18,100/mo</b></span>
+          <span>antibacterial spray <b>9,900/mo</b></span>
+          <span>kitchen cleaner <b>8,100/mo</b></span>
+          <span>limescale remover <b>6,600/mo</b></span>
+        </div>
+        <div class="ba-meta mono">7 images to spec · claims checked · backend keywords · flat-file validated · filed</div>
+      </div>
+    </div>
+
+    <div class="ex-side">
+      <p class="note" data-rv>The left is what happens when nobody owns the listing: a warehouse stock code where Amazon's style guide puts the brand, a list of rooms where a shopper expects a product name, and a "Pack of 1" carried over from the trade sheet. The right puts the queries people actually type in the order a shopper scans: brand, product, size, use, benefit, each with its monthly volume attached from a year of UK Amazon searches. Now do that six hundred times without the quality drifting on SKU four hundred. That is the whole business. The product is illustrative; your SKUs get real numbers in the sample.</p>
+      <div class="incl" data-rv style="--i:1">
+        <span class="eyebrow">What every SKU gets</span>
+        <ul>
+          <li><span>Title, up to 200 characters, from recorded demand</span><span>SS-01+</span></li>
+          <li><span>Five bullets, description, backend keywords</span><span>SS-01+</span></li>
+          <li><span>Prohibited-claims and style-guide check</span><span>SS-01+</span></li>
+          <li><span>Hero image from your photography</span><span>SS-02+</span></li>
+          <li><span>Six more images: inside, how-to, size, lifestyle, compare, pack</span><span>SS-03</span></li>
+          <li><span>Product data mapped, validated, filed on your account</span><span>all</span></li>
+          <li><span>A person signs off the batch before filing</span><span>all</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PROOF BAND ══════ -->
+<div class="proof">
+  <div class="sheet">
+    <div class="proof-row">
+      <div data-rv style="--i:1"><span class="v">200<small>+ listings</small></span><h3>Built on our own two accounts first</h3><p>The production line ran our own catalogues before it touched a client's: the upload errors, the policy checks, the edge cases. All ours.</p></div>
+      <div data-rv style="--i:2"><span class="v">1.46<small>M queries</small></span><h3>A year of UK Amazon search, word for word</h3><p>Not what a model imagines people search for. What they typed, with the volume behind each phrase, attached to your titles in the sample.</p></div>
+      <div data-rv style="--i:3"><span class="v">1<small>person per batch</small></span><h3>Every batch checked, then signed off</h3><p>Every line passes the automated claims and style checks. A person reads and signs off each batch before it is filed. One wrong phrase can take a listing down; we learned that on our own.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════ 4 · SERVICES ══════ -->
+<section id="services">
+  <div class="sheet">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-rv>03 / Three services, one order</p>
+        <h2 data-rv style="--i:1">Launch puts the range live. Care and Growth keep it selling.</h2>
+      </div>
+      <p data-rv style="--i:2">Built in this order because A+ content, storefronts and advertising only work when the pages underneath them are ready.</p>
+    </div>
+    <div class="cols3">
+      <div data-rv style="--i:1">
+        <span class="n mono">01 · <b>Launch</b></span>
+        <h3>Catalogue Launch</h3>
+        <p>The range ranked by demand, written, imaged, validated and filed on your account, in waves of 50–100 SKUs, each signed off before the next starts.</p>
+        <ul><li>Pilot Wave first, fixed price</li><li>Then waves at the per-SKU rate</li><li>30 days of live numbers with every wave</li></ul>
+        <p class="tarif">Pilot Wave from £2,400 · then £10–70 / SKU</p>
+      </div>
+      <div data-rv style="--i:2">
+        <span class="n mono">02 · <b>Care</b></span>
+        <h3>Catalogue Care</h3>
+        <p>Keeping a live range live: suppressions cleared, new SKUs added, cases handled, content refreshed, a monthly report. For catalogues that are built and need looking after.</p>
+        <ul><li>Up to 150 live SKUs £600</li><li>150–500 £900</li><li>500–1,000 £1,300</li></ul>
+        <p class="tarif">£600–1,300 / month</p>
+      </div>
+      <div data-rv style="--i:3">
+        <span class="n mono">03 · <b>Growth</b></span>
+        <h3>Channel Growth</h3>
+        <p>Brand Registry and the storefront, A+ on the SKUs that carry the range, advertising built from the same keyword base, organic rank tracked weekly, a monthly review.</p>
+        <ul><li>A+ content £250–350 per hero SKU</li><li>Store and Registry scoped per case</li><li>Advertising inside an agreed budget band</li></ul>
+        <p class="tarif">from £1,500 / month, includes Care</p>
+      </div>
+    </div>
+
+    <div class="scope" data-rv>
+      <div class="ours">
+        <span class="eyebrow">What we run</span>
+        <h3>The shelf</h3>
+        <p>Research, listing copy, images, product data, filing, A+ content, storefront, catalogue maintenance, advertising execution and reporting.</p>
+      </div>
+      <div>
+        <span class="eyebrow">What stays with you</span>
+        <h3>The business</h3>
+        <p>Pricing, stock and inventory decisions, fulfilment, customer service and the money. We do not touch them, and we say so in the contract.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5 · PRICING ══════ -->
+<section class="prices" id="pricing">
+  <div class="sheet">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-rv>04 / Pricing</p>
+        <h2 data-rv style="--i:1">Published, so you can do the maths before you reply.</h2>
+      </div>
+      <p data-rv style="--i:2;color:var(--ink-3)" class="mono">Trade · GBP ex VAT · E&amp;OE · every quote fixed in writing before work starts</p>
+    </div>
+
+    <h3 class="sub-h" data-rv>Start: one Pilot Wave, one fixed price</h3>
+    <p class="sub-p" data-rv>Every first order is a Pilot Wave: full listings, A+ on the hero SKUs, catalogue setup for one product type. Live within 10 working days of clean data and sign-off. It counts toward the rollout.</p>
+    <div class="rows" data-rv>
+      <div class="row"><span class="code mono">S</span><span class="name">Pilot Wave S</span><span class="desc">25 full listings · A+ on 2 hero SKUs · catalogue setup. For ranges under 100 SKUs, or a first product family.</span><span class="cost">£2,400<small>fixed</small></span></div>
+      <div class="row"><span class="code mono">M</span><span class="name">Pilot Wave M</span><span class="desc">50 full listings · A+ on 3 hero SKUs · catalogue setup. The 50 with proven search demand go first; the rest follows in demand order or gets retired. Doors B, C and D usually start here.</span><span class="cost">£3,900<small>fixed</small></span></div>
+      <div class="row"><span class="code mono">L</span><span class="name">Pilot Wave L</span><span class="desc">100 full listings · A+ on 5 hero SKUs · catalogue setup. One product type; a second structure is quoted after the sample. Vendor Exit adds £1,500 migration setup.</span><span class="cost">£7,400<small>fixed</small></span></div>
+      <div class="row"><span class="code mono">C</span><span class="name">Copy Wave</span><span class="desc">100 listings, copy only: title, bullets, backend keywords, flat-file, plus setup. For ranges that already have images to spec.</span><span class="cost">£1,650<small>fixed</small></span></div>
+    </div>
+
+    <div class="inc-grid" data-rv>
+      <div>
+        <span class="eyebrow">Included in every wave</span>
+        <ul>
+          <li>Demand ranking of the range from a year of UK Amazon searches</li>
+          <li>Copy, seven images from your photography, product data mapped and validated</li>
+          <li>Filing on your Seller Central account, or files for you to upload</li>
+          <li>Catalogue setup for one product type; one round of revisions</li>
+          <li>30 days of live numbers after launch: sessions, conversion, keyword rank</li>
+        </ul>
+      </div>
+      <div class="no">
+        <span class="eyebrow">Not included, and said up front</span>
+        <ul>
+          <li>VAT</li>
+          <li>Photography of physical samples: quoted separately when your images are not usable</li>
+          <li>A second catalogue structure or legacy repair (duplicates, suppressions): quoted after the sample</li>
+          <li>Brand Registry and storefront recovery when a third party holds the brand: scoped per case</li>
+          <li>Advertising spend itself; we run it inside a band you set</li>
+        </ul>
+      </div>
+    </div>
+    <p class="meta" data-rv>50% deposit, the balance on sign-off. Further revision rounds at an hourly rate published in the quote.</p>
+
+    <h3 class="sub-h" data-rv>Continue: per SKU, at one hundred SKUs and above</h3>
+    <div class="rates" data-rv>
+      <div><span class="eyebrow">SS-01 · Copy</span><b>£10–15<small>/ SKU</small></b><p>Title, bullets, description, backend keywords, claims audit.</p></div>
+      <div><span class="eyebrow">SS-02 · Copy + hero</span><b>£25–35<small>/ SKU</small></b><p>Everything above, plus the main image that decides whether anyone clicks.</p></div>
+      <div><span class="eyebrow">SS-03 · Full listing</span><b>£50–70<small>/ SKU</small></b><p>Copy plus seven images: hero, infographics, how-to, lifestyle.</p></div>
+      <div><span class="eyebrow">SS-04 · A+ content</span><b>£250–350<small>/ hero SKU</small></b><p>Hand-built for the SKUs that carry the range. Brand Story module £400.</p></div>
+      <div><span class="eyebrow">SS-06 · Catalogue Care</span><b>£600–1,300<small>/ month</small></b><p>By live SKUs: up to 150 · 150–500 · 500–1,000.</p></div>
+      <div><span class="eyebrow">SS-05 · Channel Growth</span><b>from £1,500<small>/ month</small></b><p>Care plus advertising, store, weekly rank tracking, monthly review.</p></div>
+    </div>
+    <p class="meta" data-rv>Where a price lands inside its range depends on source-data quality, category complexity and image requirements. The quote is fixed before work starts. Smaller runs are quoted individually.</p>
+
+    <h3 class="sub-h" data-rv>What a catalogue comes to</h3>
+    <p class="sub-p" data-rv>Three sizes, worked through. Full listings, one product type, setup included in the wave.</p>
+    <div class="totals" data-rv>
+      <div><span class="n">100 SKUs</span><span class="d">Pilot Wave L. Live in 10 working days. Then Catalogue Care if you want it looked after.</span><span class="c">£7,400<small>+ Care £600 / month</small></span></div>
+      <div><span class="n">300 SKUs</span><span class="d">Pilot Wave L, then two waves of 100 at £50–70. About eight weeks end to end.</span><span class="c">£17,400–21,400<small>+ Care £900 / month</small></span></div>
+      <div><span class="n">500 SKUs</span><span class="d">Pilot Wave L, then four waves of 100. Early waves report live numbers while later ones are in production.</span><span class="c">£27,400–35,400<small>+ Care £900 / month</small></span></div>
+    </div>
+    <p class="meta" data-rv>Cheaper than an agency for the same deliverable because the work runs on a production line we built and own. Dearer than offshore data entry because the images, the keyword data and the filing are in the price.</p>
+  </div>
+</section>
+
+<!-- ══════ 6 · HOW TO START ══════ -->
+<section id="how">
+  <div class="sheet">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-rv>05 / How to start</p>
+        <h2 data-rv style="--i:1">Four steps. The first two cost you nothing.</h2>
+      </div>
+      <p data-rv style="--i:2">You judge finished work, not a proposal. No discovery call, no deck.</p>
+    </div>
+    <div class="cols4">
+      <div data-rv style="--i:1">
+        <span class="n mono">Step 1 · <b>£0</b></span>
+        <h3>Send the catalogue</h3>
+        <p>A spreadsheet, a trade price list, or a link to your wholesale portal. Whatever you already have is enough; it does not need formatting.</p>
+      </div>
+      <div data-rv style="--i:2">
+        <span class="n mono">Step 2 · <b>£0 · five working days</b></span>
+        <h3>The sample: your range ranked, three SKUs rebuilt, a fixed quote</h3>
+        <p>Your lines ranked by real Amazon search demand, so you see which go first and which never should. Three of your SKUs rebuilt as they would go live: title, bullets, keywords with volumes, a hero mock. Scope and price in writing.</p>
+      </div>
+      <div data-rv style="--i:3">
+        <span class="n mono">Step 3 · <b>Pilot Wave · £2,400–7,400 fixed</b></span>
+        <h3>25–100 SKUs live in 10 working days</h3>
+        <p>One product family, built, filed and live on your account. One round of revisions. It counts toward the rollout, and it is where the schedule for the rest gets fixed, on real numbers.</p>
+      </div>
+      <div data-rv style="--i:4">
+        <span class="n mono">Step 4 · <b>the quote, fixed</b></span>
+        <h3>Rollout in waves, then the channel</h3>
+        <p>Waves of 50–100, each signed off before the next starts, each with 30 days of live numbers. Then Catalogue Care keeps the range live, and Channel Growth keeps it selling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 7 · FAQ ══════ -->
+<section id="faq" style="padding-top:0">
+  <div class="sheet">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" data-rv>06 / Fair questions</p>
+        <h2 data-rv style="--i:1">The things you would ask on a call, answered here instead.</h2>
+      </div>
+    </div>
+    <div class="faq" data-rv>
+      <details>
+        <summary>Do you need access to our Seller Central?<span class="chev">+</span></summary>
+        <div class="a">Not for the sample; that is built from public data and your spec sheets. For filing, either a restricted user on your account or you upload our finished files yourself. Both work, and nothing goes live without your sign-off either way.</div>
+      </details>
+      <details>
+        <summary>How long does a 500-SKU catalogue actually take?<span class="chev">+</span></summary>
+        <div class="a">Your first 50–100 SKUs are live within 10 working days of clean data and sign-off; the clock starts when your data template and assets are approved, not when the contract is signed. The rest follows in waves of 50–100, with the schedule fixed after the first wave on what the data and the category actually required. Early waves are producing live numbers while later ones are still in production, and those numbers feed back into the build.</div>
+      </details>
+      <details>
+        <summary>What do you need from us to start?<span class="chev">+</span></summary>
+        <div class="a">Your catalogue in whatever form it exists: spreadsheet, trade price list, wholesale portal. Then a filled-in copy of our standard CSV template, product photography or samples for imaging, and a brand authorisation letter if we are fixing existing brand pages, because Amazon requires it.</div>
+      </details>
+      <details>
+        <summary>Who owns the content, the files and the data?<span class="chev">+</span></summary>
+        <div class="a">You do, outright. Copy, images, A+ layouts, flat-files and the keyword mapping for your range are delivered as files you keep. If we part ways, everything stays with you and keeps working.</div>
+      </details>
+      <details>
+        <summary>How do revisions work, and what is not included?<span class="chev">+</span></summary>
+        <div class="a">One full round of revisions is included in every wave; further rounds are billed at an hourly rate published in the quote. Not included: photography of physical samples (quoted separately), Brand Registry and storefront recovery (scoped per case), advertising spend, and VAT.</div>
+      </details>
+      <details>
+        <summary>Does a person read every listing, or is it automated?<span class="chev">+</span></summary>
+        <div class="a">Both, and in that order. Every line passes automated checks for prohibited claims, style-guide rules and product-type schema before anyone sees it. Then a person reads and signs off each batch before it is filed. We do not claim Amazon never rejects a listing; we claim that when it does, we handle the case, and it has never been for a phrase we wrote.</div>
+      </details>
+      <details>
+        <summary>Couldn't we just use ChatGPT for this?<span class="chev">+</span></summary>
+        <div class="a">For the words, yes, more or less. That is the part everyone can see, and it is the part that has become cheap. A large catalogue does not hit a wall on words; it hits the wall underneath: the operations that turn a spreadsheet into live pages on your own account without breaking anything.
+          <ul>
+            <li>Flat-files with valid productType schemas, validated before upload</li>
+            <li>Parent/child variations that do not trip the abuse filters</li>
+            <li>Seven images per SKU to Amazon's spec, at catalogue volume</li>
+            <li>Errors 5665 and 8541, category gating, Brand Registry</li>
+            <li>Policy-safe copy: no medical claims, no invented free-from claims</li>
+            <li>Titles from a year of recorded UK searches with volumes, not from a model's guess</li>
+          </ul>
+          Multiply every line by the number of SKUs in your range, and you have the reason those products are still not listed.</div>
+      </details>
+      <details>
+        <summary>Seller Central, Vendor Central, or hybrid?<span class="chev">+</span></summary>
+        <div class="a">Seller Central first; that is where our production line, keyword base and own accounts run. For Vendor and hybrid brands the content, images and data files are the same, only the upload path differs. If Amazon is winding your Vendor agreement down, Vendor Exit is the package for it: Seller account, Brand Registry, catalogue migrated in waves, resellers brought under rules.</div>
+      </details>
+      <details>
+        <summary>We own several brands. Which goes first?<span class="chev">+</span></summary>
+        <div class="a">We run all of them through the same demand analysis and tell you which five to ten to back, who earns on them today instead of you, and which to leave alone. Optimising everything does not pay at £3–5 a unit. Send the list; the sample covers up to five brands.</div>
+      </details>
+      <details>
+        <summary>Only Amazon UK, or Europe too?<span class="chev">+</span></summary>
+        <div class="a">Amazon UK first; our keyword base and live accounts are British, and that is where demand can be measured properly. A catalogue built once is mostly a translation-and-transformation away from the EU marketplaces; we roll those out as a follow-on once the UK range performs.</div>
+      </details>
+      <details>
+        <summary>We have fewer than 100 SKUs. Too small?<span class="chev">+</span></summary>
+        <div class="a">Not too small; Pilot Wave S exists for exactly that. Below 25 lines the production line stops paying for itself, and we say so in the reply.</div>
+      </details>
+      <details>
+        <summary>Who is this not for?<span class="chev">+</span></summary>
+        <div class="a">Single-product launches and private-label testing: the production line is built for range, and at that size a freelancer will serve you better. And we stay out of pricing, inventory, fulfilment and customer service. Your team keeps the commercial controls; we run the shelf.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 8 · NEXT STEP ══════ -->
+<section id="contact" style="background:var(--wash)">
+  <div class="sheet sam">
+    <div>
+      <p class="eyebrow" data-rv>07 / Next step</p>
+      <h2 data-rv style="--i:1">Send us your catalogue. We will tell you what goes first, and what it costs.</h2>
+      <p class="lede" data-rv style="--i:2">
+        One email. Five working days later you have your range ranked by demand, three SKUs rebuilt,
+        and a fixed price. If the number does not work for you, you have lost one email and learned
+        what the market rate should be.
+      </p>
+      <div class="acts" data-rv style="--i:3">
+        <a class="btn" href="mailto:kevin@shelfandscale.com?subject=Catalogue%20for%20a%20sample%20and%20quote&body=Company%3A%0AWebsite%3A%0ASKUs%20in%20the%20range%20(approx.)%3A%0AWhere%20you%20are%20on%20Amazon%20today%20(not%20yet%20%2F%20tried%20once%20%2F%20sold%20by%20others%20%2F%20live)%3A%0ACatalogue%20attached%20or%20linked%3A%0A">kevin@shelfandscale.com
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5"/></svg></a>
+        <a class="btn btn-o" href="#pricing">Back to pricing</a>
+      </div>
+      <p class="small hero-note" data-rv style="--i:3">Recruiting for an Amazon manager at the moment? There is a version of this for the months before they start: the catalogue built and handed over, documented.</p>
+    </div>
+
+    <div class="pack" data-rv style="--i:2">
+      <div class="h">What to send</div>
+      <div><span class="n">01</span><span>Your catalogue: spreadsheet, trade price list, or a wholesale-portal link</span></div>
+      <div><span class="n">02</span><span>One line on where you are on Amazon today: not yet, tried once, sold by others, or live</span></div>
+      <div class="h">What you get, in five working days</div>
+      <div><span class="n">03</span><span>Your range ranked by real Amazon search demand: what goes first, what never should</span></div>
+      <div><span class="n">04</span><span>Three of your SKUs rebuilt as they would go live: title, bullets, keywords with volumes, hero mock</span></div>
+      <div><span class="n">05</span><span>Scope and a fixed price in writing. No Seller Central access needed for any of it</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="sheet">
+    <div class="foot-top">
+      <a class="brand" href="#top">
+        <svg viewBox="0 0 26 26" role="img" aria-label="Shelf and Scale">
+          <g fill="none" stroke="currentColor" stroke-width="1.6">
+            <rect x="1.8" y="1.8" width="6" height="6" rx="1.2"/><rect x="10" y="1.8" width="6" height="6" rx="1.2"/><rect x="18.2" y="1.8" width="6" height="6" rx="1.2"/>
+            <rect x="10" y="10" width="6" height="6" rx="1.2"/><rect x="18.2" y="10" width="6" height="6" rx="1.2"/>
+          </g>
+          <g fill="#0B5C3B">
+            <rect x="1.8" y="10" width="6" height="6" rx="1.2"/>
+            <rect x="1.8" y="18.2" width="6" height="6" rx="1.2"/><rect x="10" y="18.2" width="6" height="6" rx="1.2"/><rect x="18.2" y="18.2" width="6" height="6" rx="1.2"/>
+          </g>
+        </svg>
+        SHELF &amp; SCALE
+      </a>
+      <nav class="foot-nav">
+        <a href="#which">Which one is you</a>
+        <a href="#example">Example</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy.html">Privacy notice</a>
+      </nav>
+    </div>
+    <div class="foot-bot">
+      <p>
+        Amazon catalogue &amp; brand management. Whole ranges written, imaged, filed and live, then run
+        as a channel, at a published price. United Kingdom.<br>
+        No cookies. No tracking. If you email us, we keep the thread only to reply to you, share it with
+        no one, and delete it on request. Prices shown are trade, GBP, ex VAT, E&amp;OE; every quote is
+        fixed in writing before work starts.
+      </p>
+      <div class="foot-contact">
+        <p class="mono">Send your catalogue</p>
+        <a href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a>
+        <p class="cr">&copy; 2026 Shelf &amp; Scale</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els = document.querySelectorAll('[data-rv]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.04 });
+    els.forEach(function(el){ io.observe(el); });
+  }
+
+  var shelf = document.getElementById('shelf');
+  if (shelf) {
+    var cols = 50, rows = 13, pitch = 13.2, size = 10, ns = 'http://www.w3.org/2000/svg';
+    var live = [3,27,41,66,88,109,131,158,177,203,244,281,322,376];
+    var rects = [];
+    for (var r = 0; r < rows; r++) for (var c = 0; c < cols; c++) {
+      var i = r * cols + c, el = document.createElementNS(ns, 'rect');
+      el.setAttribute('x', (c * pitch).toFixed(1)); el.setAttribute('y', (r * pitch).toFixed(1));
+      el.setAttribute('width', size); el.setAttribute('height', size); el.setAttribute('rx', 2);
+      if (live.indexOf(i) > -1) el.setAttribute('class', 'live');
+      shelf.appendChild(el); rects.push(el);
+    }
+    var wave = [], j = 0;
+    while (wave.length < 50 && j < rects.length) { if (live.indexOf(j) < 0) wave.push(rects[j]); j++; }
+    var run = function(){ wave.forEach(function(el, k){ setTimeout(function(){ el.classList.add('wave'); }, 600 + k * 55); }); };
+    if (reduce || !('IntersectionObserver' in window)) { wave.forEach(function(el){ el.classList.add('wave'); }); }
+    else {
+      var so = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if (e.isIntersecting) { run(); so.disconnect(); } });
+      }, { threshold: 0.3 });
+      so.observe(shelf);
+    }
+  }
+
+  var faqs = document.querySelectorAll('.faq details');
+  faqs.forEach(function(d){ d.addEventListener('toggle', function(){
+    if (d.open) faqs.forEach(function(o){ if (o !== d) o.open = false; });
+  }); });
+})();
+</script>
+</body>
+</html>
