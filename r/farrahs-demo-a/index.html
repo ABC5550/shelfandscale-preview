@@ -48,6 +48,52 @@
 
     .hero{grid-template-columns:minmax(0,1fr) minmax(0,.78fr)}
     .hero h1{font-size:clamp(38px,3.7vw,58px)}
+
+    /* stacked products, anatomy, assembly, shelf */
+    .rb-panel{margin-top:44px;padding-top:34px;border-top:1px solid var(--rule)}
+    .rb-kick{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;margin-bottom:18px;align-items:end}
+    .rb-kick h3{font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:-.02em;margin:0}
+    .rb-kick p{font-size:14.5px;color:var(--muted);margin:0}
+    .anat{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start;margin:8px 0 10px}
+    .anat-shot{position:relative;border:1px solid var(--rule);background:#fff}
+    .anat-shot img{display:block;width:100%;height:auto}
+    .pin{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:#8a3b2e;color:#fff;display:grid;place-items:center;font-size:13px;box-shadow:0 0 0 4px rgba(138,59,46,.18),0 4px 12px rgba(0,0,0,.25)}
+    .pin b{font-weight:600}
+    .anat-list{list-style:none;margin:0;padding:0}
+    .anat-list li{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:14px;color:var(--muted);line-height:1.5}
+    .anat-list li b{width:26px;height:26px;border-radius:50%;background:#8a3b2e;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:600}
+    .anat-list strong{color:var(--ink);font-weight:500}
+    .asm-wrap{margin:34px 0 8px;border:1px solid var(--rule);background:#fff}
+    .asm-head{display:grid;grid-template-columns:.5fr 1fr;gap:22px;padding:18px 24px;border-bottom:1px solid var(--rule)}
+    .asm-head p{margin:0;font-size:14px;color:var(--muted)}
+    .asm{display:grid;grid-template-columns:44% 56%;gap:26px;padding:24px;font-family:var(--sans)}
+    .asm-gallery img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;display:block;border:1px solid #e6e8e3}
+    .asm-tiles{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:8px}
+    .asm-tiles .t{aspect-ratio:1/1;border:1px solid #d5d9d7;background:#f6f6f0;display:grid;place-items:center;font-size:8px;text-align:center;color:#666;padding:2px;line-height:1.2}
+    .asm-title{font-size:16px;line-height:1.45;font-weight:500;color:#111;margin:0}
+    .asm-title .w{display:inline-block}
+    .asm-bullets{margin:14px 0 0 16px;padding:0;font-size:12.5px;line-height:1.5;color:#222}
+    .asm-bullets li{margin-bottom:4px}
+    .asm-foot{margin-top:14px;color:var(--green)}
+    @supports (animation-timeline: view()) {
+      @media (prefers-reduced-motion: no-preference) {
+        .asm .w{opacity:0;transform:translateY(10px);animation:asm-in linear both;animation-timeline:view();animation-range:entry calc(20% + var(--d)) entry calc(60% + var(--d))}
+        .asm .t{opacity:0;transform:scale(.7);animation:asm-in linear both;animation-timeline:view();animation-range:entry calc(30% + var(--d)) entry calc(75% + var(--d))}
+        .asm .b{opacity:0;clip-path:inset(0 100% 0 0);animation:asm-wipe linear both;animation-timeline:view();animation-range:entry calc(45% + var(--d)) cover calc(20% + var(--d))}
+        .asm-gallery img{opacity:0;transform:translateY(16px);animation:asm-in linear both;animation-timeline:view();animation-range:entry 10% entry 45%}
+      }
+    }
+    @keyframes asm-in{to{opacity:1;transform:none}}
+    @keyframes asm-wipe{to{opacity:1;clip-path:inset(0 0 0 0)}}
+    .shelf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .shelf-grid article{border:1px solid var(--rule);background:#fff;overflow:hidden}
+    .shelf-grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;object-position:left top;border-bottom:1px solid var(--rule)}
+    .shelf-grid div{padding:14px 16px 16px}
+    .shelf-grid h3{font-family:var(--sans);font-size:14px;font-weight:500;margin:4px 0 8px;color:var(--ink)}
+    .shelf-grid b{display:block;font-family:var(--display);font-weight:400;font-size:30px;line-height:1;color:var(--green)}
+    .shelf-grid div>span:last-child{display:block;font-size:12px;color:var(--muted);margin-top:6px}
+    @media(max-width:900px){.anat,.rb-kick,.asm,.asm-head{grid-template-columns:1fr}.shelf-grid{grid-template-columns:1fr 1fr}.asm-tiles .t{font-size:7px}}
+    @media(max-width:600px){.shelf-grid{grid-template-columns:1fr}}
     /* variant A: brand pairing, counters, before/after slider */
     .pair{display:flex;align-items:center;gap:14px;margin-left:28px}
     .pair-x{font-family:var(--display);color:var(--muted);font-size:20px}
@@ -152,17 +198,39 @@
     </div>
   </section>
 
+  <!-- 02b THE SHELF TODAY -->
+  <section class="container section" id="shelf" aria-labelledby="shelf-title">
+    <div class="section-heading"><div><p class="eyebrow">02 / WHO IS SELLING FUDGE THERE NOW</p><h2 id="shelf-title">The shelf you are not on.<br><em>Observed 12 September 2026.</em></h2></div><p>Four pages that answer "fudge" and "clotted cream fudge gift" today. The monthly figure is Amazon's own "bought in past month" badge, read via Keepa; it is a bucket, not an exact count, and not a forecast for Farrah's.</p></div>
+    <div class="shelf-grid">
+      <article><img src="img/comp-B0FGY2QMF7.jpg" alt="by Amazon All Butter Fudge page" loading="lazy"><div><span class="micro">BY AMAZON</span><h3>All Butter Fudge, 125g</h3><b>4,000+</b><span>bought in the past month · £1.47</span></div></article>
+      <article><img src="img/comp-B075S23PC7.jpg" alt="Bon Bons Gourmet All Butter Fudge page" loading="lazy"><div><span class="micro">BON BONS</span><h3>Gourmet All Butter Fudge</h3><b>300+</b><span>bought in the past month · £3.99</span></div></article>
+      <article><img src="img/comp-B0FQ6HWDY7.jpg" alt="Bentley and Ackerman Clotted Cream Fudge gift jar page" loading="lazy"><div><span class="micro">BENTLEY &amp; ACKERMAN</span><h3>Clotted Cream Fudge gift jar, 520g</h3><b>200+</b><span>bought in the past month · £12.99 · Amazon's Choice</span></div></article>
+      <article><img src="img/comp-B0DZWG6C9F.jpg" alt="Strawberry Ledge fudge sweets gift box page" loading="lazy"><div><span class="micro">STRAWBERRY LEDGE</span><h3>Fudge sweets gift box</h3><b>200+</b><span>bought in the past month · £9.99</span></div></article>
+    </div>
+    <p class="process-note">Two of the four are gift formats at £10–13, the price band your tins sit in. None of them has 655 reviews.</p>
+  </section>
+
   <!-- 03 THREE PRODUCTS REBUILT -->
   <section class="container section" id="rebuilt" aria-labelledby="rebuilt-title">
-    <div class="section-heading"><div><p class="eyebrow">03 / THREE OF YOUR PRODUCTS</p><h2 id="rebuilt-title">Same tins.<br><em>Drag to see them relisted.</em></h2></div><p>Left of the handle, the page as it stands on Amazon today. Right, how we would relist it: title from the phrases above, seven images to Amazon's spec, bullets a shopper reads. Illustrative rebuild from your public range; the Pilot Wave version is built from your data and photography.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">03 / THREE OF YOUR PRODUCTS</p><h2 id="rebuilt-title">Same tins.<br><em>Drag each one to see it relisted.</em></h2></div><p>Left of the handle, the page as it stands on Amazon today. Right, how we would relist it: title from the phrases above, seven images to Amazon's spec, bullets a shopper reads. Illustrative rebuild from your public range; the Pilot Wave version is built from your data and photography.</p></div>
 
-    <div class="tabs" role="tablist" aria-label="Products">
-      <button role="tab" aria-selected="true" data-tab="p1">01 · Butter Fudge tin</button>
-      <button role="tab" aria-selected="false" data-tab="p2">02 · Harrogate Toffee tin</button>
-      <button role="tab" aria-selected="false" data-tab="p3">03 · Shortbread, honey &amp; preserve trio</button>
+    <div class="anat" data-rv>
+      <div class="anat-shot">
+        <img src="img/today-fudge.jpg" alt="The Butter Fudge tin page on Amazon UK today, with four points marked" width="1280" height="720">
+        <span class="pin" style="left:76%;top:10%"><b>1</b></span>
+        <span class="pin" style="left:47%;top:4%"><b>2</b></span>
+        <span class="pin" style="left:36%;top:11%"><b>3</b></span>
+        <span class="pin" style="left:4%;top:32%"><b>4</b></span>
+      </div>
+      <ol class="anat-list">
+        <li><b>1</b><span><strong>"Currently unavailable."</strong> No offer, so Amazon keeps the page out of search. Nobody has seen it in the results for years.</span></li>
+        <li><b>2</b><span><strong>63 characters of 200.</strong> The title says "Luxury Fudge Art Nouveau Tin". Nobody types that. "Sweets gift box" and "fudge gift set" are typed every week.</span></li>
+        <li><b>3</b><span><strong>655 reviews, 4.6 stars.</strong> The asset. A relisted page keeps every one of them; a new page would start at zero.</span></li>
+        <li><b>4</b><span><strong>Six images, none for gifting.</strong> Tin on white and close-ups. No "what is inside", no gift moment, no size cue.</span></li>
+      </ol>
     </div>
 
-    <div class="rb-panel" id="p1">
+    <div class="rb-panel" id="p1"><div class="rb-kick"><h3>01 · Butter Fudge tin</h3><p>Your best-reviewed page. 655 reviews, 4.6 stars, no offer since the last unit sold.</p></div>
       <div class="ba" data-ba>
         <div class="ba-after">
           <div class="pdp">
@@ -191,7 +259,19 @@
       </div>
     </div>
 
-    <div class="rb-panel" id="p2" hidden>
+    <div class="asm-wrap">
+      <div class="asm-head"><p class="micro">HOW THE PAGE IS BUILT · SCROLL</p><p>Each word in the title comes from the demand table. Each image answers one question a shopper asks. Each bullet is one fact. Scroll and watch the page assemble in the order we build it.</p></div>
+      <div class="asm">
+        <div class="asm-gallery"><img src="img/fudge-tin.jpg" alt="" width="900" height="900"><div class="asm-tiles"><span class="t" style="--d:0%"><i>Tin on white</i></span><span class="t" style="--d:4%"><i>Open tin</i></span><span class="t" style="--d:8%"><i>What is inside</i></span><span class="t" style="--d:12%"><i>The 1910 tin</i></span><span class="t" style="--d:16%"><i>Gift moment</i></span><span class="t" style="--d:20%"><i>Size</i></span><span class="t" style="--d:24%"><i>The range</i></span></div></div>
+        <div class="asm-copy">
+          <p class="asm-title"><span class="w" style="--d:0.0%">Farrah's</span> <span class="w" style="--d:1.2%">of</span> <span class="w" style="--d:2.4%">Harrogate</span> <span class="w" style="--d:3.5999999999999996%">Butter</span> <span class="w" style="--d:4.8%">Fudge</span> <span class="w" style="--d:6.0%">Gift</span> <span class="w" style="--d:7.199999999999999%">Tin</span> <span class="w" style="--d:8.4%">300g</span> <span class="w" style="--d:9.6%">-</span> <span class="w" style="--d:10.799999999999999%">Handmade</span> <span class="w" style="--d:12.0%">Olde</span> <span class="w" style="--d:13.2%">English</span> <span class="w" style="--d:14.399999999999999%">Fudge</span> <span class="w" style="--d:15.6%">in</span> <span class="w" style="--d:16.8%">an</span> <span class="w" style="--d:18.0%">Embossed</span> <span class="w" style="--d:19.2%">Collector's</span> <span class="w" style="--d:20.4%">Tin,</span> <span class="w" style="--d:21.599999999999998%">Sweets</span> <span class="w" style="--d:22.8%">Gift</span> <span class="w" style="--d:24.0%">Box</span> <span class="w" style="--d:25.2%">for</span> <span class="w" style="--d:26.4%">Christmas,</span> <span class="w" style="--d:27.599999999999998%">Birthdays</span> <span class="w" style="--d:28.799999999999997%">and</span> <span class="w" style="--d:30.0%">Thank-Yous,</span> <span class="w" style="--d:31.2%">Made</span> <span class="w" style="--d:32.4%">in</span> <span class="w" style="--d:33.6%">Yorkshire</span> <span class="w" style="--d:34.8%">since</span> <span class="w" style="--d:36.0%">1840</span> </p>
+          <ul class="asm-bullets"><li class="b" style="--d:0%">Handmade butter fudge in the 1910 Art Nouveau tin that once held Harrogate Toffee</li><li class="b" style="--d:5%">Made with three sugars for a crumbly, creamy texture</li><li class="b" style="--d:10%">300 g tin: a sweets gift box for Christmas, birthdays and thank-yous</li><li class="b" style="--d:15%">Farrah's of Harrogate, North Yorkshire, since 1840</li><li class="b" style="--d:20%">Keep the tin: embossed, collectable, refill it with your favourite sweets</li></ul>
+          <p class="asm-foot micro">FILED · LIVE · REVIEWS KEPT</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rb-panel" id="p2"><div class="rb-kick"><h3>02 · Harrogate Toffee tin</h3><p>The original. 140 reviews and a title with not one word a shopper types.</p></div>
       <div class="ba" data-ba>
         <div class="ba-after">
           <div class="pdp">
@@ -220,20 +300,20 @@
       </div>
     </div>
 
-    <div class="rb-panel" id="p3" hidden>
+    <div class="rb-panel" id="p3"><div class="rb-kick"><h3>03 · Shortbread, honey &amp; preserve trio</h3><p>A hamper by any other name. "Hamper" is nowhere on the page.</p></div>
       <div class="ba" data-ba>
         <div class="ba-after">
           <div class="pdp">
             <div class="pdp-gallery">
               <div class="pdp-thumbs"><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <img src="img/shortbread-tube.jpg" alt="Rebuilt main image" width="900" height="900">
+              <img src="img/knolling-trio.jpg" alt="Rebuilt main image: the trio laid out flat" width="900" height="900">
             </div>
             <div class="pdp-copy">
               <span class="pdp-brand">Visit the Farrah's Store</span>
-              <h3>Farrah's of Harrogate Shortbread, Honey and Preserve <u>Gift Set</u> - Clotted Cream Shortbread 160g, Summer Blossom Honey 114g, Blackcurrant Preserve 114g, <u>Sweet Hamper</u> for Birthdays and <u>Christmas</u>, Made in Yorkshire</h3>
+              <h3>Farrah's of Harrogate Shortbread, Honey and Preserve <u>Gift Set</u> - Clotted Cream Shortbread 160g, Summer Blossom Honey 114g, Plum Preserve 114g, <u>Sweet Hamper</u> for Birthdays and <u>Christmas</u>, Made in Yorkshire</h3>
               <div class="pdp-rating"><span class="stars">★★★★★</span> 4.4 · 24 ratings</div>
               <div class="pdp-stock">In stock · Prime eligible · Dispatched from Amazon</div>
-              <ul class="pdp-bullets"><li>Clotted cream shortbread 160 g, summer blossom honey 114 g, blackcurrant preserve 114 g</li><li>Boxed as a set, ready to give</li><li>A sweet hamper for birthdays, Christmas and thank-yous</li><li>Each jar and tube sealed and labelled for gifting</li><li>Made by Farrah's of Harrogate, Yorkshire, since 1840</li></ul>
+              <ul class="pdp-bullets"><li>Clotted cream shortbread 160 g, summer blossom honey 114 g, plum preserve 114 g</li><li>Boxed as a set, ready to give</li><li>A sweet hamper for birthdays, Christmas and thank-yous</li><li>Each jar and tube sealed and labelled for gifting</li><li>Made by Farrah's of Harrogate, Yorkshire, since 1840</li></ul>
             </div>
           </div>
         </div>
@@ -245,7 +325,7 @@
       <div class="ba-legend"><span>◀ Drag: today</span><span>relisted ▶</span></div>
       <div class="ba-facts">
         <div class="facts-today"><span class="micro">TODAY</span><div class="data-row"><span>Title</span><strong>Farrah's of Harrogate - Trio Pack - Clotted Cream Shortbread (160g), Summer Blossom Honey (114g) &amp; Blackcurrant Preserve (114g)</strong></div><div class="data-row"><span>Listed</span><strong>August 2019</strong></div><div class="data-row"><span>Reviews</span><strong>24 · 4.4</strong></div><div class="data-row"><span>Offer</span><strong>none</strong></div><div class="data-row"><span>Title length</span><strong>2 images, 118 characters</strong></div></div>
-        <div class="facts-after"><span class="micro">RELISTED</span><div class="keyword-tags"><span>sweet hamper</span><span>christmas hamper basket</span><span>hamper for men</span><span>christmas food gifts</span></div><div class="result-deliverables"><div><span aria-hidden="true">✓</span><p><strong>Title from what shoppers type</strong>"Sweet hamper" in the title; "christmas hamper basket" ranks 318th from September and goes into the bullets, with "hamper for men" and "christmas food gifts".</p></div><div><span aria-hidden="true">✓</span><p><strong>Seven images</strong>Box on white, the three jars and tube laid out, what is inside each, gift moment, size, the range.</p></div><div><span aria-hidden="true">✓</span><p><strong>Same page, same reviews</strong>Existing ASIN relisted; a second listing for the gift-boxed version only if the data shows demand for it.</p></div></div></div>
+        <div class="facts-after"><span class="micro">RELISTED</span><div class="keyword-tags"><span>sweet hamper</span><span>christmas hamper basket</span><span>hamper for men</span><span>christmas food gifts</span></div><div class="result-deliverables"><div><span aria-hidden="true">✓</span><p><strong>Title from what shoppers type</strong>"Sweet hamper" in the title; "christmas hamper basket" ranks 318th from September and goes into the bullets, with "hamper for men" and "christmas food gifts".</p></div><div><span aria-hidden="true">✓</span><p><strong>Seven images</strong>The trio laid out flat as the "what is inside" shot (illustrative, generated from your Amazon photo), box on white, each jar and the tube, gift moment, size, the range.</p></div><div><span aria-hidden="true">✓</span><p><strong>Same page, same reviews</strong>Existing ASIN relisted; a second listing for the gift-boxed version only if the data shows demand for it.</p></div></div></div>
       </div>
     </div>
     <div class="example-footer"><p>Titles keep Amazon's rule of no word more than twice and stay at product-name length. The remaining phrases go into bullets and backend search terms, where Amazon indexes them just the same.</p><a class="text-link" href="#plan">The first ten working days <span aria-hidden="true">↓</span></a></div>
