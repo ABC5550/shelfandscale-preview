@@ -46,6 +46,8 @@
     .need li:before{content:"0" counter(n);position:absolute;left:0;top:20px;font-family:var(--display);color:var(--accent);font-size:18px}
     .need li span{display:block;font-size:13.5px;color:var(--muted);margin-top:4px}
 
+    .hero{grid-template-columns:minmax(0,1fr) minmax(0,.78fr)}
+    .hero h1{font-size:clamp(38px,3.7vw,58px)}
     /* variant A: brand pairing, counters, before/after slider */
     .pair{display:flex;align-items:center;gap:14px;margin-left:28px}
     .pair-x{font-family:var(--display);color:var(--muted);font-size:20px}
