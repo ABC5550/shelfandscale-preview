@@ -12,20 +12,13 @@
   <style>
     /* demo additions on top of the site stylesheet */
     .header-tag{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-left:auto;margin-right:22px}
-    /* hero: same grid and type scale as the main site; sizes also follow window height so it stays one screen */
-    .hero{grid-template-columns:1.18fr 1fr;gap:clamp(32px,4.5vw,65px);padding-block:clamp(24px,4vh,56px);min-height:calc(100vh - 86px);align-content:center}
-    .hero h1{font-size:clamp(40px,min(5.25vw,8vh),74px);line-height:1.1}
-    .hero .hero-description{font-size:clamp(15px,min(1.25vw,2.3vh),18px);max-width:510px}
-    .hero .product-sheet{max-width:clamp(280px,calc(100vh - 330px),500px)}
-    .hero-nums b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(26px,min(2.6vw,4.6vh),38px);line-height:1;color:var(--green);letter-spacing:-.02em;white-space:nowrap}
-    @media(max-width:900px){.hero{min-height:0;padding-block:32px}.hero h1{font-size:clamp(34px,9vw,44px)}.hero .product-sheet{max-width:none}}
-    .hero .sheet-product{padding:12px 0 16px}
-    .hero .sheet-product h2{font-size:20px}
+    /* hero: identical grid, type and card to the main site; photo box is landscape like the packshot */
+    .hero .packshot{height:auto}
+    .hero .packshot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+    .hero .sheet-top .sheet-number{white-space:nowrap}
+    .trust-grid p{padding-left:72px}.trust-grid p+p{padding-left:94px}.trust-mark{font-size:22px;top:1px}
     .hero .packshot{height:auto;display:block}
     .hero .packshot img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
-    .hero-nums{display:grid;grid-template-columns:repeat(3,minmax(0,auto));gap:0 40px;justify-content:start;margin-top:28px;padding-top:20px;border-top:1px solid var(--rule)}
-    .hero-nums span{display:block;font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.45}
-    .hero .hero-note{margin-top:18px}
     @media(max-width:900px){.hero .product-sheet{max-width:none}.hero-nums{gap:0 20px}}
     .found{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .found article{border-top:2px solid var(--green);padding-top:16px}
@@ -195,26 +188,23 @@
       <p class="eyebrow"><span class="eyebrow-line"></span> FOR FARRAH'S OF HARROGATE · AMAZON UK · A PLAN FOR Q4</p>
       <h1 id="hero-title">655 reviews.<br>Nothing to buy.<br><em>Back by Christmas.</em></h1>
       <p class="hero-description">Amazon itself sold your range for nine years and stopped in October 2025. Since then every Farrah's page there has said "Currently unavailable". Fifty of them can be back on sale, on your own account, by 10 October.</p>
+      <p class="hero-audience">Four minutes to read. <strong>No call needed; reply to this page.</strong></p>
       <div class="button-row"><a class="button" href="#product">See your tin relisted <span aria-hidden="true">↓</span></a><a class="text-link" href="#cost">Go to the price <span aria-hidden="true">→</span></a></div>
-      <div class="hero-nums" aria-label="Farrah's on Amazon UK today">
-        <div><b data-count="124">0</b><span>pages under your name</span></div>
-        <div><b data-count="0">0</b><span>you can buy today</span></div>
-        <div><b>Oct 2025</b><span>last Amazon stock sold</span></div>
-      </div>
-      <p class="hero-note">Amazon UK product data and our search base, checked 12 September.</p>
+      <p class="hero-note">Figures from Amazon UK product data and our search base, checked 12 September.</p>
     </div>
     <div class="hero-art">
       <div class="product-sheet">
         <div class="sheet-top"><span class="micro">ONE OF YOUR 124 PAGES</span><span class="sheet-number">AMAZON UK · 2013–2025</span></div>
-        <div class="packshot"><img src="img/hero-fudge.jpg" width="960" height="960" alt="Gallery concept: Farrah's Clotted Cream Fudge, cubes on a plate beside the Designer Box" fetchpriority="high"></div>
+        <div class="packshot"><img src="img/hero-fudge-wide.jpg" width="1200" height="900" alt="Gallery concept: Farrah's Clotted Cream Fudge, cubes on a plate beside the Designer Box" fetchpriority="high"></div>
         <div class="sheet-product"><span>FARRAH'S DESIGNER BOX</span><h2>Clotted Cream Fudge</h2><p>483 reviews · 4.6 stars · on Amazon since 2013</p></div>
+        <div class="sheet-checks"><span><i aria-hidden="true">✓</i> Page still yours</span><span><i aria-hidden="true">✓</i> Reviews kept</span><span><i aria-hidden="true">✓</i> Brand store live</span></div>
       </div>
       <div class="art-caption"><span class="micro">ILLUSTRATIVE GALLERY CONCEPT</span><span>Packaging and fudge to be confirmed against your product</span></div>
     </div>
   </section>
 
-  <!-- 1b · WHAT WE CHECKED -->
-  <div class="trust-bar"><div class="container trust-grid"><p><span class="trust-mark" aria-hidden="true">01</span><strong>All 124 of your pages, read one by one</strong><span>Title, images, price and availability for every Farrah's page on Amazon UK, checked 12 September.</span></p><p><span class="trust-mark" aria-hidden="true">02</span><strong>Nine years of who sold what</strong><span>Every seller that ever held an offer on your pages, from Amazon itself in 2016 to the last one in October 2025.</span></p><p><span class="trust-mark" aria-hidden="true">03</span><strong>A Christmas test, not a relaunch</strong><span>Fifty pages, one season, on your own account. If Q4 pays, the rest of the range follows in January; if not, you have spent one Pilot Wave, not a year.</span></p></div></div>
+  <!-- 1b · TODAY IN NUMBERS -->
+  <div class="trust-bar"><div class="container trust-grid"><p><span class="trust-mark" aria-hidden="true">124</span><strong>pages under your name</strong><span>Every Farrah's page on Amazon UK, listed between 2012 and 2026, read one by one on 12 September.</span></p><p><span class="trust-mark" aria-hidden="true">0</span><strong>you can buy today</strong><span>All 124 say "Currently unavailable". A page with no offer is kept out of Amazon's search results.</span></p><p><span class="trust-mark" aria-hidden="true">2025</span><strong>October: Amazon's last stock sold</strong><span>Amazon itself carried the range from 2016. Its last offer ended on 18 October 2025; no seller since.</span></p></div></div>
 
   <!-- 2 · WHAT WE FOUND -->
   <section class="container section" id="found" aria-labelledby="found-title">
