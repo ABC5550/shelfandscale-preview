@@ -11,22 +11,18 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     /* demo additions on top of the site stylesheet */
-    .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding-block:64px 64px;min-height:calc(100vh - 86px);align-content:center}
+    .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);padding-block:64px 64px;min-height:calc(100vh - 86px);align-content:center}
     .hero h1{font-size:clamp(38px,3.7vw,58px)}
     .header-tag{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-left:auto;margin-right:22px}
-    .sheet-logo{height:18px;width:auto;display:block}
-    .hero .product-sheet{max-width:none;margin-left:auto;width:min(100%,600px)}
-    .hero .sheet-product{padding:16px 0 4px}
-    .hero .sheet-checks i.x{color:#8a3b2e}
-    .sheet-body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0 18px;margin-top:12px;align-items:stretch}
-    .product-sheet img.sheet-photo{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--rule)}
-    .nums{display:grid;grid-template-rows:1fr 1fr 1fr;border-left:1px solid var(--rule)}
-    .nums div{padding:12px 0 12px 18px;border-top:1px solid var(--rule);display:flex;flex-direction:column;justify-content:center}
-    .nums div:first-child{border-top:0}
-    .nums b{font-size:clamp(30px,2.6vw,40px)}
-    @media(max-width:900px){.sheet-body{grid-template-columns:1fr}.nums{border-left:0;margin-top:12px}}
-    .nums b{display:block;font-family:var(--display);font-weight:400;font-size:38px;line-height:1;color:var(--green);letter-spacing:-.02em}
-    .nums span{display:block;font-size:12px;color:var(--muted);margin-top:8px;line-height:1.45}
+    .hero-photo{margin:0;justify-self:end;display:flex;flex-direction:column;align-items:flex-end;max-width:100%}
+    .hero-photo img{display:block;height:min(72vh,720px);width:auto;max-width:100%;border:1px solid var(--rule);box-shadow:6px 6px 0 #e5e9df}
+    .hero-photo figcaption{display:flex;justify-content:space-between;gap:16px;width:100%;margin-top:16px;font-size:12px;color:var(--muted)}
+    .hero-photo figcaption .micro{color:var(--green);white-space:nowrap}
+    .hero-nums{display:grid;grid-template-columns:repeat(3,minmax(0,auto));gap:0 36px;justify-content:start;margin-top:40px;padding-top:20px;border-top:1px solid var(--rule)}
+    .hero-nums b{display:block;font-family:var(--display);font-weight:400;font-size:38px;line-height:1;color:var(--green);letter-spacing:-.02em}
+    .hero-nums span{display:block;font-size:12px;color:var(--muted);margin-top:8px;line-height:1.45;max-width:140px}
+    .hero .hero-note{margin-top:18px}
+    @media(max-width:900px){.hero-photo{justify-self:stretch;align-items:stretch}.hero-photo img{height:auto;width:100%}.hero-nums{gap:0 20px}}
     .found{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .found article{border-top:2px solid var(--green);padding-top:16px}
     .found .micro{display:block;color:var(--muted);margin-bottom:8px}
@@ -194,27 +190,19 @@
     <div class="hero-copy">
       <p class="eyebrow"><span class="eyebrow-line"></span> FOR FARRAH'S OF HARROGATE · AMAZON UK · A PLAN FOR Q4</p>
       <h1 id="hero-title">655 reviews. No stock.<br><em>Back on sale by Christmas.</em></h1>
-      <p class="hero-description">Amazon sold your range for nine years, then stopped in October 2025. Since then nothing on your 124 pages has been buyable, the 655-review fudge tin included. Fifty of them can be back on sale, on your own account, by 10 October.</p>
-      <p class="hero-audience">Four minutes to read. <strong>No call needed; reply to this page.</strong></p>
+      <p class="hero-description">Amazon sold your range for nine years, then stopped in October 2025. Fifty of your pages can be back on sale, on your own account, by 10 October.</p>
       <div class="button-row"><a class="button" href="#product">See your tin relisted <span aria-hidden="true">↓</span></a><a class="text-link" href="#cost">Go to the price <span aria-hidden="true">→</span></a></div>
-      <p class="hero-note">Figures from Amazon UK product data and our search base, checked 12 September.</p>
-    </div>
-    <div class="hero-art">
-      <div class="product-sheet">
-        <div class="sheet-top"><img src="img/farrahs-logo.png" alt="Farrah's of Harrogate" class="sheet-logo"><span class="sheet-number">ON AMAZON UK TODAY</span></div>
-        <div class="sheet-body">
-          <img class="sheet-photo" src="img/dima-fudge-serving.jpg" alt="Gallery concept: Farrah's Clotted Cream Fudge, cubes on a plate beside the box" width="960" height="1200">
-          <div class="nums">
-            <div><b data-count="124">0</b><span>pages under your name</span></div>
-            <div><b data-count="0">0</b><span>with anything to buy</span></div>
-            <div><b>Oct 25</b><span>when Amazon's last stock ran out</span></div>
-          </div>
-        </div>
-        <div class="sheet-product"><span>FARRAH'S DESIGNER BOX</span><h2>Clotted Cream Fudge</h2><p>483 reviews · 4.6 stars · Currently unavailable</p></div>
-        <div class="sheet-checks"><span><i aria-hidden="true">✓</i> Brand store live</span><span><i aria-hidden="true">✓</i> Reviews kept</span><span><i class="x" aria-hidden="true">✗</i> Nothing to buy</span></div>
+      <div class="hero-nums" aria-label="Farrah's on Amazon UK today">
+        <div><b data-count="124">0</b><span>pages under your name</span></div>
+        <div><b data-count="0">0</b><span>with anything to buy</span></div>
+        <div><b>Oct 25</b><span>when Amazon's last stock ran out</span></div>
       </div>
-      <div class="art-caption"><span class="micro">ILLUSTRATIVE GALLERY CONCEPT</span><span>Fudge and packaging to be confirmed against your current product</span></div>
+      <p class="hero-note">Amazon UK product data and our search base, checked 12 September.</p>
     </div>
+    <figure class="hero-photo">
+      <img src="img/dima-fudge-serving.jpg" alt="Gallery concept: Farrah's Clotted Cream Fudge, cubes on a plate beside the Designer Box" width="960" height="1200" fetchpriority="high">
+      <figcaption><span class="micro">ILLUSTRATIVE GALLERY CONCEPT</span><span>Fudge and packaging to be confirmed against your current product</span></figcaption>
+    </figure>
   </section>
 
   <!-- 1b · WHAT WE CHECKED -->
