@@ -11,10 +11,13 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     /* demo additions on top of the site stylesheet */
-    .hero{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);padding-block:64px 64px;min-height:calc(100vh - 86px);align-content:center}
+    .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding-block:64px 64px;min-height:calc(100vh - 86px);align-content:center}
     .hero h1{font-size:clamp(38px,3.7vw,58px)}
     .header-tag{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-left:auto;margin-right:22px}
     .sheet-logo{height:18px;width:auto;display:block}
+    .hero .product-sheet{max-width:none;margin-left:auto;width:min(100%,600px)}
+    .hero .sheet-product{padding:16px 0 4px}
+    .hero .sheet-checks i.x{color:#8a3b2e}
     .sheet-body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0 18px;margin-top:12px;align-items:stretch}
     .product-sheet img.sheet-photo{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--rule)}
     .nums{display:grid;grid-template-rows:1fr 1fr 1fr;border-left:1px solid var(--rule)}
@@ -22,7 +25,6 @@
     .nums div:first-child{border-top:0}
     .nums b{font-size:clamp(30px,2.6vw,40px)}
     @media(max-width:900px){.sheet-body{grid-template-columns:1fr}.nums{border-left:0;margin-top:12px}}
-    .nums div:first-child{border-left:0;padding-left:0}
     .nums b{display:block;font-family:var(--display);font-weight:400;font-size:38px;line-height:1;color:var(--green);letter-spacing:-.02em}
     .nums span{display:block;font-size:12px;color:var(--muted);margin-top:8px;line-height:1.45}
     .found{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -208,6 +210,8 @@
             <div><b>Oct 25</b><span>when Amazon's last stock ran out</span></div>
           </div>
         </div>
+        <div class="sheet-product"><span>FARRAH'S DESIGNER BOX</span><h2>Clotted Cream Fudge</h2><p>483 reviews · 4.6 stars · Currently unavailable</p></div>
+        <div class="sheet-checks"><span><i aria-hidden="true">✓</i> Brand store live</span><span><i aria-hidden="true">✓</i> Reviews kept</span><span><i class="x" aria-hidden="true">✗</i> Nothing to buy</span></div>
       </div>
       <div class="art-caption"><span class="micro">ILLUSTRATIVE GALLERY CONCEPT</span><span>Fudge and packaging to be confirmed against your current product</span></div>
     </div>
@@ -218,7 +222,7 @@
 
   <!-- 2 · WHAT WE FOUND -->
   <section class="container section" id="found" aria-labelledby="found-title">
-    <div class="section-heading"><div><p class="eyebrow">01 / WHAT WE FOUND</p><h2 id="found-title">Your seller was Amazon.<br><em>Amazon stopped.</em></h2></div><p>Three observations, each dated and sourced. Whether Amazon dropped the line or the line dropped Amazon, the effect is the same: since October 2025 nobody can buy Farrah's there.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">01 / WHAT WE FOUND</p><h2 id="found-title">Nothing to buy.<br><em>Everything else intact.</em></h2></div><p>Three observations, each dated and sourced. Whether Amazon dropped the line or the line dropped Amazon, the effect is the same: since October 2025 nobody can buy Farrah's there.</p></div>
     <div class="obs">
       <article>
         <span class="obs-n">01</span>
