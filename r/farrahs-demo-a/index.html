@@ -11,13 +11,17 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     /* demo additions on top of the site stylesheet */
-    .hero{grid-template-columns:minmax(0,1fr) minmax(0,.82fr);padding-block:64px 64px;min-height:calc(100vh - 86px);align-content:center}
+    .hero{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);padding-block:64px 64px;min-height:calc(100vh - 86px);align-content:center}
     .hero h1{font-size:clamp(38px,3.7vw,58px)}
     .header-tag{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-left:auto;margin-right:22px}
     .sheet-logo{height:18px;width:auto;display:block}
-    .product-sheet img.sheet-photo{display:block;width:100%;height:auto;max-height:250px;aspect-ratio:4/3;object-fit:cover;object-position:center 60%;border:1px solid var(--rule);margin-top:12px}
-    .nums{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--rule);margin:14px 0 0;padding-bottom:6px}
-    .nums div{padding:16px 12px 14px;border-left:1px solid var(--rule)}
+    .sheet-body{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:0 18px;margin-top:12px;align-items:stretch}
+    .product-sheet img.sheet-photo{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--rule)}
+    .nums{display:grid;grid-template-rows:1fr 1fr 1fr;border-left:1px solid var(--rule)}
+    .nums div{padding:12px 0 12px 18px;border-top:1px solid var(--rule);display:flex;flex-direction:column;justify-content:center}
+    .nums div:first-child{border-top:0}
+    .nums b{font-size:clamp(30px,2.6vw,40px)}
+    @media(max-width:900px){.sheet-body{grid-template-columns:1fr}.nums{border-left:0;margin-top:12px}}
     .nums div:first-child{border-left:0;padding-left:0}
     .nums b{display:block;font-family:var(--display);font-weight:400;font-size:38px;line-height:1;color:var(--green);letter-spacing:-.02em}
     .nums span{display:block;font-size:12px;color:var(--muted);margin-top:8px;line-height:1.45}
@@ -196,19 +200,21 @@
     <div class="hero-art">
       <div class="product-sheet">
         <div class="sheet-top"><img src="img/farrahs-logo.png" alt="Farrah's of Harrogate" class="sheet-logo"><span class="sheet-number">ON AMAZON UK TODAY</span></div>
-        <img class="sheet-photo" src="img/dima-fudge-serving.jpg" alt="Farrah's Clotted Cream Fudge, cubes on a plate beside the box" width="960" height="1200">
-        <div class="nums">
-          <div><b data-count="124">0</b><span>pages under your name</span></div>
-          <div><b data-count="0">0</b><span>with anything to buy</span></div>
-          <div><b>Oct 25</b><span>when Amazon's last stock ran out</span></div>
+        <div class="sheet-body">
+          <img class="sheet-photo" src="img/dima-fudge-serving.jpg" alt="Gallery concept: Farrah's Clotted Cream Fudge, cubes on a plate beside the box" width="960" height="1200">
+          <div class="nums">
+            <div><b data-count="124">0</b><span>pages under your name</span></div>
+            <div><b data-count="0">0</b><span>with anything to buy</span></div>
+            <div><b>Oct 25</b><span>when Amazon's last stock ran out</span></div>
+          </div>
         </div>
       </div>
-      <div class="art-caption"><span class="micro">WHAT IS ALREADY YOURS</span><span>Store, reviews and pages: nothing starts from zero</span></div>
+      <div class="art-caption"><span class="micro">ILLUSTRATIVE GALLERY CONCEPT</span><span>Fudge and packaging to be confirmed against your current product</span></div>
     </div>
   </section>
 
   <!-- 1b · WHAT WE CHECKED -->
-  <div class="trust-bar"><div class="container trust-grid"><p><span class="trust-mark" aria-hidden="true">01</span><strong>All 124 of your pages, read one by one</strong><span>Title, images, price, seller and offer history for every Farrah's page on Amazon UK, checked 12 September.</span></p><p><span class="trust-mark" aria-hidden="true">02</span><strong>Nine years of who sold what</strong><span>Every seller that ever held an offer on your pages, from Amazon itself in 2016 to the last one in October 2025.</span></p><p><span class="trust-mark" aria-hidden="true">03</span><strong>What shoppers type, not what we guess</strong><span>A year of Amazon UK searches, 1.46 million phrases, ranked by how often each is typed, behind every word we propose.</span></p></div></div>
+  <div class="trust-bar"><div class="container trust-grid"><p><span class="trust-mark" aria-hidden="true">01</span><strong>All 124 of your pages, read one by one</strong><span>Title, images, price and availability for every Farrah's page on Amazon UK, checked 12 September.</span></p><p><span class="trust-mark" aria-hidden="true">02</span><strong>Nine years of who sold what</strong><span>Every seller that ever held an offer on your pages, from Amazon itself in 2016 to the last one in October 2025.</span></p><p><span class="trust-mark" aria-hidden="true">03</span><strong>A Christmas test, not a relaunch</strong><span>Fifty pages, one season, on your own account. If Q4 pays, the rest of the range follows in January; if not, you have spent one Pilot Wave, not a year.</span></p></div></div>
 
   <!-- 2 · WHAT WE FOUND -->
   <section class="container section" id="found" aria-labelledby="found-title">
