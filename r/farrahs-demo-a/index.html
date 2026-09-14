@@ -140,6 +140,24 @@
     .fifty b{display:block;font-family:var(--display);font-weight:400;font-size:30px;line-height:1;color:var(--ink)}
     .fifty div.in b{color:var(--green)}
     .fifty span{display:block;font-size:12px;color:var(--muted);margin-top:6px;line-height:1.35}
+    .serp{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .serp article{background:#fff;border:1px solid var(--rule);padding:12px 12px 14px;font-family:var(--sans);position:relative;display:flex;flex-direction:column}
+    .serp article.you{outline:2px solid var(--green);outline-offset:-1px;background:#f7faf4;padding-top:30px}
+    .serp .you-tag{position:absolute;top:0;left:0;right:0;background:var(--green);color:#fff;font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px}
+    .serp-img{aspect-ratio:1/1;display:grid;place-items:center;background:#fff}
+    .serp-img img{max-width:100%;max-height:100%;object-fit:contain}
+    .serp h3{font-family:var(--sans);font-size:12.5px;font-weight:400;line-height:1.35;color:#0f1111;margin:10px 0 6px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .serp-rating{font-size:11px;color:#0f1111}.serp-rating .stars{color:#de7921;letter-spacing:1px}.serp-rating span:last-child{color:#007185}
+    .serp-sold{font-size:11px;color:#565959;margin-top:3px}
+    .serp-price{font-size:19px;color:#0f1111;margin-top:auto;padding-top:8px}
+    .tabs{display:flex;gap:8px;margin:0 0 14px}
+    .tabs button{font:inherit;font-size:13px;padding:9px 14px;border:1px solid var(--rule);background:#fff;color:var(--ink);cursor:pointer}
+    .tabs button.on{background:var(--green);color:#fff;border-color:var(--green)}
+    .ba.hide{display:none}
+    .pdp-thumbs span.im{padding:0;overflow:hidden;background:#fff}.pdp-thumbs span.im img{width:100%;height:100%;object-fit:cover;display:block}
+    .pdp-price{font-size:20px;color:#0f1111;margin-top:10px}.pdp-price small{font-size:10px;color:#565959;margin-left:6px}
+    .pdp-acc{list-style:none;margin:14px 0 0;padding:0}.pdp-acc li{font-size:13px;font-weight:600;color:#0f1111;padding:9px 0;border-top:1px solid #e3e6e3;display:flex;justify-content:space-between}.pdp-acc li:after{content:"⌄";color:#565959;font-weight:400}
+    @media(max-width:900px){.serp{grid-template-columns:repeat(2,1fr)}.tabs{flex-wrap:wrap}}
     .method{margin-top:40px;padding-top:28px;border-top:1px solid var(--rule);max-width:760px}
     .method p{font-size:14.5px;color:var(--muted);margin-top:10px}
     .method .sub-lede{margin:0;color:var(--ink)}
@@ -225,41 +243,44 @@
       <div class="example-footer"><p>Rank is the phrase's best weekly position over the year. "Farrah's" and "Harrogate toffee" do not appear in the base: shoppers search the category, not the name, so the category words have to be in the title.</p></div>
 
       <div class="edge">
-        <div class="edge-head"><p class="sub-lede">Fudge gift boxes at your price already sell. With a fraction of your reviews.</p><p>Two fudge gifts at £10–13, both listed in 2025, and what they sell with. Amazon's own "bought in past month" badge, read 14 September. Amazon shows a range, not an exact count.</p></div>
-        <div class="edge-grid">
-          <article><span class="micro">BENTLEY &amp; ACKERMAN · LISTED SEPTEMBER 2025</span><h3>Clotted Cream Fudge gift jar, 520g · £12.99</h3><b>200+</b><span>bought in the past month · 49 reviews, 4.5 stars</span></article>
-          <article><span class="micro">STRAWBERRY LEDGE · LISTED MARCH 2025</span><h3>Fudge sweets gift box · £9.99</h3><b>200+</b><span>bought in the past month · 77 reviews, 4.4 stars</span></article>
-          <article class="you"><span class="micro">FARRAH'S · LISTED DECEMBER 2012</span><h3>Butter Fudge tin, 300g · unavailable</h3><b>0</b><span>bought in the past month · 655 reviews, 4.6 stars</span></article>
+        <div class="edge-head"><p class="sub-lede">The shelf for "fudge gift set", with your tin put back on it.</p><p>Organic results as read on 14 September, sponsored tiles left out. Your relisted tin is placed third to compare, not to promise a position: rank follows sales. What it brings to the row is 655 reviews against 3 to 272.</p></div>
+        <div class="serp">
+<article><div class="serp-img"><img src="img/serp-B0H3L793VS.jpg" alt="Oaktree Hampers fudge gift set" loading="lazy"></div><h3>Fudge Gift Set – 5 Assorted Full Size Fudge Bars Including Rum and Raisin Fudge, Clotted Cream…</h3><div class="serp-rating"><span class="stars">★★★★☆</span> 3.9 <span>(3)</span></div><div class="serp-sold">50+ bought in past month</div><div class="serp-price">£16.99</div></article>
+<article><div class="serp-img"><img src="img/serp-B0DZWG6C9F.jpg" alt="Strawberry Ledge fudge gift box" loading="lazy"></div><h3>Fudge | Sweets Gift Box | Clotted Cream, Chocolate, Vanilla Bars And 6 Individually Wrapped…</h3><div class="serp-rating"><span class="stars">★★★★☆</span> 4.4 <span>(77)</span></div><div class="serp-sold">200+ bought in past month</div><div class="serp-price">£9.99</div></article>
+<article class="you"><span class="you-tag">Your relisted tin · illustrative</span><div class="serp-img"><img src="img/today-fudge-tin.jpg" alt="Farrah's Butter Fudge tin, relisted" loading="lazy"></div><h3>Farrah's of Harrogate Butter Fudge Gift Tin 300g - Handmade Olde English Fudge in an Embossed Collector's Tin, Sweets Gift Box…</h3><div class="serp-rating"><span class="stars">★★★★★</span> 4.6 <span>(655)</span></div><div class="serp-sold">on Amazon since 2012</div><div class="serp-price">£11.98</div></article>
+<article><div class="serp-img"><img src="img/serp-B0FQ6HWDY7.jpg" alt="Bentley and Ackerman fudge jar" loading="lazy"></div><h3>Clotted Cream Fudge - 520g - Original Clotted Cream Fudge in a Gift Jar By Bentley & Ackerman</h3><div class="serp-rating"><span class="stars">★★★★☆</span> 4.5 <span>(49)</span></div><div class="serp-sold">200+ bought in past month</div><div class="serp-price">£12.99</div></article>
+<article><div class="serp-img"><img src="img/serp-B0BMYJL3K6.jpg" alt="Confection Cabin fudge gift set" loading="lazy"></div><h3>Fudge Gift Set in 5 Flavours (5 Bars x 130g) - Salted Caramel, Rum and Raisin, Chocolate…</h3><div class="serp-rating"><span class="stars">★★★★☆</span> 4.5 <span>(272)</span></div><div class="serp-sold">50+ bought in past month</div><div class="serp-price">£17.99</div></article>
         </div>
-        <p class="process-note">Nine years of reviews is the thing new sellers cannot buy. Both boxes on the left started from zero last year; your tin starts from 655. The only thing it is missing is an offer.</p>
+        <p class="process-note">Titles, stars, review counts, "bought in past month" and prices as shown on 14 September. Delivery lines and badges left out: they change daily. Your tin's price is its last Amazon price, October 2025.</p>
       </div>
     </div>
   </section>
 
   <!-- 3 · ONE PRODUCT, NOW → RELISTED -->
   <section class="container section" id="product" aria-labelledby="product-title">
-    <div class="section-heading"><div><p class="eyebrow">02 / ONE TIN, NOW AND RELISTED</p><h2 id="product-title">Your best page.<br><em>Drag to see it relisted.</em></h2></div><p>The Butter Fudge tin, your most-reviewed page: 655 reviews at 4.6 stars, on Amazon since 2012. Today on the left, relisted on the right, in the same frame. Drag the handle.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">02 / TWO PAGES, NOW AND RELISTED</p><h2 id="product-title">Two of your pages.<br><em>Drag to see them relisted.</em></h2></div><p>The fudge tin, your most-reviewed page, and the three-tin gift set, a page with one photo and one review. Today on the left, relisted on the right, in the same frame. Drag the handle; switch pages above it.</p></div>
 
-    <div class="ba" data-ba>
+    <div class="tabs" role="tablist"><button type="button" class="on" data-tab="fudge" role="tab">Butter Fudge tin · 655 reviews</button><button type="button" data-tab="triple" role="tab">Three-tin gift set · 1 review</button></div>
+    <div class="ba" data-ba data-pane="fudge">
       <div class="ba-after">
         <div class="pdp">
           <div class="pdp-gallery">
-            <div class="pdp-thumbs"><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="pdp-thumbs"><span class="on"></span><span class="im"><img src="img/fudge-tin-inside.jpg" alt=""></span><span class="im"><img src="img/fudge-tin-gift.jpg" alt=""></span><span class="x" title="planned"></span><span class="x" title="planned"></span><span class="x" title="planned"></span><span class="x" title="planned"></span></div>
             <img src="img/fudge-tin.jpg" alt="Relisted main image" width="900" height="900">
           </div>
           <div class="pdp-copy">
             <span class="pdp-brand">Visit the Farrah's Store</span>
             <h3>Farrah's of Harrogate Butter <u>Fudge Gift</u> Tin 300g - Handmade Olde English Fudge in an Embossed Collector's Tin, <u>Sweets Gift Box</u> for <u>Christmas</u>, Birthdays and Thank-Yous, Made in Yorkshire since 1840</h3>
             <div class="pdp-rating"><span class="stars">★★★★★</span> 4.6 · 655 ratings</div>
-            <div class="pdp-stock">In stock · Prime eligible · Dispatched from Amazon</div>
-            <ul class="pdp-bullets"><li>Handmade butter fudge in the 1910 Art Nouveau tin that once held Harrogate Toffee</li><li>Made with three sugars for a crumbly, creamy texture</li><li>300 g tin: a sweets gift box for Christmas, birthdays and thank-yous</li><li>Farrah's of Harrogate, North Yorkshire, since 1840</li><li>Keep the tin: embossed, collectable, refill it with your favourite sweets</li></ul>
+            <div class="pdp-price">£11.98 <small>last Amazon price</small></div><div class="pdp-stock">In stock · Prime · Dispatched from Amazon</div>
+            <ul class="pdp-acc"><li>Ingredients</li><li>Top highlights</li><li>Item details</li><li>Measurements</li></ul>
           </div>
         </div>
       </div>
       <div class="ba-before">
         <div class="pdp">
           <div class="pdp-gallery">
-            <div class="pdp-thumbs"><span class="on"></span><span></span><span></span><span></span><span></span><span></span><span class="x"></span></div>
+            <div class="pdp-thumbs"><span class="on"></span><span></span><span></span><span></span><span></span><span></span></div>
             <img src="img/today-fudge-tin.jpg" alt="Main image on Amazon today" width="900" height="900">
           </div>
           <div class="pdp-copy">
@@ -267,7 +288,7 @@
             <h3>Farrah's of Harrogate Fudge - 300g Luxury Fudge Art Nouveau Tin</h3>
             <div class="pdp-rating"><span class="stars">★★★★★</span> 4.6 · 655 ratings</div>
             <div class="pdp-stock off">Currently unavailable. We don't know when or if this item will be back in stock.</div>
-            <ul class="pdp-bullets"><li>The Original Farrah's of Harrogate - 300g Luxury Fudge</li><li>Art Nouveau Embossed Collectable Tin</li><li>Made from 3 types of sugar for a gorgeously creamy texture and taste</li><li>Traditionally handmade fudge</li><li>Farrah's of Harrogate, North Yorkshire was established in 1840</li></ul>
+            <ul class="pdp-acc"><li>Ingredients</li><li>Top highlights</li><li>Item details</li><li>Measurements</li></ul>
           </div>
         </div>
         <span class="ba-tag">On Amazon today · B00APYN3TG</span>
@@ -276,10 +297,46 @@
       <div class="ba-handle" aria-hidden="true"><span></span></div>
       <input class="ba-range" type="range" min="0" max="100" value="49" aria-label="Drag to compare the page today with the relisted page">
     </div>
+    <div class="ba hide" data-ba data-pane="triple">
+      <div class="ba-after">
+        <div class="pdp">
+          <div class="pdp-gallery">
+            <div class="pdp-thumbs"><span class="on"></span><span class="im"><img src="img/triple-gift.jpg" alt=""></span><span class="im"><img src="img/triple-inside.jpg" alt=""></span><span class="x" title="planned"></span><span class="x" title="planned"></span><span class="x" title="planned"></span><span class="x" title="planned"></span></div>
+            <img src="img/today-triple.jpg" alt="Relisted main image" width="900" height="900">
+          </div>
+          <div class="pdp-copy">
+            <span class="pdp-brand">Visit the Farrah's Store</span>
+            <h3>Farrah's of Harrogate <u>Gift Set</u>, 3 x 100g Embossed Tins - Harrogate Toffee, Original Toffee and Lemon Fudge, <u>Sweet Hamper</u> for <u>Christmas</u>, Birthdays and Thank-Yous, Made in Yorkshire since 1840</h3>
+            <div class="pdp-rating"><span class="stars">★★★★★</span> 5.0 · 1 rating</div>
+            <div class="pdp-price">£10.99 <small>last Amazon price</small></div><div class="pdp-stock">In stock · Prime · Dispatched from Amazon</div>
+            <ul class="pdp-acc"><li>Ingredients</li><li>Top highlights</li><li>Item details</li><li>Measurements</li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="ba-before">
+        <div class="pdp">
+          <div class="pdp-gallery">
+            <div class="pdp-thumbs"><span class="on"></span></div>
+            <img src="img/today-triple.jpg" alt="Main image on Amazon today" width="900" height="900">
+          </div>
+          <div class="pdp-copy">
+            <span class="pdp-brand">Brand: FARRAH'S</span>
+            <h3>Farrah's - Sweet Box Triple Set Tins (3x100g), Toffee, Original Fudge & Original Toffee</h3>
+            <div class="pdp-rating"><span class="stars">★★★★★</span> 5.0 · 1 rating</div>
+            <div class="pdp-stock off">Currently unavailable. We don't know when or if this item will be back in stock.</div>
+            <ul class="pdp-acc"><li>Ingredients</li><li>Top highlights</li><li>Item details</li><li>Measurements</li></ul>
+          </div>
+        </div>
+        <span class="ba-tag">On Amazon today · B0CJCLPXYF</span>
+      </div>
+      <span class="ba-tag ba-tag-after">Relisted · illustrative</span>
+      <div class="ba-handle" aria-hidden="true"><span></span></div>
+      <input class="ba-range" type="range" min="0" max="100" value="49" aria-label="Drag to compare the page today with the relisted page">
+    </div>
     <div class="ba-legend"><span>◀ Drag: today</span><span>relisted ▶</span></div>
 
     <div class="ba-facts">
-      <div class="facts-today"><span class="micro">WHAT CHANGES</span><div class="data-row"><span>Title</span><strong>63 → 194 characters, three searched phrases</strong></div><div class="data-row"><span>Offer</span><strong>none → your own, on FBA</strong></div><div class="data-row"><span>Images</span><strong>6 close-ups → 7 with a purpose</strong></div><div class="data-row"><span>Bullets</span><strong>trade notes → five facts a shopper reads</strong></div><div class="data-row"><span>Reviews</span><strong>655 kept</strong></div></div>
+      <div class="facts-today"><span class="micro">WHAT CHANGES</span><div class="data-row"><span>Title</span><strong>trade description → three searched phrases, under 200 characters</strong></div><div class="data-row"><span>Offer</span><strong>none → your own, on FBA</strong></div><div class="data-row"><span>Images</span><strong>6 close-ups, or 1 pack shot → 7 with a purpose</strong></div><div class="data-row"><span>Bullets</span><strong>trade notes → five facts, filed under "Top highlights"</strong></div><div class="data-row"><span>Reviews</span><strong>655 and 1 → kept, on the same pages</strong></div></div>
       <div class="facts-after"><span class="micro">WHY THESE WORDS</span><div class="keyword-tags"><span>sweets gift box</span><span>fudge</span><span>fudge gift set</span><span>christmas sweets</span></div><div class="result-deliverables"><div><span aria-hidden="true">✓</span><p><strong>Title from what shoppers type</strong>"Sweets gift box" ranks 329th of 1.46 million and sits in the title word for word; "fudge gift set" and "christmas sweets" go into the bullets and search terms. No word more than twice, as Amazon's rules require.</p></div><div><span aria-hidden="true">✓</span><p><strong>Seven images with a purpose</strong>Tin on white, the open tin, what is inside, the 1910 tin it replicates, gift moment, size against a hand, the range.</p></div><div><span aria-hidden="true">✓</span><p><strong>Same page, same reviews</strong>We relist the existing ASIN under your own seller account, so the 655 reviews and the ranking history stay.</p></div></div></div>
     </div>
 
@@ -358,6 +415,7 @@
 <footer class="footer"><div class="container"><div class="footer-main"><a class="wordmark" href="https://shelfandscale.com/">shelf<span>&amp;</span>scale<span class="wordmark-period">.</span></a><p>Amazon catalogue &amp; brand management.<br>Built for the whole range.</p><a class="back-top text-link" href="#">Back to top <span aria-hidden="true">↑</span></a></div><p class="footer-legal">Prepared for Farrah's of Harrogate Ltd on 12 September 2026 from public Amazon UK product data and our own search base. Product images on the relisted side are illustrative concepts from Farrah's public range; Farrah's and Harrogate Toffee are trade marks of their owner. Shelf &amp; Scale is a trading name of Shopcienty Limited, registered in England and Wales, company number 14960765, registered office 7 Bell Yard, London WC2A 2JR. <a href="https://abc5550.github.io/shelfandscale-preview/v4/privacy.html">Privacy notice</a>.</p><div class="footer-bottom"><span>© 2026 Shelf &amp; Scale · United Kingdom</span><span>Private page · not indexed</span><span>All prices exclude VAT</span></div></div></footer>
 <script>
 (function(){
+  document.querySelectorAll('.tabs button').forEach(function(t){t.addEventListener('click',function(){var k=t.dataset.tab;t.parentNode.querySelectorAll('button').forEach(function(b){b.classList.toggle('on',b===t)});document.querySelectorAll('[data-pane]').forEach(function(p){p.classList.toggle('hide',p.dataset.pane!==k)});});});
   document.querySelectorAll('[data-ba],[data-ib]').forEach(function(w){
     var r=w.querySelector('.ba-range'),b=w.querySelector('.ba-before, .ib-before'),h=w.querySelector('.ba-handle');
     function set(v){b.style.clipPath='inset(0 '+(100-v)+'% 0 0)';h.style.left=v+'%';}
