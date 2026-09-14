@@ -140,6 +140,13 @@
     .fifty b{display:block;font-family:var(--display);font-weight:400;font-size:30px;line-height:1;color:var(--ink)}
     .fifty div.in b{color:var(--green)}
     .fifty span{display:block;font-size:12px;color:var(--muted);margin-top:6px;line-height:1.35}
+    .page-block{margin-top:34px}
+    .page-block:first-of-type{margin-top:0}
+    .page-head{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+    .page-num{font-family:var(--display);font-style:italic;font-size:26px;color:#68855a;line-height:1}
+    .page-head h3{font-family:var(--sans);font-size:17px;font-weight:500;margin:0}
+    .page-head p{font-size:12.5px;color:var(--muted);margin:2px 0 0}
+    .page-asin{margin-left:auto;font:11px monospace;color:var(--muted)}
     .shot{position:relative;border:1px solid var(--rule);background:#fff;overflow:hidden;user-select:none}
     .shot img{display:block;width:100%;height:auto}
     .shot .ib-before{position:absolute;inset:0}
@@ -249,35 +256,38 @@
       <div class="example-footer"><p>Rank is the phrase's best weekly position over the year. "Farrah's" and "Harrogate toffee" do not appear in the base: shoppers search the category, not the name, so the category words have to be in the title.</p></div>
 
       <div class="edge">
-        <div class="edge-head"><p class="sub-lede">The shelf for "fudge gift set", with your tin put back on it.</p><p>Amazon UK organic results, 14 September, sponsored tiles and delivery lines removed. Your relisted tin is placed third to compare, not to promise a position: rank follows sales. It brings 654 reviews to a row of 3 to 272.</p></div>
-        <figure class="shot-figure"><img src="img/serp-shelf.jpg" alt="Amazon UK search results for fudge gift set with the Farrah's Butter Fudge tin placed third" loading="lazy" width="1568" height="490"><figcaption>Amazon.co.uk, search "fudge gift set", 14 September 2026. Prices in GBP as listed that day. The outlined tile is illustrative; its price is the tin's last Amazon price, October 2025.</figcaption></figure>
+        <div class="edge-head"><p class="sub-lede">The shelf for "fudge gift set", with your tin put back on it.</p><p>Amazon UK, organic results on 14 September, sponsored tiles and delivery lines taken out. Your relisted tin is placed third to compare, not to promise a position: rank follows sales. It brings 654 reviews to a row of 3 to 272.</p></div>
+        <figure class="shot-figure"><img src="img/serp-shelf.jpg" alt="Amazon UK search results for fudge gift set with the Farrah's Butter Fudge tin placed third" loading="lazy" width="1568" height="575"><figcaption>Amazon.co.uk, search "fudge gift set", 14 September 2026. Prices in GBP as listed that day. The Farrah's tile is illustrative: new main image, new title, the tin's last Amazon price from October 2025.</figcaption></figure>
       </div>
     </div>
   </section>
 
   <!-- 3 · ONE PRODUCT, NOW → RELISTED -->
   <section class="container section" id="product" aria-labelledby="product-title">
-    <div class="section-heading"><div><p class="eyebrow">02 / TWO PAGES, NOW AND RELISTED</p><h2 id="product-title">Two of your pages.<br><em>Drag to see them relisted.</em></h2></div><p>Two real Amazon pages: the fudge tin, your most-reviewed, and the three-tin gift set, one photo and one review. Left: the page as it is today. Right: the same page with the title, offer and images we would file. Drag the handle; switch pages above it.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">02 / TWO PAGES, NOW AND RELISTED</p><h2 id="product-title">Two of your pages.<br><em>Drag to see them relisted.</em></h2></div><p>Two of your real Amazon pages, the fudge tin and the toffee tin. Left, the page as it is today. Right, the same page with the main image, title and offer we would file: everything else is Amazon's own. Drag the handle.</p></div>
 
-    <div class="tabs" role="tablist"><button type="button" class="on" data-tab="fudge" role="tab">Butter Fudge tin · 654 reviews</button><button type="button" data-tab="triple" role="tab">Three-tin gift set · 1 review</button></div>
-    <div class="ba shot" data-ib data-pane="fudge">
-      <img class="ib-after" src="img/after-fudge.jpg" alt="The same Amazon page, relisted: new title, price, Prime, in stock" width="1100" height="560">
-      <img class="ib-before" src="img/before-fudge.jpg" alt="The Amazon page today: currently unavailable" width="1100" height="560">
-      <span class="ba-tag">On Amazon today · B00APYN3TG</span><span class="ba-tag ba-tag-after">Relisted · illustrative</span>
-      <div class="ba-handle" aria-hidden="true"><span></span></div>
-      <input class="ba-range" type="range" min="0" max="100" value="46" aria-label="Drag to compare the page today with the relisted page">
+    <div class="page-block">
+      <div class="page-head"><span class="page-num">01</span><div><h3>Butter Fudge, Art Nouveau tin 300g</h3><p>654 reviews · 4.6 stars · on Amazon since December 2012</p></div><span class="page-asin">B00APYN3TG</span></div>
+      <div class="ba shot" data-ib>
+        <img class="ib-after" src="img/after-fudge.jpg" alt="Butter Fudge, Art Nouveau tin 300g: the same Amazon page relisted, with new main image, title, price and Prime" width="1540" height="690">
+        <img class="ib-before" src="img/before-fudge.jpg" alt="Butter Fudge, Art Nouveau tin 300g: the Amazon page today, currently unavailable" width="1540" height="690">
+        <div class="ba-handle" aria-hidden="true"><span></span></div>
+        <input class="ba-range" type="range" min="0" max="100" value="30" aria-label="Drag to compare the page today with the relisted page">
+      </div>
+      <div class="ba-legend"><span>◀ Today · currently unavailable</span><span>Relisted · illustrative ▶</span></div>
     </div>
-    <div class="ba shot hide" data-ib data-pane="triple">
-      <img class="ib-after" src="img/after-triple.jpg" alt="The same Amazon page, relisted: new title, price, Prime, in stock" width="1100" height="560">
-      <img class="ib-before" src="img/before-triple.jpg" alt="The Amazon page today: currently unavailable" width="1100" height="560">
-      <span class="ba-tag">On Amazon today · B0CJCLPXYF</span><span class="ba-tag ba-tag-after">Relisted · illustrative</span>
-      <div class="ba-handle" aria-hidden="true"><span></span></div>
-      <input class="ba-range" type="range" min="0" max="100" value="46" aria-label="Drag to compare the page today with the relisted page">
+    <div class="page-block">
+      <div class="page-head"><span class="page-num">02</span><div><h3>Harrogate Toffee, Crescent tin 300g</h3><p>140 reviews · 4.3 stars · on Amazon since March 2012</p></div><span class="page-asin">B007N3GU0Q</span></div>
+      <div class="ba shot" data-ib>
+        <img class="ib-after" src="img/after-toffee.jpg" alt="Harrogate Toffee, Crescent tin 300g: the same Amazon page relisted, with new main image, title, price and Prime" width="1290" height="640">
+        <img class="ib-before" src="img/before-toffee.jpg" alt="Harrogate Toffee, Crescent tin 300g: the Amazon page today, currently unavailable" width="1290" height="640">
+        <div class="ba-handle" aria-hidden="true"><span></span></div>
+        <input class="ba-range" type="range" min="0" max="100" value="30" aria-label="Drag to compare the page today with the relisted page">
+      </div>
+      <div class="ba-legend"><span>◀ Today · currently unavailable</span><span>Relisted · illustrative ▶</span></div>
     </div>
-    <div class="ba-legend"><span>◀ Drag: today</span><span>relisted ▶</span></div>
-
     <div class="ba-facts">
-      <div class="facts-today"><span class="micro">WHAT CHANGES</span><div class="data-row"><span>Title</span><strong>trade description → three searched phrases, under 200 characters</strong></div><div class="data-row"><span>Offer</span><strong>none → your own, on FBA</strong></div><div class="data-row"><span>Images</span><strong>6 close-ups, or 1 pack shot → 7 with a purpose</strong></div><div class="data-row"><span>Bullets</span><strong>trade notes → five facts, filed under "Top highlights"</strong></div><div class="data-row"><span>Reviews</span><strong>654 and 1 → kept, on the same pages</strong></div></div>
+      <div class="facts-today"><span class="micro">WHAT CHANGES · BOTH PAGES</span><div class="data-row"><span>Title</span><strong>trade description → three searched phrases, under 200 characters</strong></div><div class="data-row"><span>Offer</span><strong>none → your own, on FBA</strong></div><div class="data-row"><span>Images</span><strong>lid close-ups → tin with the fudge in front, the open tin, the gift moment</strong></div><div class="data-row"><span>Bullets</span><strong>trade notes → five facts, filed under "Top highlights"</strong></div><div class="data-row"><span>Reviews</span><strong>654 and 140 → kept, on the same pages</strong></div></div>
       <div class="facts-after"><span class="micro">WHY THESE WORDS</span><div class="keyword-tags"><span>sweets gift box</span><span>fudge</span><span>fudge gift set</span><span>christmas sweets</span></div><div class="result-deliverables"><div><span aria-hidden="true">✓</span><p><strong>Title from what shoppers type</strong>"Sweets gift box" ranks 329th of 1.46 million and sits in the title word for word; "fudge gift set" and "christmas sweets" go into the bullets and search terms. No word more than twice, as Amazon's rules require.</p></div><div><span aria-hidden="true">✓</span><p><strong>Seven images with a purpose</strong>Tin on white, the open tin, what is inside, the 1910 tin it replicates, gift moment, size against a hand, the range.</p></div><div><span aria-hidden="true">✓</span><p><strong>Same page, same reviews</strong>We relist the existing ASIN under your own seller account, so the 654 reviews and the ranking history stay.</p></div></div></div>
     </div>
 
