@@ -43,6 +43,27 @@
     .shelf-grid b{display:block;font-family:var(--display);font-weight:400;font-size:26px;line-height:1;color:var(--green)}
     .shelf-grid div>span:last-child{display:block;font-size:11.5px;color:var(--muted);margin-top:5px}
     .sub-lede{font-family:var(--display);font-size:22px;letter-spacing:-.01em;margin:0 0 10px}
+
+    /* observations, three-up, airy */
+    .obs{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:8px}
+    .obs article{border-top:1px solid var(--rule);padding-top:22px;display:flex;flex-direction:column}
+    .obs-n{font-family:var(--display);font-style:italic;font-size:30px;color:#68855a;line-height:1;margin-bottom:22px}
+    .obs h3{font-family:var(--sans);font-weight:500;font-size:21px;letter-spacing:-.01em;margin:0 0 12px;color:var(--ink)}
+    .obs p{font-size:15px;color:var(--muted);margin:0 0 14px;line-height:1.6}
+    .obs-src{font-size:12.5px;color:var(--muted);margin-bottom:18px}
+    .obs article>b{margin-top:auto;font-size:15px;font-weight:600;color:var(--ink)}
+    .edge{margin-top:56px;padding-top:36px;border-top:1px solid var(--rule)}
+    .edge-head{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:18px}
+    .edge-head p{margin:0}
+    .edge-head p:last-child{font-size:14px;color:var(--muted)}
+    .edge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .edge-grid article{border:1px solid var(--rule);background:#fff;padding:18px 18px 16px}
+    .edge-grid article.you{background:#edf2e8;border-color:var(--green)}
+    .edge-grid h3{font-family:var(--sans);font-size:13.5px;font-weight:500;margin:4px 0 12px;color:var(--ink)}
+    .edge-grid b{display:block;font-family:var(--display);font-weight:400;font-size:34px;line-height:1;color:var(--green)}
+    .edge-grid article.you b{color:#8a3b2e}
+    .edge-grid article>span:last-child{display:block;font-size:12px;color:var(--muted);margin-top:8px}
+    @media(max-width:900px){.obs,.edge-head{grid-template-columns:1fr}.edge-grid{grid-template-columns:1fr}}
     /* anatomy */
     .anat{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start;margin:8px 0 34px}
     .anat-shot{position:relative;border:1px solid var(--rule);background:#fff}
@@ -187,50 +208,66 @@
   </section>
 
   <!-- 2 · WHAT WE FOUND -->
-  <section class="work-section" id="found" aria-labelledby="found-title">
+  <section class="container section" id="found" aria-labelledby="found-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / WHAT WE FOUND</p><h2 id="found-title">Your seller was Amazon.<br><em>Amazon stopped.</em></h2></div><p>Three observations, each dated and sourced. Whether Amazon dropped the line or the line dropped Amazon, the effect is the same: since October 2025 nobody can buy Farrah's there.</p></div>
+    <div class="obs">
+      <article>
+        <span class="obs-n">01</span>
+        <h3>124 pages, none for sale.</h3>
+        <p>Listed between 2012 and 2026, the newest in July this year. Every one shows "Currently unavailable". A page with no offer is kept out of search, so "fudge gift set" returns Bon Bons and Strawberry Ledge, never Farrah's.</p>
+        <span class="obs-src">Amazon product data · 12 September 2026</span>
+        <b>The pages are still yours.</b>
+      </article>
+      <article>
+        <span class="obs-n">02</span>
+        <h3>Amazon sold it. Nobody else does.</h3>
+        <p>Amazon carried your tins on Vendor terms from November 2016 to October 2025. The toffee tin's last Amazon offer ended on 18 October, the fudge tin's on 6 October. Two gift resellers had stopped earlier, in 2022 and 2024.</p>
+        <span class="obs-src">Offer history, 2016–2025</span>
+        <b>Since then, no seller at all.</b>
+      </article>
+      <article>
+        <span class="obs-n">03</span>
+        <h3>The store and the reviews survived.</h3>
+        <p>Your brand store is still up. The Butter Fudge tin keeps its 655 reviews at 4.6 stars, the Designer Box 483, the toffee tin 140. An offer put back on these pages returns them to search with that history intact.</p>
+        <span class="obs-src">Amazon UK product pages · 11 September 2026</span>
+        <b>Nothing starts from zero.</b>
+      </article>
+    </div>
+  </section>
+
+  <!-- 2b · THE DEMAND -->
+  <section class="work-section" id="demand" aria-labelledby="demand-title">
     <div class="container section">
-      <div class="section-heading"><div><p class="eyebrow">01 / WHAT WE FOUND</p><h2 id="found-title">Your seller was Amazon.<br><em>Amazon stopped.</em></h2></div><p>Three observations, each dated and sourced. Whether Amazon dropped the line or the line dropped Amazon, the effect is the same: since October 2025 nobody can buy Farrah's there, and the pages have gone out of search.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">02 / THE DEMAND</p><h2 id="demand-title">The searches never stopped.<br><em>Your pages did.</em></h2></div><p>Amazon ranks every phrase by how often shoppers type it. These are the phrases your range answers, where each ranks among 1.46 million phrases typed into Amazon UK last year, and whether your titles say it.</p></div>
+      <table class="demand">
+        <thead><tr><th>What shoppers type</th><th>Rank of 1.46M</th><th>When</th><th>In your titles</th></tr></thead>
+        <tbody>
+          <tr><td class="q">sweets gift box</td><td class="r">329th</td><td>every week</td><td class="no">no</td></tr>
+          <tr><td class="q">christmas sweets</td><td class="r">778th</td><td>September to December</td><td class="no">no</td></tr>
+          <tr><td class="q">fudge</td><td class="r">1,158th</td><td>every week</td><td class="yes">5 of 20 titles</td></tr>
+          <tr><td class="q">sweet hamper</td><td class="r">2,065th</td><td>every week</td><td class="no">no</td></tr>
+          <tr><td class="q">stocking fillers for adults</td><td class="r">2,818th</td><td>October to December</td><td class="no">no</td></tr>
+          <tr><td class="q">fudge gift set</td><td class="r">3,694th</td><td>every week</td><td class="no">no</td></tr>
+          <tr><td class="q">retro sweets gift box</td><td class="r">5,532nd</td><td>every week</td><td class="no">no</td></tr>
+        </tbody>
+      </table>
+      <div class="example-footer"><p>Rank is the phrase's best weekly position over the year. "Farrah's" and "Harrogate toffee" do not appear in the base: shoppers search the category, not the name, so the category words have to be in the title.</p></div>
 
-      <div class="found">
-        <article><span class="micro">01 · THE PAGES · AMAZON PRODUCT DATA, 12 SEP 2026</span><h3>124 pages, none for sale.</h3><p>Listed between 2012 and 2026, the newest in July this year. Every one shows <b>"Currently unavailable"</b>. A page with no offer is kept out of search, so "fudge gift set" returns Bon Bons, Strawberry Ledge and Amazon's own fudge, never Farrah's.</p></article>
-        <article><span class="micro">02 · THE SELLER · OFFER HISTORY, 2016–2025</span><h3>Amazon sold it. Nobody else does.</h3><p>Amazon carried your tins on Vendor terms from <b>November 2016 to October 2025</b>: the toffee tin's last Amazon offer ended on 18 October, the fudge tin's on 6 October. Two gift resellers had stopped earlier, in 2022 and 2024. Since then, no seller at all.</p></article>
-        <article><span class="micro">03 · THE DEMAND · 1.46M UK SEARCH PHRASES, 52 WEEKS</span><h3>The searches never stopped.</h3><p>"Sweets gift box" ranks <b>329th</b> of 1.46 million phrases typed into Amazon UK; "fudge gift set" 3,694th; "sweet hamper" 2,065th. All three every week of the year. The Christmas phrases start climbing now.</p></article>
-      </div>
-
-      <div class="two-col">
-        <div>
-          <p class="sub-lede">What shoppers type, and whether your titles say it</p>
-          <table class="demand">
-            <thead><tr><th>Phrase</th><th>Rank of 1.46M</th><th>When</th><th>In your titles</th></tr></thead>
-            <tbody>
-              <tr><td class="q">sweets gift box</td><td class="r">329th</td><td>every week</td><td class="no">no</td></tr>
-              <tr><td class="q">christmas sweets</td><td class="r">778th</td><td>September to December</td><td class="no">no</td></tr>
-              <tr><td class="q">fudge</td><td class="r">1,158th</td><td>every week</td><td class="yes">5 of 20 titles</td></tr>
-              <tr><td class="q">sweet hamper</td><td class="r">2,065th</td><td>every week</td><td class="no">no</td></tr>
-              <tr><td class="q">stocking fillers for adults</td><td class="r">2,818th</td><td>October to December</td><td class="no">no</td></tr>
-              <tr><td class="q">fudge gift set</td><td class="r">3,694th</td><td>every week</td><td class="no">no</td></tr>
-              <tr><td class="q">retro sweets gift box</td><td class="r">5,532nd</td><td>every week</td><td class="no">no</td></tr>
-            </tbody>
-          </table>
-          <p class="process-note">Rank is the phrase's best weekly position over the year. "Farrah's" and "Harrogate toffee" do not appear in the base: shoppers search the category, not the name, so the category words have to be in the title.</p>
+      <div class="edge">
+        <div class="edge-head"><p class="sub-lede">Fudge gift boxes at your price already sell. With a fraction of your reviews.</p><p>Two fudge gifts at £10–13, both listed in 2025, and what they sell with. Amazon's own "bought in past month" badge, 14 September; a bucket, not a forecast.</p></div>
+        <div class="edge-grid">
+          <article><span class="micro">BENTLEY &amp; ACKERMAN · LISTED SEPTEMBER 2025</span><h3>Clotted Cream Fudge gift jar, 520g · £12.99</h3><b>200+</b><span>bought in the past month · 49 reviews, 4.5 stars</span></article>
+          <article><span class="micro">STRAWBERRY LEDGE · LISTED MARCH 2025</span><h3>Fudge sweets gift box · £9.99</h3><b>200+</b><span>bought in the past month · 77 reviews, 4.4 stars</span></article>
+          <article class="you"><span class="micro">FARRAH'S · LISTED DECEMBER 2012</span><h3>Butter Fudge tin, 300g · unavailable</h3><b>0</b><span>bought in the past month · 655 reviews, 4.6 stars</span></article>
         </div>
-        <div>
-          <p class="sub-lede">Who is on the fudge shelf today</p>
-          <div class="shelf-grid">
-            <article><img src="img/comp-B0FGY2QMF7.jpg" alt="by Amazon All Butter Fudge page" loading="lazy"><div><span class="micro">BY AMAZON</span><h3>All Butter Fudge, 125g</h3><b>4,000+</b><span>bought in the past month · £1.47</span></div></article>
-            <article><img src="img/comp-B0FQ6HWDY7.jpg" alt="Bentley and Ackerman Clotted Cream Fudge gift jar page" loading="lazy"><div><span class="micro">BENTLEY &amp; ACKERMAN</span><h3>Clotted Cream Fudge gift jar, 520g</h3><b>200+</b><span>bought in the past month · £12.99 · Amazon's Choice</span></div></article>
-            <article><img src="img/comp-B075S23PC7.jpg" alt="Bon Bons Gourmet All Butter Fudge page" loading="lazy"><div><span class="micro">BON BONS</span><h3>Gourmet All Butter Fudge</h3><b>300+</b><span>bought in the past month · £3.99</span></div></article>
-            <article><img src="img/comp-B0DZWG6C9F.jpg" alt="Strawberry Ledge fudge sweets gift box page" loading="lazy"><div><span class="micro">STRAWBERRY LEDGE</span><h3>Fudge sweets gift box</h3><b>200+</b><span>bought in the past month · £9.99</span></div></article>
-          </div>
-          <p class="process-note">Amazon's own "bought in past month" badge, observed 12 September. A bucket, not a forecast. Two of the four are gift formats at £10–13, your tins' price band. None of them has 655 reviews.</p>
-        </div>
+        <p class="process-note">Nine years of reviews is the thing new sellers cannot buy. Both boxes on the left started from zero last year; your tin starts from 655. The only thing it is missing is an offer.</p>
       </div>
     </div>
   </section>
 
   <!-- 3 · ONE PRODUCT, NOW → RELISTED -->
   <section class="container section" id="product" aria-labelledby="product-title">
-    <div class="section-heading"><div><p class="eyebrow">02 / ONE TIN, NOW AND RELISTED</p><h2 id="product-title">Your best page.<br><em>Drag to see it relisted.</em></h2></div><p>The Butter Fudge tin: your most-reviewed page, 655 reviews at 4.6 stars, listed in 2012. Four things we would change, then the page itself, today on the left and relisted on the right, in the same frame.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">03 / ONE TIN, NOW AND RELISTED</p><h2 id="product-title">Your best page.<br><em>Drag to see it relisted.</em></h2></div><p>The Butter Fudge tin: your most-reviewed page, 655 reviews at 4.6 stars, listed in 2012. Four things we would change, then the page itself, today on the left and relisted on the right, in the same frame.</p></div>
 
     <div class="anat">
       <div class="anat-shot">
@@ -326,7 +363,7 @@
 
   <!-- 4 · WHERE TO START -->
   <section class="pricing-section" id="fifty" aria-labelledby="fifty-title"><div class="container section">
-    <div class="section-heading"><div><p class="eyebrow">03 / WHERE TO START</p><h2 id="fifty-title">Fifty pages first.<br><em>Here is where they come from.</em></h2></div><p>Of your 124 pages, 59 are gift formats: tins, drums, gift packs and selections. The first wave is the fifty of those with reviews, gift demand and a shelf life that clears FBA's 90-day rule. The three above are examples from that fifty, not the whole of it.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">04 / WHERE TO START</p><h2 id="fifty-title">Fifty pages first.<br><em>Here is where they come from.</em></h2></div><p>Of your 124 pages, 59 are gift formats: tins, drums, gift packs and selections. The first wave is the fifty of those with reviews, gift demand and a shelf life that clears FBA's 90-day rule. The three above are examples from that fifty, not the whole of it.</p></div>
     <div class="fifty">
       <div class="in"><b>40</b><span>tins and drums</span></div>
       <div class="in"><b>19</b><span>gift packs and selections</span></div>
@@ -345,7 +382,7 @@
 
   <!-- 5 · HOW THE LAUNCH RUNS -->
   <section class="container section" id="plan" aria-labelledby="plan-title">
-    <div class="section-heading"><div><p class="eyebrow">04 / HOW THE LAUNCH RUNS</p><h2 id="plan-title">Live before the<br><em>stocking-filler window.</em></h2></div><p>Three moves, in this order. The clock starts at your sign-off, not at the contract. Christmas is a line on the plan, not a separate offer.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">05 / HOW THE LAUNCH RUNS</p><h2 id="plan-title">Live before the<br><em>stocking-filler window.</em></h2></div><p>Three moves, in this order. The clock starts at your sign-off, not at the contract. Christmas is a line on the plan, not a separate offer.</p></div>
     <div class="process-grid">
       <article><span class="step-number">01</span><h3>Confirm the route back</h3><p>Amazon sold your tins on Vendor terms until October 2025. The route back that keeps every page, review and the store is your own seller account with stock at FBA. If you already have one, we use it; if not, we set it up alongside your Vendor account, which stays as it is.</p></article>
       <article><span class="step-number">02</span><h3>Relist fifty, gift formats first</h3><p>Every one of the 124 pages gets a decision: relist, merge or retire. The fifty go up with titles from the phrases above, seven images each, five bullets, search terms, and A+ content on the three pages that carry the range.</p></article>
@@ -369,7 +406,7 @@
 
   <!-- 6 · SCOPE AND BUDGET -->
   <section class="pricing-section" id="cost" aria-labelledby="cost-title"><div class="container section">
-    <div class="section-heading"><div><p class="eyebrow">05 / SCOPE AND BUDGET</p><h2 id="cost-title">One price.<br><em>Fixed before we start.</em></h2></div><p>The first order is a Pilot Wave: one fixed price for the first fifty pages. It counts toward anything that follows. Trade, GBP, ex VAT. No retainer attached; care and advertising are separate decisions, after the pages are live.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">06 / SCOPE AND BUDGET</p><h2 id="cost-title">One price.<br><em>Fixed before we start.</em></h2></div><p>The first order is a Pilot Wave: one fixed price for the first fifty pages. It counts toward anything that follows. Trade, GBP, ex VAT. No retainer attached; care and advertising are separate decisions, after the pages are live.</p></div>
     <div class="pricing-grid">
       <article class="price-card price-highlight"><div class="price-ribbon">OUR RECOMMENDATION FOR FARRAH'S</div><p class="micro">THE FIFTY GIFT PAGES</p><h3>Pilot Wave M</h3><p class="price">£3,900<small class="fixed">fixed</small></p><p class="price-description">Fifty of your 124 pages relisted as full listings, live within 10 working days of sign-off.</p><ul class="check-list"><li>50 full listings: title, bullets, search terms, seven images each</li><li>A+ content on 3 hero pages</li><li>Inventory of all 124 pages: relist, merge or retire</li><li>FBA stock plan for November</li><li>One revision round · 50% deposit, balance on sign-off</li></ul><a href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20%E2%80%94%20Pilot%20Wave%20M" class="button">Start with fifty <span aria-hidden="true">↗</span></a></article>
       <article class="price-card"><p class="micro">IF YOU WOULD RATHER START SMALLER</p><h3>Pilot Wave S</h3><p class="price">£2,400<small class="fixed">fixed</small></p><p class="price-description">The 25 tins and boxes with reviews first.</p><ul class="check-list"><li>25 full listings</li><li>A+ content on 2 hero pages</li><li>Same inventory, same FBA plan</li></ul><a href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20%E2%80%94%20Pilot%20Wave%20S" class="button button-outline">Start with twenty-five <span aria-hidden="true">↗</span></a></article>
@@ -379,7 +416,7 @@
   </div></section>
 
   <!-- 7 · NEXT STEP -->
-  <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-grid"><div><p class="eyebrow">06 / NEXT STEP</p><h2 id="contact-title">Reply to this page.<br><em>We start at your sign-off.</em></h2><p>Reply to the email this page came with: which wave, and where you stand with Amazon today. Within one working day you get the schedule and the quote in writing. This page is private and stays up until 10 October 2026.</p><div class="contact-benefits"><span>No call needed</span><span>No account access until you say so</span><span>Quote fixed in writing</span></div></div><div class="contact-card"><p class="micro">FOR PETER MARSTON · FARRAH'S OF HARROGATE</p><h3>Your range.<br>Back in the search by October.</h3><a class="button button-light" href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20on%20Amazon%20%E2%80%94%20let%27s%20start&body=Hi%20Kevin%2C%0A%0APilot%20Wave%20M%20%2F%20S%3A%20%0AWhere%20we%20are%20with%20Amazon%20today%20(Vendor%20%2F%20seller%20account)%3A%20%0AWe%20can%20sign%20off%20by%3A%20%0APrice%20list%20attached%3A%20%0A">Reply to Kevin <span aria-hidden="true">↗</span></a><div class="email-row"><a href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a><button type="button" class="copy-email" aria-label="Copy email address" title="Copy email address"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4"/></svg></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div></section>
+  <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-grid"><div><p class="eyebrow">07 / NEXT STEP</p><h2 id="contact-title">Reply to this page.<br><em>We start at your sign-off.</em></h2><p>Reply to the email this page came with: which wave, and where you stand with Amazon today. Within one working day you get the schedule and the quote in writing. This page is private and stays up until 10 October 2026.</p><div class="contact-benefits"><span>No call needed</span><span>No account access until you say so</span><span>Quote fixed in writing</span></div></div><div class="contact-card"><p class="micro">FOR PETER MARSTON · FARRAH'S OF HARROGATE</p><h3>Your range.<br>Back in the search by October.</h3><a class="button button-light" href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20on%20Amazon%20%E2%80%94%20let%27s%20start&body=Hi%20Kevin%2C%0A%0APilot%20Wave%20M%20%2F%20S%3A%20%0AWhere%20we%20are%20with%20Amazon%20today%20(Vendor%20%2F%20seller%20account)%3A%20%0AWe%20can%20sign%20off%20by%3A%20%0APrice%20list%20attached%3A%20%0A">Reply to Kevin <span aria-hidden="true">↗</span></a><div class="email-row"><a href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a><button type="button" class="copy-email" aria-label="Copy email address" title="Copy email address"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4"/></svg></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div></section>
 
   <section class="container" style="padding:36px 0 10px">
     <div class="notes">
