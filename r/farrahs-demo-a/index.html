@@ -147,6 +147,42 @@
     .page-head h3{font-family:var(--sans);font-size:17px;font-weight:500;margin:0}
     .page-head p{font-size:12.5px;color:var(--muted);margin:2px 0 0}
     .page-asin{margin-left:auto;font:11px monospace;color:var(--muted)}
+    .phones-block{margin-top:34px}
+    .phones-block:first-of-type{margin-top:0}
+    .phones{display:grid;grid-template-columns:repeat(2,minmax(0,330px));gap:40px;justify-content:center;align-items:stretch}
+    .phone{display:flex;flex-direction:column}.phone .ph-avail{margin-top:auto}
+    .phone::before{content:"";position:absolute;left:12px;right:12px;top:12px;bottom:40px;background:#fff;border-radius:24px}
+    .phone>*{position:relative}
+    .phone .ph-top{background:transparent}
+    .phone{margin:0;width:100%;background:#111;border-radius:34px;padding:12px;box-shadow:0 12px 40px rgba(0,0,0,.18);font-family:Arial,Helvetica,sans-serif;color:#0f1111;position:relative}
+    .phone>*:not(figcaption){background:#fff}
+    .phone .ph-top{display:flex;justify-content:space-between;font-size:11px;font-weight:700;padding:10px 18px 4px;border-radius:24px 24px 0 0;color:#111}
+    .phone .ph-search{display:flex;gap:8px;align-items:center;margin:0 10px;padding:7px 10px;border:1px solid #cfd3d5;border-radius:8px;font-size:12px;color:#565959;background:#fff}
+    .phone .ph-img{padding:14px 18px 8px}
+    .phone .ph-img img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#fff}
+    .phone .ph-title{padding:4px 16px 0;font-size:13px;line-height:1.35;color:#0f1111;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .phone .ph-title u{text-decoration:none;background:#edf2e8;box-shadow:0 2px 0 #a8c4a1}
+    .phone .ph-stars{padding:6px 16px 0;font-size:12px}.phone .stars{color:#de7921;letter-spacing:1px}.phone .ph-n{color:#007185}
+    .phone .ph-price{padding:8px 16px 0;font-size:22px;color:#0f1111}.phone .ph-sym{font-size:12px;vertical-align:top;margin-right:1px}.phone .ph-prime{display:inline-block;margin-left:10px;font-size:11px;font-weight:700;color:#00a8e1;vertical-align:middle;font-style:italic}
+    .phone .ph-avail{padding:6px 16px 18px;font-size:15px;color:#007600;border-radius:0 0 24px 24px}
+    .phone .ph-avail.off{color:#b12704}.phone .ph-avail small{display:block;font-size:11px;color:#565959;margin-top:2px}
+    .phone figcaption{text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#bbb;padding:12px 0 2px}
+    .phone.after figcaption{color:#a9c2a4}
+    .board{margin-top:44px;padding-top:32px;border-top:1px solid var(--rule)}
+    .board-head{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:18px}
+    .board-head p{margin:0}.board-head p:last-child{font-size:14px;color:var(--muted)}
+    .board-row{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
+    .board-row figure{margin:0;border:1px solid var(--rule);background:#fff}
+    .board-row img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+    .board-row .sk svg{display:block;width:100%;aspect-ratio:1/1;fill:none;stroke:#9aa898;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;background:#f6f6f0;padding:10%}
+    .board-row figcaption{padding:8px 10px 10px;font-size:11px;color:var(--muted);line-height:1.4}
+    .board-row figcaption b{display:block;font-weight:600;color:var(--ink);font-size:11px;margin-bottom:2px}
+    @media(max-width:900px){.phones{grid-template-columns:1fr 1fr;gap:16px}.board-head{grid-template-columns:1fr}.board-row{grid-template-columns:repeat(4,1fr)}}
+    @media(max-width:560px){.phones{grid-template-columns:minmax(0,1fr);max-width:340px;margin-inline:auto}.page-head{flex-wrap:wrap}.page-asin{margin-left:0;width:100%}.board-row{grid-template-columns:repeat(2,1fr)}}
+    #product{overflow-x:hidden}
+    .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    html,body{overflow-x:hidden}
+    @media(max-width:560px){.demand{min-width:440px}.demand td,.demand th{white-space:nowrap}}
     .shot{position:relative;border:1px solid var(--rule);background:#fff;overflow:hidden;user-select:none}
     .shot img{display:block;width:100%;height:auto}
     .shot .ib-before{position:absolute;inset:0}
@@ -256,7 +292,7 @@
   <section class="work-section" id="demand" aria-labelledby="demand-title">
     <div class="container section">
       <div class="section-heading"><div><p class="eyebrow">01 / THE DEMAND</p><h2 id="demand-title">The searches never stopped.<br><em>Your pages did.</em></h2></div><p>A page with no offer is left out of Amazon's search, so today "fudge gift set" brings up Bon Bons and Strawberry Ledge, never Farrah's. Below: the phrases your range answers, ranked by how often shoppers type them (the rank shown is the phrase's best week in the year), and whether your titles say them.</p></div>
-      <table class="demand">
+      <div class="table-scroll"><table class="demand">
         <thead><tr><th>What shoppers type</th><th>Rank of 1.46M</th><th>When</th><th>In your titles</th></tr></thead>
         <tbody>
           <tr><td class="q">sweets gift box</td><td class="r">329th</td><td>every week</td><td class="no">no</td></tr>
@@ -267,7 +303,7 @@
           <tr><td class="q">fudge gift set</td><td class="r">3,694th</td><td>every week</td><td class="no">no</td></tr>
           <tr><td class="q">retro sweets gift box</td><td class="r">5,532nd</td><td>every week</td><td class="no">no</td></tr>
         </tbody>
-      </table>
+      </table></div>
       <div class="example-footer"><p>Rank is the phrase's best weekly position over the year. "Farrah's" and "Harrogate toffee" do not appear in the base: shoppers search the category, not the name, so the category words have to be in the title.</p></div>
 
       <div class="edge">
@@ -279,37 +315,76 @@
 
   <!-- 3 · ONE PRODUCT, NOW → RELISTED -->
   <section class="container section" id="product" aria-labelledby="product-title">
-    <div class="section-heading"><div><p class="eyebrow">02 / TWO PAGES, NOW AND RELISTED</p><h2 id="product-title">Two of your pages.<br><em>Drag to see them relisted.</em></h2></div><p>Two of your real Amazon pages, the fudge tin and the toffee tin. Left, the page as it is today. Right, the same page with the main image, title and bullets we would file, "Top highlights" opened so the bullets show. Everything else is Amazon's own. Drag the handle.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">02 / YOUR PAGE, ON A PHONE</p><h2 id<h2 id="product-title">Your tin, today<br><em>and relisted.</em></h2></div><p>Most Amazon UK shoppers see your page on a phone. This is what fits on that first screen: photo, title, stars, and whether they can buy. Left, today. Right, the same page relisted. Everything below the fold is in the table underneath.</p></div>
 
-    <div class="page-block">
+    <div class="phones-block">
       <div class="page-head"><span class="page-num">01</span><div><h3>Butter Fudge, Art Nouveau tin 300g</h3><p>654 reviews · 4.6 stars · on Amazon since December 2012</p></div><span class="page-asin">B00APYN3TG</span></div>
-      <div class="ba shot" data-ib>
-        <img class="ib-after" src="img/after-fudge.jpg" alt="Butter Fudge, Art Nouveau tin 300g: the same Amazon page relisted, with new main image, title and bullets" width="1150" height="855">
-        <img class="ib-before" src="img/before-fudge.jpg" alt="Butter Fudge, Art Nouveau tin 300g: the Amazon page today, currently unavailable" width="1150" height="855">
-        <div class="ba-handle" aria-hidden="true"><span></span></div>
-        <input class="ba-range" type="range" min="0" max="100" value="30" aria-label="Drag to compare the page today with the relisted page">
+      <div class="phones">
+        <figure class="phone today">
+          <div class="ph-top"><span class="ph-time">9:41</span><span class="ph-sig">●●● ᯤ ▮</span></div>
+          <div class="ph-search"><span>🔍</span><span>fudge gift set</span></div>
+          <div class="ph-img"><img src="img/ph-fudge-today.jpg" alt="Butter Fudge, Art Nouveau tin 300g on Amazon today" loading="lazy" width="800" height="800"></div>
+          <div class="ph-title">Farrah's of Harrogate Fudge - 300g Luxury Fudge Art Nouveau Tin</div>
+          <div class="ph-stars"><span class="stars">★★★★★</span> <span class="ph-n">(654)</span></div>
+          <div class="ph-avail off">Currently unavailable.<small>We don't know when or if this item will be back in stock.</small></div>
+          <figcaption>Today</figcaption>
+        </figure>
+        <figure class="phone after">
+          <div class="ph-top"><span class="ph-time">9:41</span><span class="ph-sig">●●● ᯤ ▮</span></div>
+          <div class="ph-search"><span>🔍</span><span>fudge gift set</span></div>
+          <div class="ph-img"><img src="img/ph-fudge-main-0.jpg" alt="Butter Fudge, Art Nouveau tin 300g relisted, concept" loading="lazy" width="800" height="800"></div>
+          <div class="ph-title">Farrah's of Harrogate Butter <u>Fudge Gift</u> Tin 300g – Handmade Fudge in an Embossed Collector's Tin, <u>Sweets Gift Box</u> for <u>Christmas</u>, <u>Stocking Fillers for Adults</u>, <u>Sweet Hamper</u> Treat</div>
+          <div class="ph-stars"><span class="stars">★★★★★</span> <span class="ph-n">(654)</span></div>
+          <div class="ph-price"><span class="ph-sym">£</span>11.98<span class="ph-prime">prime</span></div><div class="ph-avail">In stock</div>
+          <figcaption>Relisted · our concept</figcaption>
+        </figure>
+
       </div>
-      <div class="ba-legend"><span>◀ Today · currently unavailable</span><span>Relisted · our concept ▶</span></div>
     </div>
-    <div class="page-block">
-      <div class="page-head"><span class="page-num">02</span><div><h3>Harrogate Toffee, Crescent tin 300g</h3><p>140 reviews · 4.3 stars · on Amazon since March 2012</p></div><span class="page-asin">B007N3GU0Q</span></div>
-      <div class="ba shot" data-ib>
-        <img class="ib-after" src="img/after-toffee.jpg" alt="Harrogate Toffee, Crescent tin 300g: the same Amazon page relisted, with new main image, title and bullets" width="1150" height="760">
-        <img class="ib-before" src="img/before-toffee.jpg" alt="Harrogate Toffee, Crescent tin 300g: the Amazon page today, currently unavailable" width="1150" height="760">
-        <div class="ba-handle" aria-hidden="true"><span></span></div>
-        <input class="ba-range" type="range" min="0" max="100" value="30" aria-label="Drag to compare the page today with the relisted page">
+    <div class="board">
+      <div class="board-head"><p class="sub-lede">The gallery, seven frames, as a shooting plan</p><p>Three are built. Four are drawn, with the question each one answers for a shopper. The pack shot stays first; Amazon wants the product on white there.</p></div>
+      <div class="board-row">
+        <figure><img src="img/ph-fudge-main-0.jpg" alt="Tin on white with fudge in front" loading="lazy"><figcaption><b>01 · On white</b>What is it?</figcaption></figure>
+        <figure><img src="img/ph-fudge-open-0.jpg" alt="The open tin" loading="lazy"><figcaption><b>02 · Open tin</b>What is inside?</figcaption></figure>
+        <figure><img src="img/ph-fudge-gift-0.jpg" alt="Gift moment" loading="lazy"><figcaption><b>03 · Gift moment</b>Is it a present?</figcaption></figure>
+        <figure class="sk"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="22" y="38" width="56" height="34" rx="3"/><path d="M14 70c6-6 12-8 18-8v14c-6 0-12 2-18 8z"/><path d="M32 62c4 0 8-2 10-6"/></svg><figcaption><b>04 · Size in hand</b>How big is 300 g?</figcaption></figure>
+        <figure class="sk"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="20" y="30" width="60" height="40" rx="3"/><circle cx="50" cy="50" r="10"/><path d="M26 76h48"/></svg><figcaption><b>05 · The 1910 tin</b>Why this design?</figcaption></figure>
+        <figure class="sk"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="28" y="34" width="44" height="30" rx="3"/><path d="M40 34v-6h20v6M34 70h32"/><circle cx="50" cy="49" r="5"/></svg><figcaption><b>06 · Close-up</b>What does it taste like?</figcaption></figure>
+        <figure class="sk"><svg viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="40" width="24" height="24" rx="2"/><rect x="38" y="36" width="24" height="28" rx="2"/><rect x="66" y="40" width="24" height="24" rx="2"/></svg><figcaption><b>07 · The range</b>What else is there?</figcaption></figure>
       </div>
-      <div class="ba-legend"><span>◀ Today · currently unavailable</span><span>Relisted · our concept ▶</span></div>
+    </div>
+    <div class="phones-block">
+      <div class="page-head"><span class="page-num">02</span><div><h3>Harrogate Toffee, Crescent tin 300g</h3><p>140 reviews · 4.3 stars · on Amazon since March 2012</p></div><span class="page-asin">B007N3GU0Q</span></div>
+      <div class="phones">
+        <figure class="phone today">
+          <div class="ph-top"><span class="ph-time">9:41</span><span class="ph-sig">●●● ᯤ ▮</span></div>
+          <div class="ph-search"><span>🔍</span><span>fudge gift set</span></div>
+          <div class="ph-img"><img src="img/ph-toffee-today.jpg" alt="Harrogate Toffee, Crescent tin 300g on Amazon today" loading="lazy" width="800" height="800"></div>
+          <div class="ph-title">Farrah's of Harrogate - Toffee, 300g Crescent Tin</div>
+          <div class="ph-stars"><span class="stars">★★★★☆</span> <span class="ph-n">(140)</span></div>
+          <div class="ph-avail off">Currently unavailable.<small>We don't know when or if this item will be back in stock.</small></div>
+          <figcaption>Today</figcaption>
+        </figure>
+        <figure class="phone after">
+          <div class="ph-top"><span class="ph-time">9:41</span><span class="ph-sig">●●● ᯤ ▮</span></div>
+          <div class="ph-search"><span>🔍</span><span>fudge gift set</span></div>
+          <div class="ph-img"><img src="img/ph-toffee-main-1.jpg" alt="Harrogate Toffee, Crescent tin 300g relisted, concept" loading="lazy" width="800" height="800"></div>
+          <div class="ph-title">Farrah's of Harrogate Harrogate Toffee Tin 300g – Handmade Original Toffee in an Embossed Collector's Tin, <u>Sweet Hamper</u> for <u>Christmas</u>, <u>Stocking Fillers for Adults</u>, <u>Sweets Gift Box</u> Treat</div>
+          <div class="ph-stars"><span class="stars">★★★★☆</span> <span class="ph-n">(140)</span></div>
+          <div class="ph-price"><span class="ph-sym">£</span>10.29<span class="ph-prime">prime</span></div><div class="ph-avail">In stock</div>
+          <figcaption>Relisted · our concept</figcaption>
+        </figure>
+
+      </div>
     </div>
     <div class="ba-facts">
-      <div class="facts-today"><span class="micro">WHAT CHANGES · BOTH PAGES</span><div class="data-row"><span>Title</span><strong>trade description → three searched phrases, under 200 characters</strong></div><div class="data-row"><span>Offer</span><strong>none → your own, on FBA</strong></div><div class="data-row"><span>Images</span><strong>lid close-ups → tin with the fudge in front, the open tin, the gift moment</strong></div><div class="data-row"><span>Bullets</span><strong>trade notes → five facts, filed under "Top highlights"</strong></div><div class="data-row"><span>Reviews</span><strong>654 and 140 → kept, on the same pages</strong></div></div>
-      <div class="facts-after"><span class="micro">WHY THESE WORDS</span><div class="keyword-tags"><span>sweets gift box</span><span>fudge</span><span>fudge gift set</span><span>christmas sweets</span></div><div class="result-deliverables"><div><span aria-hidden="true">✓</span><p><strong>Title from what shoppers type</strong>"Sweets gift box" ranks 329th of 1.46 million and sits in the title word for word; "fudge gift set" and "christmas sweets" go into the bullets and search terms. No word more than twice, as Amazon's rules require.</p></div><div><span aria-hidden="true">✓</span><p><strong>Seven images with a purpose</strong>Tin on white, the open tin, what is inside, the 1910 tin it replicates, gift moment, size against a hand, the range.</p></div><div><span aria-hidden="true">✓</span><p><strong>Same page, same reviews</strong>We relist the existing ASIN under your own seller account, so the 654 reviews and the ranking history stay.</p></div></div></div>
+      <div class="facts-today"><span class="micro">WHAT CHANGES · BOTH PAGES</span><div class="data-row"><span>Title</span><strong>trade description → four searched phrases, 180 characters, no word more than twice</strong></div><div class="data-row"><span>Offer</span><strong>none → your own, on FBA</strong></div><div class="data-row"><span>Images</span><strong>6 lid close-ups → 7 frames, each answering one question</strong></div><div class="data-row"><span>Bullets</span><strong>trade notes → five facts, filed under "Top highlights"</strong></div><div class="data-row"><span>Reviews</span><strong>654 and 140 → kept, on the same pages</strong></div></div>
+      <div class="facts-after"><span class="micro">WHY THESE WORDS</span><div class="keyword-tags"><span>sweets gift box</span><span>sweet hamper</span><span>stocking fillers for adults</span><span>fudge</span><span>christmas</span></div><div class="result-deliverables"><div><span aria-hidden="true">✓</span><p><strong>Title from what shoppers type</strong>"Sweets gift box", "sweet hamper" and "stocking fillers for adults" sit in the title word for word; "fudge gift set" needs a third "gift", so it goes into the bullets and search terms. "Since 1840" moves to the first bullet: nobody types it, everybody reads it after the click.</p></div><div><span aria-hidden="true">✓</span><p><strong>Seven images with a purpose</strong>One question per frame, in the order a shopper asks them. Three built for this page; the other four shot or built from your files in the Pilot Wave.</p></div><div><span aria-hidden="true">✓</span><p><strong>Same page, same reviews</strong>We relist the existing ASIN under your own seller account, so the 654 reviews and the ranking history stay.</p></div></div></div>
     </div>
 
     <div class="method">
       <p class="sub-lede">Same method, every page</p>
-      <p>The toffee tin (140 reviews) gets "sweet hamper" and "stocking fillers for adults" in the title and the embossed lid as its second image. The shortbread, honey and preserve trio (24 reviews) gets "gift set" and "sweet hamper", and a flat-lay of the three items as the "what is inside" shot. Fifty pages, one standard.</p>
-      <p>One correction comes with the relist: the trio's title says blackcurrant preserve, its photo and bullets say plum. The page will say what the box holds.</p>
+      <p>Each of the fifty pages gets the same treatment: a title built from the phrases shoppers type, seven frames that answer a shopper's questions in order, five bullets that read as facts. One correction comes with the relist: the shortbread, honey and preserve trio's title says blackcurrant, its photo and bullets say plum. The page will say what the box holds.</p>
     </div>
   </section>
 
