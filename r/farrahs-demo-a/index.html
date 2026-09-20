@@ -154,18 +154,31 @@
     .phone::before{content:"";position:absolute;left:12px;right:12px;top:12px;bottom:40px;background:#fff;border-radius:24px}
     .phone>*{position:relative}
     .phone .ph-top{background:transparent}
-    .phone{margin:0;width:100%;background:#111;border-radius:34px;padding:12px;box-shadow:0 12px 40px rgba(0,0,0,.18);font-family:Arial,Helvetica,sans-serif;color:#0f1111;position:relative}
-    .phone>*:not(figcaption){background:#fff}
-    .phone .ph-top{display:flex;justify-content:space-between;font-size:11px;font-weight:700;padding:10px 18px 4px;border-radius:24px 24px 0 0;color:#111}
-    .phone .ph-search{display:flex;gap:8px;align-items:center;margin:0 10px;padding:7px 10px;border:1px solid #cfd3d5;border-radius:8px;font-size:12px;color:#565959;background:#fff}
-    .phone .ph-img{padding:14px 18px 8px}
-    .phone .ph-img img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#fff}
-    .phone .ph-title{padding:4px 16px 0;font-size:13px;line-height:1.35;color:#0f1111;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+    .phone{margin:0;width:100%;background:#111;border-radius:34px;padding:10px;box-shadow:0 12px 40px rgba(0,0,0,.18);font-family:Arial,Helvetica,sans-serif;color:#0f1111;position:relative;display:flex;flex-direction:column}
+    .phone::before{content:"";position:absolute;left:10px;right:10px;top:10px;bottom:38px;background:#fff;border-radius:26px}
+    .phone>*{position:relative}
+    .phone .ph-top{display:flex;justify-content:space-between;font-size:11px;font-weight:700;padding:10px 20px 6px;color:#111}
+    .phone .ph-search{display:flex;gap:10px;align-items:center;padding:8px 12px;background:#f3d9b1;font-size:12px;color:#565959}
+    .phone .ph-search .ph-box{flex:1;background:#fff;border-radius:20px;padding:7px 12px;color:#565959}
+    .phone .ph-store{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;padding:10px 14px 0;font-size:12px}
+    .phone .ph-store a{color:#007185}
+    .phone .ph-rating{white-space:nowrap;font-size:11px}.phone .ph-r{margin-right:2px}.phone .stars{color:#de7921;letter-spacing:0}.phone .ph-n{color:#007185;margin-left:2px}
+    .phone .ph-title{padding:2px 14px 0;font-size:13px;line-height:1.4;color:#0f1111;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
     .phone .ph-title u{text-decoration:none;background:#edf2e8;box-shadow:0 2px 0 #a8c4a1}
-    .phone .ph-stars{padding:6px 16px 0;font-size:12px}.phone .stars{color:#de7921;letter-spacing:1px}.phone .ph-n{color:#007185}
-    .phone .ph-price{padding:8px 16px 0;font-size:22px;color:#0f1111}.phone .ph-sym{font-size:12px;vertical-align:top;margin-right:1px}.phone .ph-prime{display:inline-block;margin-left:10px;font-size:11px;font-weight:700;color:#00a8e1;vertical-align:middle;font-style:italic}
-    .phone .ph-avail{padding:6px 16px 18px;font-size:15px;color:#007600;border-radius:0 0 24px 24px}
-    .phone .ph-avail.off{color:#b12704}.phone .ph-avail small{display:block;font-size:11px;color:#565959;margin-top:2px}
+    .phone .ph-bought{padding:8px 14px 0;font-size:12px;color:#0f1111}.phone .ph-bought b{font-weight:700}
+    .phone .ph-img{padding:12px 24px 0;position:relative}
+    .phone .ph-img img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:#fff}
+    .phone .ph-dots{display:flex;justify-content:center;gap:6px;padding:12px 0 10px;position:relative}
+    .phone .ph-dots i{width:7px;height:7px;border-radius:50%;background:#ccc;display:block}.phone .ph-dots i.on{background:#111}
+    .phone .ph-icons{position:absolute;right:0;top:6px;font-size:14px;color:#333;letter-spacing:4px}
+    .phone .ph-avail{padding:10px 14px 4px;font-size:17px;color:#007600;border-top:6px solid #f0f2f2}
+    .phone .ph-avail.off{color:#0f1111;font-weight:700}.phone .ph-avail small{display:block;font-size:13px;color:#0f1111;font-weight:400;margin-top:4px;line-height:1.4}
+    .phone .ph-price{padding:10px 14px 0;font-size:24px;color:#0f1111;border-top:6px solid #f0f2f2}.phone .ph-sym{font-size:12px;vertical-align:top;margin-right:1px}.phone .ph-price small{font-size:11px;color:#565959;margin-left:6px}
+    .phone .ph-prime{padding:2px 14px 0;font-size:12px;color:#00a8e1;font-weight:700}
+    .phone.after .ph-avail{border-top:0;padding-top:6px}
+    .phone .ph-save{padding:10px 14px 16px;font-size:13px;font-weight:700;display:flex;flex-direction:column;gap:8px;margin-top:auto}
+    .phone .ph-btn{display:block;text-align:center;font-weight:400;font-size:13px;padding:9px;border:1px solid #888;border-radius:20px;background:#fff;color:#0f1111}
+    .phone .ph-btn.yellow{background:#ffd814;border-color:#fcd200}.phone .ph-btn.orange{background:#ffa41c;border-color:#ff8f00}
     .phone figcaption{text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#bbb;padding:12px 0 2px}
     .phone.after figcaption{color:#a9c2a4}
     .board{margin-top:44px;padding-top:32px;border-top:1px solid var(--rule)}
@@ -321,21 +334,23 @@
       <div class="page-head"><span class="page-num">01</span><div><h3>Butter Fudge, Art Nouveau tin 300g</h3><p>654 reviews · 4.6 stars · on Amazon since December 2012</p></div><span class="page-asin">B00APYN3TG</span></div>
       <div class="phones">
         <figure class="phone today">
-          <div class="ph-top"><span class="ph-time">9:41</span><span class="ph-sig">●●● ᯤ ▮</span></div>
-          <div class="ph-search"><span>🔍</span><span>fudge gift set</span></div>
-          <div class="ph-img"><img src="img/ph-fudge-today.jpg" alt="Butter Fudge, Art Nouveau tin 300g on Amazon today" loading="lazy" width="800" height="800"></div>
+          <div class="ph-top"><span class="ph-time">00:48</span><span class="ph-sig">▮▮▮ ᯤ ▮</span></div>
+          <div class="ph-search"><span>←</span><span class="ph-box">🔍 Search or ask a question</span></div>
+          <div class="ph-store"><a>Visit the FARRAH'S Store</a><span class="ph-rating"><span class="ph-r">4.6</span><span class="stars">★★★★★</span><span class="ph-n">(654)</span></span></div>
           <div class="ph-title">Farrah's of Harrogate Fudge - 300g Luxury Fudge Art Nouveau Tin</div>
-          <div class="ph-stars"><span class="stars">★★★★★</span> <span class="ph-n">(654)</span></div>
-          <div class="ph-avail off">Currently unavailable.<small>We don't know when or if this item will be back in stock.</small></div>
+          
+          <div class="ph-img"><img src="img/ph-fudge-today.jpg" alt="Butter Fudge, Art Nouveau tin 300g on Amazon today" loading="lazy" width="800" height="800"><div class="ph-dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><span class="ph-icons">♡ ⋰</span></div></div>
+          <div class="ph-avail off">Currently unavailable.<small>We don't know when or if this item will be back in stock.</small></div><div class="ph-save">Save this item<span class="ph-btn">Add to List</span></div>
           <figcaption>Today</figcaption>
         </figure>
         <figure class="phone after">
-          <div class="ph-top"><span class="ph-time">9:41</span><span class="ph-sig">●●● ᯤ ▮</span></div>
-          <div class="ph-search"><span>🔍</span><span>fudge gift set</span></div>
-          <div class="ph-img"><img src="img/ph-fudge-main-0.jpg" alt="Butter Fudge, Art Nouveau tin 300g relisted, concept" loading="lazy" width="800" height="800"></div>
+          <div class="ph-top"><span class="ph-time">00:48</span><span class="ph-sig">▮▮▮ ᯤ ▮</span></div>
+          <div class="ph-search"><span>←</span><span class="ph-box">🔍 Search or ask a question</span></div>
+          <div class="ph-store"><a>Visit the Farrah's Store</a><span class="ph-rating"><span class="ph-r">4.6</span><span class="stars">★★★★★</span><span class="ph-n">(654)</span></span></div>
           <div class="ph-title">Farrah's of Harrogate Butter <u>Fudge Gift</u> Tin 300g – Handmade Fudge in an Embossed Collector's Tin, <u>Sweets Gift Box</u> for <u>Christmas</u>, <u>Stocking Fillers for Adults</u>, <u>Sweet Hamper</u> Treat</div>
-          <div class="ph-stars"><span class="stars">★★★★★</span> <span class="ph-n">(654)</span></div>
-          <div class="ph-price"><span class="ph-sym">£</span>11.98<span class="ph-prime">prime</span></div><div class="ph-avail">In stock</div>
+          <div class="ph-bought"><b>Relisted</b> on your own account</div>
+          <div class="ph-img"><img src="img/ph-fudge-main-0.jpg" alt="Butter Fudge, Art Nouveau tin 300g relisted, concept" loading="lazy" width="800" height="800"><div class="ph-dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="ph-icons">♡ ⋰</span></div></div>
+          <div class="ph-price"><span class="ph-sym">£</span>11.98<small>(£39.93 / kg)</small></div><div class="ph-prime">✓prime One-Day</div><div class="ph-avail">In stock</div><div class="ph-save"><span class="ph-btn yellow">Add to Basket</span><span class="ph-btn orange">Buy Now</span></div>
           <figcaption>Relisted · our concept</figcaption>
         </figure>
 
@@ -357,21 +372,23 @@
       <div class="page-head"><span class="page-num">02</span><div><h3>Harrogate Toffee, Crescent tin 300g</h3><p>140 reviews · 4.3 stars · on Amazon since March 2012</p></div><span class="page-asin">B007N3GU0Q</span></div>
       <div class="phones">
         <figure class="phone today">
-          <div class="ph-top"><span class="ph-time">9:41</span><span class="ph-sig">●●● ᯤ ▮</span></div>
-          <div class="ph-search"><span>🔍</span><span>fudge gift set</span></div>
-          <div class="ph-img"><img src="img/ph-toffee-today.jpg" alt="Harrogate Toffee, Crescent tin 300g on Amazon today" loading="lazy" width="800" height="800"></div>
+          <div class="ph-top"><span class="ph-time">00:48</span><span class="ph-sig">▮▮▮ ᯤ ▮</span></div>
+          <div class="ph-search"><span>←</span><span class="ph-box">🔍 Search or ask a question</span></div>
+          <div class="ph-store"><a>Visit the FARRAH'S Store</a><span class="ph-rating"><span class="ph-r">4.3</span><span class="stars">★★★★☆</span><span class="ph-n">(140)</span></span></div>
           <div class="ph-title">Farrah's of Harrogate - Toffee, 300g Crescent Tin</div>
-          <div class="ph-stars"><span class="stars">★★★★☆</span> <span class="ph-n">(140)</span></div>
-          <div class="ph-avail off">Currently unavailable.<small>We don't know when or if this item will be back in stock.</small></div>
+          
+          <div class="ph-img"><img src="img/ph-toffee-today.jpg" alt="Harrogate Toffee, Crescent tin 300g on Amazon today" loading="lazy" width="800" height="800"><div class="ph-dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><span class="ph-icons">♡ ⋰</span></div></div>
+          <div class="ph-avail off">Currently unavailable.<small>We don't know when or if this item will be back in stock.</small></div><div class="ph-save">Save this item<span class="ph-btn">Add to List</span></div>
           <figcaption>Today</figcaption>
         </figure>
         <figure class="phone after">
-          <div class="ph-top"><span class="ph-time">9:41</span><span class="ph-sig">●●● ᯤ ▮</span></div>
-          <div class="ph-search"><span>🔍</span><span>fudge gift set</span></div>
-          <div class="ph-img"><img src="img/ph-toffee-main-1.jpg" alt="Harrogate Toffee, Crescent tin 300g relisted, concept" loading="lazy" width="800" height="800"></div>
+          <div class="ph-top"><span class="ph-time">00:48</span><span class="ph-sig">▮▮▮ ᯤ ▮</span></div>
+          <div class="ph-search"><span>←</span><span class="ph-box">🔍 Search or ask a question</span></div>
+          <div class="ph-store"><a>Visit the Farrah's Store</a><span class="ph-rating"><span class="ph-r">4.3</span><span class="stars">★★★★☆</span><span class="ph-n">(140)</span></span></div>
           <div class="ph-title">Farrah's of Harrogate Harrogate Toffee Tin 300g – Handmade Original Toffee in an Embossed Collector's Tin, <u>Sweet Hamper</u> for <u>Christmas</u>, <u>Stocking Fillers for Adults</u>, <u>Sweets Gift Box</u> Treat</div>
-          <div class="ph-stars"><span class="stars">★★★★☆</span> <span class="ph-n">(140)</span></div>
-          <div class="ph-price"><span class="ph-sym">£</span>10.29<span class="ph-prime">prime</span></div><div class="ph-avail">In stock</div>
+          <div class="ph-bought"><b>Relisted</b> on your own account</div>
+          <div class="ph-img"><img src="img/ph-toffee-main-1.jpg" alt="Harrogate Toffee, Crescent tin 300g relisted, concept" loading="lazy" width="800" height="800"><div class="ph-dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="ph-icons">♡ ⋰</span></div></div>
+          <div class="ph-price"><span class="ph-sym">£</span>10.29<small>(£34.30 / kg)</small></div><div class="ph-prime">✓prime One-Day</div><div class="ph-avail">In stock</div><div class="ph-save"><span class="ph-btn yellow">Add to Basket</span><span class="ph-btn orange">Buy Now</span></div>
           <figcaption>Relisted · our concept</figcaption>
         </figure>
 
