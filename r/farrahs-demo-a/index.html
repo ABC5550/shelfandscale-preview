@@ -13,7 +13,7 @@
     /* demo additions on top of the site stylesheet */
     .header-tag{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-left:auto;margin-right:22px}
     /* hero: identical grid, type and card to the main site; photo box is landscape like the packshot */
-    .hero .packshot img{object-fit:cover}
+    .hero .packshot img{object-fit:contain}
     .hero .sheet-top .sheet-number{white-space:nowrap}
     .trust-grid p{padding-left:78px}.trust-grid p+p{padding-left:100px}.trust-mark{font-size:22px;top:1px;white-space:nowrap}
     @media(max-width:900px){.hero .product-sheet{max-width:none}.hero-nums{gap:0 20px}}
@@ -171,6 +171,13 @@
     .pdp-price{font-size:20px;color:#0f1111;margin-top:10px}.pdp-price small{font-size:10px;color:#565959;margin-left:6px}
     .pdp-acc{list-style:none;margin:14px 0 0;padding:0}.pdp-acc li{font-size:13px;font-weight:600;color:#0f1111;padding:9px 0;border-top:1px solid #e3e6e3;display:flex;justify-content:space-between}.pdp-acc li:after{content:"⌄";color:#565959;font-weight:400}
     @media(max-width:900px){.serp{grid-template-columns:repeat(2,1fr)}.tabs{flex-wrap:wrap}}
+    .account-row{display:flex;justify-content:space-between;align-items:center;gap:32px;margin-top:18px;padding:18px 22px;border:1px solid #d3dacb;background:#f7f8f3}
+    .account-row .micro{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}
+    .account-row strong{display:block;font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:-.02em}
+    .account-row p{font-size:12.5px;color:var(--muted);margin-top:6px;max-width:760px}
+    .account-row .text-link{white-space:nowrap;font-size:13px}
+    .pricing-grid{grid-template-columns:repeat(2,1fr)}
+    @media(max-width:720px){.account-row{display:block}.account-row .text-link{margin-top:10px}}
     .method{margin-top:40px;padding-top:28px;border-top:1px solid var(--rule);max-width:760px}
     .method p{font-size:14.5px;color:var(--muted);margin-top:10px}
     .method .sub-lede{margin:0;color:var(--ink)}
@@ -218,24 +225,24 @@
     <div class="hero-copy">
       <p class="eyebrow"><span class="eyebrow-line"></span> FOR FARRAH'S OF HARROGATE · AMAZON UK · A PLAN FOR Q4</p>
       <h1 id="hero-title">654 reviews.<br><em>Back by Christmas.</em></h1>
-      <p class="hero-description">Amazon itself sold your range for nine years and stopped in October 2025. Fifty of your 124 pages can be back on sale, on your own account, by 10 October, in time for Christmas gifting.</p>
-      <p class="hero-audience">Three minutes to read. <strong>No call needed; reply to this page.</strong></p>
+      <p class="hero-description">Amazon itself sold your range for nine years and stopped in October 2025. Fifty of your 124 pages can be back on sale, on your own account, by <span data-day="26">10 October</span>, in time for Christmas gifting.</p>
+      <p class="hero-audience">Five minutes to read. <strong>No call needed; reply to this page.</strong></p>
       <div class="button-row"><a class="button" href="#product">See your tin relisted <span aria-hidden="true">↓</span></a><a class="text-link" href="#cost">Go to the price <span aria-hidden="true">→</span></a></div>
       <p class="hero-note">Figures from Amazon UK product data and our search base, checked 12 September.</p>
     </div>
     <div class="hero-art">
       <div class="product-sheet">
-        <div class="sheet-top"><span class="micro">ONE OF YOUR 124 PAGES</span><span class="sheet-number">AMAZON UK · 2013–2025</span></div>
-        <div class="packshot"><img src="img/hero-fudge-wide.jpg" width="1200" height="900" alt="Gallery concept: Farrah's Clotted Cream Fudge, cubes on a plate beside the Designer Box" fetchpriority="high"></div>
-        <div class="sheet-product"><span>FARRAH'S DESIGNER BOX</span><h2>Clotted Cream Fudge</h2><p>483 reviews · 4.6 stars · on Amazon since 2013</p></div>
+        <div class="sheet-top"><span class="micro">ONE OF YOUR 124 PAGES</span><span class="sheet-number">AMAZON UK · 2012–2025</span></div>
+        <div class="packshot"><img src="img/gen/fudge-main-0.jpg" width="1000" height="1000" alt="Gallery concept from your Amazon pack shot: the Art Nouveau fudge tin with four cubes of butter fudge" fetchpriority="high"></div>
+        <div class="sheet-product"><span>FARRAH'S ART NOUVEAU TIN</span><h2>Butter Fudge, 300g</h2><p>654 reviews · 4.6 stars · on Amazon since 2012</p></div>
         <div class="sheet-checks"><span><i aria-hidden="true">✓</i> Page still yours</span><span><i aria-hidden="true">✓</i> Reviews kept</span><span><i aria-hidden="true">✓</i> Brand store live</span></div>
       </div>
-      <div class="art-caption"><span class="micro">ILLUSTRATIVE GALLERY CONCEPT</span><span>Packaging and fudge to be confirmed against your product</span></div>
+      <div class="art-caption"><span class="micro">GALLERY CONCEPT</span><span>Built from your Amazon pack shot; the tin is yours, the fudge is ours</span></div>
     </div>
   </section>
 
   <!-- 1b · TODAY IN NUMBERS -->
-  <div class="trust-bar"><div class="container trust-grid"><p><span class="trust-mark" aria-hidden="true">124</span><strong>Farrah's pages on Amazon UK, none for sale</strong><span>Listed between 2012 and 2026, all still yours. Every one has said "Currently unavailable" since Amazon's last offer ended on 18 October 2025.</span></p><p><span class="trust-mark" aria-hidden="true">654</span><strong>reviews on your fudge tin, still there</strong><span>4.6 stars. The Designer Box has 483, the toffee tin 140. Relist the page and the reviews come back with it. A new seller starts from zero.</span></p><p><span class="trust-mark" aria-hidden="true">50</span><strong>pages we propose to relist by 10 October</strong><span>Fifty listings rebuilt at a fixed price, on your own seller account, live before the Christmas gifting weeks. One season to see whether Amazon earns its place; if it does, the rest of the range follows in January.</span></p></div></div>
+  <div class="trust-bar"><div class="container trust-grid"><p><span class="trust-mark" aria-hidden="true">124</span><strong>Farrah's pages on Amazon UK, none for sale</strong><span>Listed between 2012 and 2026, all still yours. Every one has said "Currently unavailable" since Amazon's last offer ended on 18 October 2025.</span></p><p><span class="trust-mark" aria-hidden="true">654</span><strong>reviews on your fudge tin, still there</strong><span>4.6 stars. The Designer Box has 483, the toffee tin 140. Relist the page and the reviews come back with it. A new seller starts from zero.</span></p><p><span class="trust-mark" aria-hidden="true">50</span><strong>pages we propose to relist by <span data-day="26">10 October</span></strong><span>Fifty listings rebuilt at a fixed price, on your own seller account, live before the Christmas gifting weeks. One season to see whether Amazon earns its place; if it does, the rest of the range follows in January.</span></p></div></div>
 
   <!-- 2b · THE DEMAND -->
   <section class="work-section" id="demand" aria-labelledby="demand-title">
@@ -257,7 +264,7 @@
 
       <div class="edge">
         <div class="edge-head"><p class="sub-lede">The shelf for "fudge gift set", with your tin put back on it.</p><p>Amazon UK, organic results on 14 September, sponsored tiles and delivery lines taken out. Your relisted tin is placed third to compare, not to promise a position: rank follows sales. It brings 654 reviews to a row of 3 to 272.</p></div>
-        <figure class="shot-figure"><img src="img/serp-shelf.jpg" alt="Amazon UK search results for fudge gift set with the Farrah's Butter Fudge tin placed third" loading="lazy" width="1568" height="575"><figcaption>Amazon.co.uk, search "fudge gift set", 14 September 2026. Prices in GBP as listed that day. The Farrah's tile is illustrative: new main image, new title, the tin's last Amazon price from October 2025.</figcaption></figure>
+        <figure class="shot-figure"><img src="img/serp-shelf.jpg" alt="Amazon UK search results for fudge gift set with the Farrah's Butter Fudge tin placed third" loading="lazy" width="1568" height="575"><figcaption>Amazon.co.uk, search "fudge gift set", 14 September 2026. Prices in GBP as listed that day. The Farrah's tile is our concept: new main image, new title, the tin's last Amazon price from October 2025.</figcaption></figure>
       </div>
     </div>
   </section>
@@ -274,7 +281,7 @@
         <div class="ba-handle" aria-hidden="true"><span></span></div>
         <input class="ba-range" type="range" min="0" max="100" value="30" aria-label="Drag to compare the page today with the relisted page">
       </div>
-      <div class="ba-legend"><span>◀ Today · currently unavailable</span><span>Relisted · illustrative ▶</span></div>
+      <div class="ba-legend"><span>◀ Today · currently unavailable</span><span>Relisted · our concept ▶</span></div>
     </div>
     <div class="page-block">
       <div class="page-head"><span class="page-num">02</span><div><h3>Harrogate Toffee, Crescent tin 300g</h3><p>140 reviews · 4.3 stars · on Amazon since March 2012</p></div><span class="page-asin">B007N3GU0Q</span></div>
@@ -284,7 +291,7 @@
         <div class="ba-handle" aria-hidden="true"><span></span></div>
         <input class="ba-range" type="range" min="0" max="100" value="30" aria-label="Drag to compare the page today with the relisted page">
       </div>
-      <div class="ba-legend"><span>◀ Today · currently unavailable</span><span>Relisted · illustrative ▶</span></div>
+      <div class="ba-legend"><span>◀ Today · currently unavailable</span><span>Relisted · our concept ▶</span></div>
     </div>
     <div class="ba-facts">
       <div class="facts-today"><span class="micro">WHAT CHANGES · BOTH PAGES</span><div class="data-row"><span>Title</span><strong>trade description → three searched phrases, under 200 characters</strong></div><div class="data-row"><span>Offer</span><strong>none → your own, on FBA</strong></div><div class="data-row"><span>Images</span><strong>lid close-ups → tin with the fudge in front, the open tin, the gift moment</strong></div><div class="data-row"><span>Bullets</span><strong>trade notes → five facts, filed under "Top highlights"</strong></div><div class="data-row"><span>Reviews</span><strong>654 and 140 → kept, on the same pages</strong></div></div>
@@ -316,14 +323,14 @@
   <section class="container section" id="plan" aria-labelledby="plan-title">
     <div class="section-heading"><div><p class="eyebrow">04 / HOW THE LAUNCH RUNS</p><h2 id="plan-title">Live before the<br><em>stocking-filler window.</em></h2></div><p>Three moves, in this order. The clock starts at your sign-off, not at the contract.</p></div>
     <div class="process-grid">
-      <article><span class="step-number">01</span><h3>Confirm the route back</h3><p>Amazon sold your tins on Vendor terms until October 2025. The route back that keeps every page, review and the store is your own seller account with stock at FBA. If you already have one, we use it; if not, we set it up alongside your Vendor account, which stays as it is.</p></article>
+      <article><span class="step-number">01</span><h3>Confirm the route back</h3><p>Amazon sold your tins on Vendor terms until October 2025. The route back that keeps every page, review and the store is your own seller account with stock at FBA. If you already have one, we use it; if not, we set it up alongside your Vendor account, which stays as it is. Vendor takes lines back on its own terms and timetable; a seller account puts the decision, the price and the stock in your hands, and the pages stay the same.</p></article>
       <article><span class="step-number">02</span><h3>Relist fifty, gift formats first</h3><p>Every one of the 124 pages gets a decision: relist, merge or retire. The fifty go up with titles from the phrases above, seven images each, five bullets, search terms, and A+ content on the three pages that carry the range.</p></article>
       <article><span class="step-number">03</span><h3>Stock at FBA before November</h3><p>Prime badge on every gift line when "stocking fillers" and "christmas sweets" start climbing. We plan quantities from the demand data and your batch dates; you ship to Amazon's warehouse.</p></article>
     </div>
     <div class="timeline">
-      <div><b>26 Sep</b><span>Your sign-off, price list and photography in</span></div>
-      <div><b>10 Oct</b><span>Fifty pages relisted and live</span></div>
-      <div><b>31 Oct</b><span>Stock received at FBA, Prime badge on</span></div>
+      <div><b data-day="12" data-short>26 Sep</b><span>Your sign-off, price list and photography in</span></div>
+      <div><b data-day="26" data-short>10 Oct</b><span>Fifty pages relisted and live</span></div>
+      <div><b data-day="47" data-short>31 Oct</b><span>Stock received at FBA, Prime badge on</span></div>
       <div><b>Nov–Dec</b><span>In search for the gifting peak</span></div>
     </div>
     <ol class="need">
@@ -338,17 +345,17 @@
 
   <!-- 6 · SCOPE AND BUDGET -->
   <section class="pricing-section" id="cost" aria-labelledby="cost-title"><div class="container section">
-    <div class="section-heading"><div><p class="eyebrow">05 / SCOPE AND BUDGET</p><h2 id="cost-title">One price.<br><em>Fixed before we start.</em></h2></div><p>The first order is a Pilot Wave: one fixed price for the first fifty pages. It counts toward anything that follows. Trade, GBP, ex VAT. No retainer attached; care and advertising are separate decisions, after the pages are live.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">05 / SCOPE AND BUDGET</p><h2 id="cost-title">One price.<br><em>Fixed before we start.</em></h2></div><p>One fixed price for the first fifty pages; it counts toward anything that follows. For scale: two neighbours on the "fudge gift set" shelf show 200+ bought in the past month at £10–13, Amazon's figure, not ours. Trade, GBP, ex VAT. No retainer; care and advertising are separate decisions, after the pages are live.</p></div>
     <div class="pricing-grid">
-      <article class="price-card price-highlight"><div class="price-ribbon">OUR RECOMMENDATION FOR FARRAH'S</div><p class="micro">THE FIFTY GIFT PAGES</p><h3>Pilot Wave M</h3><p class="price">£3,900<small class="fixed">fixed</small></p><p class="price-description">Fifty of your 124 pages relisted as full listings, live within 10 working days of sign-off.</p><ul class="check-list"><li>50 full listings: title, bullets, search terms, seven images each</li><li>A+ content on 3 hero pages</li><li>Inventory of all 124 pages: relist, merge or retire</li><li>FBA stock plan for November</li><li>One revision round · 50% deposit, balance on sign-off</li></ul><a href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20%E2%80%94%20Pilot%20Wave%20M" class="button">Start with fifty <span aria-hidden="true">↗</span></a></article>
-      <article class="price-card"><p class="micro">IF YOU WOULD RATHER START SMALLER</p><h3>Pilot Wave S</h3><p class="price">£2,400<small class="fixed">fixed</small></p><p class="price-description">The 25 tins and boxes with reviews first.</p><ul class="check-list"><li>25 full listings</li><li>A+ content on 2 hero pages</li><li>Same inventory, same FBA plan</li></ul><a href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20%E2%80%94%20Pilot%20Wave%20S" class="button button-outline">Start with twenty-five <span aria-hidden="true">↗</span></a></article>
-      <article class="price-card"><p class="micro">ONLY IF NEEDED</p><h3>Seller account set-up</h3><p class="price">£1,500<small class="fixed">one-off</small></p><p class="price-description">If Farrah's has no seller account yet: account, Brand Registry link, FBA settings, VAT and tax setup handed to your accountant.</p><ul class="check-list"><li>Skipped if an account exists</li><li>Vendor account untouched</li><li>Done inside the same ten days</li></ul><a href="https://abc5550.github.io/shelfandscale-preview/v4/#pricing" class="text-link" target="_blank" rel="noopener">Full price list <span aria-hidden="true">↗</span></a></article>
+      <article class="price-card price-highlight"><div class="price-ribbon">OUR RECOMMENDATION FOR FARRAH'S</div><p class="micro">PILOT WAVE M · THE FIFTY GIFT PAGES</p><h3>Fifty pages</h3><p class="price">£3,900<small class="fixed">fixed</small></p><p class="price-description">Fifty of your 124 pages relisted as full listings, live within 10 working days of sign-off.</p><ul class="check-list"><li>50 full listings: title, bullets, search terms, seven images each</li><li>A+ content on 3 hero pages</li><li>Inventory of all 124 pages: relist, merge or retire</li><li>FBA stock plan for November</li><li>One revision round · 50% deposit, balance on sign-off</li></ul><a href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20%E2%80%94%20Pilot%20Wave%20M" class="button">Start with fifty <span aria-hidden="true">↗</span></a></article>
+      <article class="price-card"><p class="micro">PILOT WAVE S · IF YOU WOULD RATHER START SMALLER</p><h3>Twenty-five pages</h3><p class="price">£2,400<small class="fixed">fixed</small></p><p class="price-description">The 25 tins and boxes with reviews first.</p><ul class="check-list"><li>25 full listings</li><li>A+ content on 2 hero pages</li><li>Same inventory, same FBA plan</li></ul><a href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20%E2%80%94%20Pilot%20Wave%20S" class="button button-outline">Start with twenty-five <span aria-hidden="true">↗</span></a></article>
     </div>
+    <div class="account-row"><div><span class="micro">ONLY IF NEEDED</span><strong>Seller account set-up · £1,500 one-off</strong><p>If Farrah's has no seller account yet: account, Brand Registry link, FBA settings, VAT and tax setup handed to your accountant. Skipped if an account exists; your Vendor account is untouched; done inside the same ten days.</p></div><a href="https://abc5550.github.io/shelfandscale-preview/v4/#pricing" class="text-link" target="_blank" rel="noopener">Full price list <span aria-hidden="true">↗</span></a></div>
     <div class="pricing-notes"><p><strong>Not in the price, said up front.</strong> VAT; photography of physical samples if your images are not usable; Amazon's fees and FBA storage; advertising spend; Catalogue Care after launch, from £600 a month, if you want the range looked after. Legacy repairs beyond relisting, if the inventory turns any up, are itemised before you commit.</p><span>GBP · excluding VAT<br>Quote fixed in writing before work starts</span></div>
   </div></section>
 
   <!-- 7 · NEXT STEP -->
-  <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-grid"><div><p class="eyebrow">06 / NEXT STEP</p><h2 id="contact-title">Reply to this page.<br><em>We start at your sign-off.</em></h2><p>Reply to the email this page came with: which wave, and where you stand with Amazon today. Within one working day you get the schedule and the quote in writing. This page is private and stays up until 10 October 2026.</p><div class="contact-benefits"><span>No call needed</span><span>No account access until you say so</span><span>Quote fixed in writing</span></div></div><div class="contact-card"><p class="micro">FOR PETER MARSTON · FARRAH'S OF HARROGATE</p><h3>Your range.<br>Back in the search by October.</h3><a class="button button-light" href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20on%20Amazon%20%E2%80%94%20let%27s%20start&body=Hi%20Kevin%2C%0A%0APilot%20Wave%20M%20%2F%20S%3A%20%0AWhere%20we%20are%20with%20Amazon%20today%20(Vendor%20%2F%20seller%20account)%3A%20%0AWe%20can%20sign%20off%20by%3A%20%0APrice%20list%20attached%3A%20%0A">Reply to Kevin <span aria-hidden="true">↗</span></a><div class="email-row"><a href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a><button type="button" class="copy-email" aria-label="Copy email address" title="Copy email address"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4"/></svg></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div></section>
+  <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-grid"><div><p class="eyebrow">06 / NEXT STEP</p><h2 id="contact-title">Reply to this page.<br><em>We start at your sign-off.</em></h2><p>Email Kevin with two things: which wave, and where you stand with Amazon today. Within one working day you get the schedule and the quote in writing. This page is private and not indexed.</p><div class="contact-benefits"><span>No call needed</span><span>No account access until you say so</span><span>Quote fixed in writing</span></div></div><div class="contact-card"><p class="micro">FOR PETER MARSTON · FARRAH'S OF HARROGATE</p><h3>Your range.<br>Back in the search by October.</h3><a class="button button-light" href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20on%20Amazon%20%E2%80%94%20let%27s%20start&body=Hi%20Kevin%2C%0A%0APilot%20Wave%20M%20%2F%20S%3A%20%0AWhere%20we%20are%20with%20Amazon%20today%20(Vendor%20%2F%20seller%20account)%3A%20%0AWe%20can%20sign%20off%20by%3A%20%0APrice%20list%20attached%3A%20%0A">Reply to Kevin <span aria-hidden="true">↗</span></a><div class="email-row"><a href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a><button type="button" class="copy-email" aria-label="Copy email address" title="Copy email address"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4"/></svg></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div></section>
 
   <section class="container" style="padding:36px 0 10px">
     <div class="notes">
@@ -358,14 +365,15 @@
         <li><strong>Reviews and stars.</strong> Read from the product pages on 11 September 2026.</li>
         <li><strong>Search phrases.</strong> One year of Amazon UK search data, 1.46 million phrases. The rank shown is the phrase's best weekly position in that year.</li>
         <li><strong>Competitor sales.</strong> Amazon's own "bought in past month" label, read on 14 September 2026. Amazon shows a range, not an exact count.</li>
-        <li><strong>The rebuilt page.</strong> Title and bullets follow Amazon's rules (200 characters, no word more than twice). They are a proposal until built from your product data and photography.</li>
+        <li><strong>What is real and what is a concept.</strong> Real: every number, date, review count, search rank, competitor price and the left side of each slider. Concept: the new titles, bullets and gallery images on the right side, the hero photo and the Farrah's tile on the shelf. Titles and bullets follow Amazon's rules (200 characters, no word more than twice) and are built for real from your product data and photography once you sign off.</li>
       </ul></details>
     </div>
   </section>
 </main>
-<footer class="footer"><div class="container"><div class="footer-main"><a class="wordmark" href="https://shelfandscale.com/">shelf<span>&amp;</span>scale<span class="wordmark-period">.</span></a><p>Amazon catalogue &amp; brand management.<br>Built for the whole range.</p><a class="back-top text-link" href="#">Back to top <span aria-hidden="true">↑</span></a></div><p class="footer-legal">Prepared for Farrah's of Harrogate Ltd on 12 September 2026 from public Amazon UK product data and our own search base. Product images on the relisted side are illustrative concepts from Farrah's public range; Farrah's and Harrogate Toffee are trade marks of their owner. Shelf &amp; Scale is a trading name of Shopcienty Limited, registered in England and Wales, company number 14960765, registered office 7 Bell Yard, London WC2A 2JR. <a href="https://abc5550.github.io/shelfandscale-preview/v4/privacy.html">Privacy notice</a>.</p><div class="footer-bottom"><span>© 2026 Shelf &amp; Scale · United Kingdom</span><span>Private page · not indexed</span><span>All prices exclude VAT</span></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-main"><a class="wordmark" href="https://shelfandscale.com/">shelf<span>&amp;</span>scale<span class="wordmark-period">.</span></a><p>Amazon catalogue &amp; brand management.<br>Built for the whole range.</p><a class="back-top text-link" href="#">Back to top <span aria-hidden="true">↑</span></a></div><p class="footer-legal">Prepared for Farrah's of Harrogate Ltd on 12 September 2026 from public Amazon UK product data and our own search base. Relisted pages and gallery images are concepts built from Farrah's public product data and photography; Farrah's and Harrogate Toffee are trade marks of their owner. Shelf &amp; Scale is a trading name of Shopcienty Limited, registered in England and Wales, company number 14960765, registered office 7 Bell Yard, London WC2A 2JR. <a href="https://abc5550.github.io/shelfandscale-preview/v4/privacy.html">Privacy notice</a>.</p><div class="footer-bottom"><span>© 2026 Shelf &amp; Scale · United Kingdom</span><span>Private page · not indexed</span><span>All prices exclude VAT</span></div></div></footer>
 <script>
 (function(){
+  var SENT=new Date('2026-09-14');var MON=['January','February','March','April','May','June','July','August','September','October','November','December'];document.querySelectorAll('[data-day]').forEach(function(e){var d=new Date(SENT);d.setDate(d.getDate()+parseInt(e.dataset.day,10));var m=MON[d.getMonth()];e.textContent=d.getDate()+' '+(e.hasAttribute('data-short')?m.slice(0,3):m);});
   document.querySelectorAll('.tabs button').forEach(function(t){t.addEventListener('click',function(){var k=t.dataset.tab;t.parentNode.querySelectorAll('button').forEach(function(b){b.classList.toggle('on',b===t)});document.querySelectorAll('[data-pane]').forEach(function(p){p.classList.toggle('hide',p.dataset.pane!==k)});});});
   document.querySelectorAll('[data-ba],[data-ib]').forEach(function(w){
     var r=w.querySelector('.ba-range'),b=w.querySelector('.ba-before, .ib-before'),h=w.querySelector('.ba-handle');
