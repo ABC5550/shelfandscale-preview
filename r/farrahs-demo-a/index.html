@@ -142,15 +142,20 @@
     .fifty span{display:block;font-size:12px;color:var(--muted);margin-top:6px;line-height:1.35}
     .page-block{margin-top:34px}
     .page-block:first-of-type{margin-top:0}
-    .page-head{display:flex;align-items:center;gap:16px;margin-bottom:12px}
-    .page-num{font-family:var(--display);font-style:italic;font-size:26px;color:#68855a;line-height:1}
-    .page-head h3{font-family:var(--sans);font-size:17px;font-weight:500;margin:0}
-    .page-head p{font-size:12.5px;color:var(--muted);margin:2px 0 0}
-    .page-asin{margin-left:auto;font:11px monospace;color:var(--muted)}
-    .phones-block{margin-top:40px}
+    .page-head{display:block;padding-top:18px}
+    .page-num{display:block;font-family:var(--display);font-style:italic;font-size:34px;color:#68855a;line-height:1;margin-bottom:14px}
+    .page-head h3{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.15;margin:0;color:var(--ink);letter-spacing:-.01em}
+    .page-head p{font-size:13px;color:var(--muted);margin:8px 0 0}
+    .page-asin{display:block;font:11px monospace;color:var(--muted);margin-top:6px}
+    .page-delta{margin:26px 0 0;padding-top:18px;border-top:1px solid var(--rule)}
+    .page-delta div{display:grid;grid-template-columns:86px 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:13px;line-height:1.45}
+    .page-delta dt{color:var(--muted);margin:0}.page-delta dd{margin:0;color:var(--ink)}
+    .phones-block{margin-top:56px;display:grid;grid-template-columns:minmax(260px,1fr) auto;gap:56px;align-items:start}
     .phones-block:first-of-type{margin-top:0}
-    .phones{display:grid;grid-template-columns:repeat(2,var(--phw));gap:56px;justify-content:center;align-items:start;--phw:350px}
+    .phones{display:grid;grid-template-columns:repeat(2,var(--phw));gap:40px;justify-content:end;align-items:start;--phw:clamp(260px,calc((100vh - 200px) * .4986),320px)}
     .phone{margin:0;width:var(--phw);display:flex;flex-direction:column;align-items:center}
+    .phone figcaption{order:-1;align-self:center;margin:0 0 14px;padding:5px 12px;border-radius:999px;background:#e6e8e2;color:#4f5a4c;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;line-height:1.2}
+    .phone.after figcaption{background:#1f3d2b;color:#f3f5ee}
     .ph-device{position:relative;width:100%;aspect-ratio:739/1482;container-type:inline-size;filter:drop-shadow(0 18px 28px rgba(20,30,20,.16)) drop-shadow(0 2px 4px rgba(0,0,0,.08))}
     .ph-frame{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;z-index:2}
     /* screen is designed at 312x672 for a 350px device; every size inside is in em, base = 12px at 350px, so it scales with the device */
@@ -166,7 +171,7 @@
     .ph-store{display:flex;justify-content:space-between;align-items:flex-start;gap:.5em;padding:.833em 1.167em 0;font-size:.958em}
     .ph-store a{color:#007185}
     .ph-rating{white-space:nowrap;font-size:.917em;display:inline-flex;align-items:center;gap:.25em}.ph-rating .stars{color:#de7921;letter-spacing:-.04em;font-size:1.09em}.ph-rating .ph-n{color:#007185}
-    .ph-title{padding:.333em 1.167em 0;font-size:1.083em;line-height:1.38;color:#0f1111;max-height:calc(3 * 1.38em + .3em);overflow:hidden}
+    .ph-title{padding:.333em 1.167em 0;font-size:1.167em;line-height:1.36;color:#0b0c0c;letter-spacing:-.005em;max-height:calc(3 * 1.38em + .3em);overflow:hidden}
     .ph-title u{text-decoration:none;background:#edf2e8;box-shadow:0 2px 0 #a8c4a1}
     .ph-bought{padding:.5em 1.167em 0;font-size:.958em;color:#0f1111}.ph-bought b{font-weight:700}
     .ph-img{padding:.4em 1.3em 0;position:relative}
@@ -179,8 +184,8 @@
     .ph-price{padding:.5em 1.167em 0;font-size:1.833em;line-height:1;color:#0f1111;border-top:.273em solid #f0f2f2}.ph-sym{font-size:.5em;vertical-align:top;margin-right:1px}.ph-price small{font-size:.477em;color:#565959;margin-left:.3em}
     .ph-price{display:flex;align-items:baseline;flex-wrap:nowrap}.ph-price small{margin-right:auto}.ph-prime{font-size:.523em;color:#00a8e1;font-weight:700;white-space:nowrap;padding-left:.6em}
     .phone.after .ph-avail{border-top:0;padding-top:.2em;padding-bottom:.1em;font-size:1.15em}
-    .ph-save{padding:.6em 1.167em .667em;font-size:1em;font-weight:700;display:flex;flex-direction:column;gap:.583em}
-    .ph-btn{display:block;text-align:center;font-weight:400;font-size:1.042em;padding:.72em;border:1px solid #888c8c;border-radius:1.8em;background:#fff;color:#0f1111}
+    .ph-save{padding:.45em 1.167em .5em;font-size:1em;font-weight:700;display:flex;flex-direction:column;gap:.45em}
+    .ph-btn{display:block;text-align:center;font-weight:400;font-size:1.042em;padding:.62em;border:1px solid #888c8c;border-radius:1.8em;background:#fff;color:#0f1111}
     .ph-btn.yellow{background:#ffd814;border-color:#fcd200}.ph-btn.orange{background:#ffa41c;border-color:#ff8f00}
     .ph-next{border-top:.4em solid #f0f2f2;padding:.75em 1.167em 0;font-size:1.083em}.ph-next b{display:block;font-weight:700;margin-bottom:.3em}.ph-next span{display:block;font-size:.85em;color:#565959}
     .ph-nav{position:absolute;left:0;right:0;bottom:1.333em;border-top:1px solid #e3e6e6;background:#fff;padding:.583em .833em .333em;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;font-size:.792em;color:#0f1111}
@@ -188,10 +193,9 @@
     .ph-nav .cur{position:relative}.ph-nav .cur::after{content:"";position:absolute;left:50%;bottom:-.3em;width:2.3em;height:2px;margin-left:-1.15em;background:#e47911;border-radius:1px}
     .ph-nav b{font-weight:400}
     .ph-home{position:absolute;left:0;right:0;bottom:0;height:1.333em;background:#fff}.ph-home::after{content:"";position:absolute;left:50%;bottom:.417em;width:8.667em;height:.333em;margin-left:-4.333em;border-radius:.2em;background:#0f1111}
-    .phone figcaption{text-align:center;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#a3a3a3;padding:20px 0 2px}
-    .phone.after figcaption{color:#68855a}
-    @media(max-width:900px){.phones{gap:28px;--phw:300px}}
-    @media(max-width:700px){.phones{grid-template-columns:min(340px,100%);gap:32px;justify-content:center;--phw:min(340px,100%)}.page-head .page-asin{display:none}.page-head{flex-wrap:wrap}.page-asin{margin-left:0;width:100%}}
+        @media(max-width:1100px){.phones-block{grid-template-columns:1fr;gap:24px}.phones{justify-content:center}.page-head{display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:baseline}.page-num{margin:0}.page-head h3{font-size:22px}.page-head p,.page-asin{grid-column:2}.page-delta{grid-column:1/-1;margin-top:14px}}
+    @media(max-width:900px){.phones{gap:28px;--phw:clamp(240px,calc((100vh - 200px) * .4986),300px)}}
+    @media(max-width:700px){.phones{grid-template-columns:min(340px,100%);gap:32px;justify-content:center;--phw:min(340px,100%)}.page-delta div{grid-template-columns:76px 1fr}}
     #product{overflow-x:hidden}
     .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
     html,body{overflow-x:hidden}
@@ -331,7 +335,7 @@
     <div class="section-heading"><div><p class="eyebrow">02 / YOUR PAGE, ON A PHONE</p><h2 id="product-title">Your tin, today<br><em>and relisted.</em></h2></div><p>Most Amazon UK shoppers see your page on a phone. This is what fits on that first screen: photo, title, stars, and whether they can buy. Left, today. Right, the same page relisted. What changes below the fold is in the table underneath.</p></div>
 
     <div class="phones-block">
-      <div class="page-head"><span class="page-num">01</span><div><h3>Butter Fudge, Art Nouveau tin 300g</h3><p>654 reviews · 4.6 stars · on Amazon since 2012</p></div><span class="page-asin">B00APYN3TG</span></div>
+      <div class="page-head"><span class="page-num">01</span><h3>Butter Fudge, Art Nouveau tin 300g</h3><p>654 reviews · 4.6 stars · on Amazon since 2012</p><span class="page-asin">B00APYN3TG</span><dl class="page-delta"><div><dt>Title</dt><dd>Trade description → sweets gift box, christmas, stocking fillers for adults, sweet hamper</dd></div><div><dt>Main image</dt><dd>Lid close-up on grey → the tin with its fudge, on white</dd></div><div><dt>Offer</dt><dd>None → £11.98 on your account, Prime One-Day</dd></div></dl></div>
       <div class="phones">
         <figure class="phone today"><div class="ph-device"><div class="ph-screen">
           <div class="ph-status"></div><div class="ph-search"><svg class="ph-back" viewBox="0 0 16 16" fill="none" stroke="#0f1111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 4 8l6 6"/></svg><span class="ph-box"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#565959" stroke-width="1.8" stroke-linecap="round"><circle cx="6.8" cy="6.8" r="5"/><path d="m10.5 10.5 4 4"/></svg>Search or ask a question</span><svg width="16" height="14" viewBox="0 0 20 17" fill="none" stroke="#0f1111" stroke-width="1.6" stroke-linejoin="round"><path d="M2 5h3.5l1.5-2.5h6L14.5 5H18v10H2z"/><circle cx="10" cy="10" r="3"/></svg></div>
@@ -344,7 +348,7 @@
       </div>
     </div>
     <div class="phones-block">
-      <div class="page-head"><span class="page-num">02</span><div><h3>Harrogate Toffee, Crescent tin 300g</h3><p>140 reviews · 4.3 stars · on Amazon since 2012</p></div><span class="page-asin">B007N3GU0Q</span></div>
+      <div class="page-head"><span class="page-num">02</span><h3>Harrogate Toffee, Crescent tin 300g</h3><p>140 reviews · 4.3 stars · on Amazon since 2012</p><span class="page-asin">B007N3GU0Q</span><dl class="page-delta"><div><dt>Title</dt><dd>Trade description → sweet hamper, christmas, stocking fillers for adults, sweets gift box</dd></div><div><dt>Main image</dt><dd>Lid close-up on grey → the tin with wrapped toffees, on white</dd></div><div><dt>Offer</dt><dd>None → £10.29 on your account, Prime One-Day</dd></div></dl></div>
       <div class="phones">
         <figure class="phone today"><div class="ph-device"><div class="ph-screen">
           <div class="ph-status"></div><div class="ph-search"><svg class="ph-back" viewBox="0 0 16 16" fill="none" stroke="#0f1111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2 4 8l6 6"/></svg><span class="ph-box"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#565959" stroke-width="1.8" stroke-linecap="round"><circle cx="6.8" cy="6.8" r="5"/><path d="m10.5 10.5 4 4"/></svg>Search or ask a question</span><svg width="16" height="14" viewBox="0 0 20 17" fill="none" stroke="#0f1111" stroke-width="1.6" stroke-linejoin="round"><path d="M2 5h3.5l1.5-2.5h6L14.5 5H18v10H2z"/><circle cx="10" cy="10" r="3"/></svg></div>
