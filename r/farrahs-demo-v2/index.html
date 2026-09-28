@@ -159,18 +159,6 @@
     .fifty b{display:block;font-family:var(--display);font-weight:400;font-size:30px;line-height:1;color:var(--ink)}
     .fifty div.in b{color:var(--green)}
     .fifty span{display:block;font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.35}
-    .econ{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
-    .econ article{border:1px solid var(--rule);background:#fff;padding:22px 24px}
-    .econ .micro{display:block;color:var(--muted);margin-bottom:10px}
-    .econ h3{font-family:var(--display);font-weight:400;font-size:24px;letter-spacing:-.02em;margin:0 0 14px}
-    .ledger{list-style:none;margin:0;padding:0}
-    .ledger li{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:14.5px}
-    .ledger li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
-    .ledger li.sum{font-weight:600;color:var(--ink)}
-    .ledger li.sum.bad span:last-child{color:var(--red)}
-    .ledger li.sum.ok span:last-child{color:var(--green)}
-    .econ p{font-size:14px;color:var(--muted);margin:14px 0 0;line-height:1.55}
-    .econ p b{color:var(--ink);font-weight:600}
     /* vendor vs seller */
     .cmp{width:100%;border-collapse:collapse;margin-top:8px}
     .cmp th{text-align:left;font-weight:400;padding:0 18px 14px 0;border-bottom:2px solid var(--green);vertical-align:bottom}
@@ -235,7 +223,7 @@
     .footer-legal a{color:inherit}
     /* responsive */
     @media(max-width:1100px){.phones-block{grid-template-columns:1fr;gap:24px}.phones{justify-content:center}.page-head{display:grid;grid-template-columns:auto 1fr;column-gap:16px;align-items:baseline}.page-num{margin:0}.page-head h3{font-size:22px}.page-head p,.page-asin{grid-column:2}.page-delta{grid-column:1/-1;margin-top:14px}}
-    @media(max-width:900px){.found,.two-col,.econ,.need,.edge-head{grid-template-columns:1fr}.fifty{grid-template-columns:repeat(3,1fr)}.timeline{grid-template-columns:1fr 1fr}.header-tag{display:none}.phones{gap:28px;--phw:clamp(240px,calc((100vh - 200px) * .4986),300px)}.who{grid-template-columns:auto 1fr}.who-links{grid-column:2}.after-grid{grid-template-columns:1fr}.hero .product-sheet{max-width:none}}
+    @media(max-width:900px){.found,.two-col,.need,.edge-head{grid-template-columns:1fr}.fifty{grid-template-columns:repeat(3,1fr)}.timeline{grid-template-columns:1fr 1fr}.header-tag{display:none}.phones{gap:28px;--phw:clamp(240px,calc((100vh - 200px) * .4986),300px)}.who{grid-template-columns:auto 1fr}.who-links{grid-column:2}.after-grid{grid-template-columns:1fr}.hero .product-sheet{max-width:none}}
     @media(max-width:720px){.ln{display:inline}.pricing-grid{grid-template-columns:1fr}.tldr li{grid-template-columns:1fr;gap:2px}.tldr li span{padding-top:0}.total-row{grid-template-columns:1fr}.total-row .sum small{text-align:left}.account-row{display:block}.account-row .text-link{margin-top:10px}.frames{grid-template-columns:repeat(3,1fr)}.frames div.plan{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;align-items:center;background:#fff}.frames div.plan .ph{display:none}.frames div.plan i{position:static;margin:0 0 0 9px}.frames div.plan span{padding:8px 9px}.frames div.plan span b{display:inline;margin-right:6px}.cmp thead{display:none}.cmp tr{display:block;padding:12px 0;border-bottom:1px solid var(--rule)}.cmp td{display:block;padding:2px 0;border:0}.cmp td:first-child{width:auto;margin-bottom:4px}.cmp td:nth-child(2):before{content:"Vendor · ";color:var(--muted);font-weight:600}.cmp td:nth-child(3):before{content:"Your account · ";color:var(--green);font-weight:600}.shot-figure .shot-desktop{display:none}.shot-figure .shot-mobile{display:block}.shot-figure .concept-tag{bottom:auto;top:10px;left:auto;right:10px;transform:none}}
     @media(max-width:700px){.phones{grid-template-columns:min(340px,100%);gap:32px;justify-content:center;--phw:min(340px,100%)}.page-delta div{grid-template-columns:76px 1fr}
       .ph-toggle{display:flex;gap:0;margin:0 auto 18px;border:1px solid var(--rule);width:max-content}.ph-toggle button{font:inherit;font-size:13px;padding:9px 18px;border:0;background:#fff;color:var(--ink);cursor:pointer}.ph-toggle button.on{background:var(--green);color:#fff}
@@ -272,6 +260,18 @@
     .frames div span{font-size:var(--t-sm)}.frames div span b{font-size:var(--t-md)}
     .demand th,.went th,.found .mini li.head{letter-spacing:.06em}
     @media(max-width:720px){.tldr li{grid-template-columns:1fr}.hero-art .sheet-checks{font-size:var(--t-sm)}}
+    .frames{grid-template-columns:repeat(3,1fr);gap:12px}
+    .frames-rest{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr;gap:0}
+    .frames-rest li{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--rule);font-size:var(--t-md);color:var(--muted)}
+    .frames-rest li i{flex:none;width:22px;height:22px;border-radius:50%;background:#9aa596;color:#fff;font:italic 13px var(--display);display:grid;place-items:center}
+    .frames-rest li b{color:var(--ink);font-weight:600;margin-right:2px}
+    @media(max-width:720px){.frames-rest{grid-template-columns:1fr}}
+    .rules{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+    .rules>div{border-top:2px solid var(--green);padding-top:16px}
+    .rules .micro{display:block;color:var(--muted);margin-bottom:8px}
+    .rules b{display:block;font-family:var(--display);font-weight:400;font-size:24px;letter-spacing:-.02em;margin-bottom:10px}
+    .rules p{font-size:var(--t-base);color:var(--muted);margin:0;line-height:1.6}
+    @media(max-width:900px){.rules{grid-template-columns:1fr}}
     html,body{overflow-x:hidden}
     #example{overflow-x:hidden}
   </style>
@@ -297,7 +297,7 @@
     <ul class="tldr">
       <li><span>What we propose</span><div>Relist <b>fifty gift pages on your own seller account</b>: the same pages, the same reviews, your price, your stock at FBA.</div></li>
       <li><span>When</span><div>Live within <b>ten working days</b> of your sign-off. Sign off by 16 October and the tins are buyable for the stocking-filler window.</div></li>
-      <li><span>What it costs</span><div><b>£3,900 fixed</b> for fifty pages; £5,400 with a new seller account. No retainer.</div></li>
+      <li><span>What it costs</span><div><b>£5,400 fixed</b>: fifty pages plus a new seller account (£3,900 if you already have one). No retainer.</div></li>
       <li><span>Next step</span><div>This page is the free sample. <b>Reply with your trade price list</b>; the quote comes back fixed, in writing, within one working day.</div></li>
     </ul>
     <div class="hero-cta">
@@ -404,17 +404,19 @@
         <p class="note">The title stays a product name: what it is, how much, which tin, what it is for. 140 characters, no word more than twice, nothing the tin is not. "Since 1840" goes to the first bullet: nobody types it, everybody reads it after the click.</p>
       </div>
       <div class="panel">
-        <span class="micro">SEVEN FRAMES, ONE QUESTION EACH</span>
+        <span class="micro">SEVEN FRAMES, ONE QUESTION EACH · THREE BUILT FOR THIS PAGE</span>
         <div class="frames">
           <div><i>1</i><img src="img/ph-fudge-main-0.jpg" alt="Frame 1 concept: the tin with its fudge on white" loading="lazy" width="400" height="400"><span><b>What is it</b>Main image, on white</span></div>
           <div><i>2</i><img src="img/ph-fudge-open-0.jpg" alt="Frame 2 concept: the tin open, fudge inside" loading="lazy" width="400" height="400"><span><b>What is inside</b>Open tin, the fudge</span></div>
           <div><i>3</i><img src="img/ph-fudge-gift-0.jpg" alt="Frame 3 concept: the tin as a present" loading="lazy" width="400" height="400"><span><b>Is it a present</b>The tin, wrapped</span></div>
-          <div class="plan"><i>4</i><div class="ph"></div><span><b>How big is 300 g</b>Tin in hand, cube count</span></div>
-          <div class="plan"><i>5</i><div class="ph"></div><span><b>Why this tin</b>Harrogate, since 1840</span></div>
-          <div class="plan"><i>6</i><div class="ph"></div><span><b>What it tastes like</b>Butter, sugar, cream: the ingredients</span></div>
-          <div class="plan"><i>7</i><div class="ph"></div><span><b>What else is there</b>The gift range</span></div>
         </div>
-        <p class="note">Three frames are built for this page from your pack shot, so you can judge the standard. Frames 4 to 7 are shot or built from your files in the Pilot Wave; every one of the fifty pages gets the same seven.</p>
+        <ol class="frames-rest">
+          <li><i>4</i><b>How big is 300 g</b> tin in hand, cube count</li>
+          <li><i>5</i><b>Why this tin</b> Harrogate, since 1840</li>
+          <li><i>6</i><b>What it tastes like</b> butter, sugar, cream</li>
+          <li><i>7</i><b>What else is there</b> the gift range</li>
+        </ol>
+        <p class="note">Frames 1 to 3 are built for this page from your pack shot, so you can judge the standard. Frames 4 to 7 are shot or built from your files in the Pilot Wave; every one of the fifty pages gets the same seven.</p>
       </div>
     </div>
 
@@ -441,7 +443,7 @@
 
   <!-- 4 · WHICH FIFTY, AND WHETHER THEY PAY -->
   <section class="pricing-section" id="fifty" aria-labelledby="fifty-title"><div class="container section">
-    <div class="section-heading"><div><p class="eyebrow">03 / WHICH FIFTY, AND WHETHER THEY PAY</p><h2 id="fifty-title">Gift formats first. <em class="ln">Here is the arithmetic.</em></h2></div><p>Of your 124 pages, 59 are gift formats. The first wave is the fifty of those with reviews, gift demand, and a shelf life that clears FBA's 90-day rule. Whether each one pays is a question for your price list, not ours, so that check comes before any commitment.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">03 / WHICH FIFTY, AND WHY</p><h2 id="fifty-title">Gift formats first. <em class="ln">Here is how the fifty are chosen.</em></h2></div><p>Of your 124 pages, 59 are gift formats. The first wave is the fifty of those that pass three rules: reviews already earned, gift demand, and a shelf life that clears FBA's 90-day rule.</p></div>
     <div class="fifty">
       <div class="in"><b>40</b><span>tins and drums</span></div>
       <div class="in"><b>19</b><span>gift packs and selections</span></div>
@@ -451,31 +453,10 @@
       <div><b>1</b><span>honey and preserves</span></div>
     </div>
     <p class="process-note">Green: the pool the first fifty are drawn from.</p>
-    <div class="econ">
-      <article>
-        <span class="micro">A 300 G TIN AT ITS LAST AMAZON PRICE · APPROXIMATE</span>
-        <h3>Why the tins go first</h3>
-        <ul class="ledger">
-          <li><span>Price on the page, incl. VAT</span><span>£11.98</span></li>
-          <li><span>Price ex VAT</span><span>£9.98</span></li>
-          <li><span>Amazon's referral fee, confectionery</span><span>about −£1.80</span></li>
-          <li><span>FBA pick, pack and delivery, one small parcel</span><span>about −£3.00</span></li>
-          <li class="sum ok"><span>Left to Farrah's, before product and inbound shipping</span><span>about £5</span></li>
-        </ul>
-        <p>Amazon's published UK rates for a parcel under 500 g, rounded; the exact fees are itemised in the quote. Your price list says whether £5 clears your margin. <b>It probably does for a tin. It is the reason the tins go first.</b></p>
-      </article>
-      <article>
-        <span class="micro">A £2.50 BAG OF BOILED SWEETS · APPROXIMATE</span>
-        <h3>Why the bags wait</h3>
-        <ul class="ledger">
-          <li><span>Price on the page, incl. VAT</span><span>£2.50</span></li>
-          <li><span>Price ex VAT</span><span>£2.08</span></li>
-          <li><span>Amazon's referral fee</span><span>about −£0.20</span></li>
-          <li><span>FBA pick, pack and delivery</span><span>about −£2.90</span></li>
-          <li class="sum bad"><span>Left to Farrah's</span><span>below zero</span></li>
-        </ul>
-        <p>Single bags at £2–3 lose money on FBA at any margin. <b>They come back as multipacks in a second wave, or not at all.</b> That is the decision the inventory of all 124 pages makes explicit: relist, merge into a multipack, or retire.</p>
-      </article>
+    <div class="rules">
+      <div><span class="micro">RULE 1</span><b>Reviews first</b><p>Pages that already carry reviews go up first: the fudge tin's 654, the Designer Box's 483, the toffee tin's 140. A new page starts from zero; these start where they left off.</p></div>
+      <div><span class="micro">RULE 2</span><b>Gift demand</b><p>"Sweets gift box", "christmas sweets" and "stocking fillers for adults" are searched every week and peak from October. Tins, drums and selections answer those searches; a single bag of mints does not.</p></div>
+      <div><span class="micro">RULE 3</span><b>Shelf life and price</b><p>FBA needs 90 days of shelf life on arrival, and a £2–3 bag does not cover Amazon's fees as a single line. The 39 bags come back as multipacks in a second wave, or not at all. The inventory of all 124 pages makes that call explicit: relist, merge, or retire.</p></div>
     </div>
   </div></section>
 
@@ -507,7 +488,7 @@
     </div>
     <p class="plan-note">Sign off later and the dates shift by the same amount: after early November the sensible target becomes January gifting and Mother's Day, and we say so rather than promise Christmas.</p>
     <ol class="need">
-      <li>Your trade price list or product spreadsheet<span>The one you send to retailers is enough. It answers the arithmetic above before anything is signed.</span></li>
+      <li>Your trade price list or product spreadsheet<span>The one you send to retailers is enough. It sets the price on every page before anything is signed.</span></li>
       <li>Product photography for the first fifty<span>Or samples of three to five products and we shoot them; quoted separately.</span></li>
       <li>Where you stand with Amazon today<span>Vendor Central still open? A seller account already? Who holds the Brand Registry? Ten minutes on email settles the route.</span></li>
       <li>A user on your Brand Registry and, once it exists, your seller account<span>Restricted permissions, revocable in a click. If the Registry is in Farrah's name, no trade mark paperwork; we confirm this at step 03.</span></li>
@@ -531,7 +512,7 @@
       <article class="price-card price-highlight"><div class="price-ribbon">OUR RECOMMENDATION FOR FARRAH'S</div><p class="micro">PILOT WAVE M · THE FIFTY GIFT PAGES</p><h3>Fifty pages</h3><p class="price">£3,900<small class="fixed">fixed</small></p><p class="price-description">Fifty of your 124 pages relisted as full listings, live within 10 working days of sign-off.</p><ul class="check-list"><li>50 full listings: title, bullets, search terms, seven images each</li><li>A+ content on 3 hero pages</li><li>Inventory of all 124 pages: relist, merge or retire</li><li>FBA stock plan for the gifting peak</li><li>One revision round</li></ul><a href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20%E2%80%94%20Pilot%20Wave%20M&body=Hi%20Kevin%2C%0A%0APrice%20list%3A%20attached%0ASeller%20account%3A%20yes%20%2F%20no%20%2F%20not%20sure%0AEarliest%20sign-off%20date%3A%20%0A" class="button">Start with fifty <span aria-hidden="true">↗</span></a></article>
       <article class="price-card"><p class="micro">PILOT WAVE S · IF YOU WOULD RATHER START SMALLER</p><h3>Twenty-five pages</h3><p class="price">£2,400<small class="fixed">fixed</small></p><p class="price-description">The 25 tins and boxes with reviews first.</p><ul class="check-list"><li>25 full listings</li><li>A+ content on 2 hero pages</li><li>Same inventory, same FBA plan</li></ul><a href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20%E2%80%94%20Pilot%20Wave%20S&body=Hi%20Kevin%2C%0A%0APrice%20list%3A%20attached%0ASeller%20account%3A%20yes%20%2F%20no%20%2F%20not%20sure%0AEarliest%20sign-off%20date%3A%20%0A" class="button button-outline">Start with twenty-five <span aria-hidden="true">↗</span></a></article>
     </div>
-    <div class="total-row"><div><span class="micro">THE WHOLE BUDGET, ON ONE LINE</span><strong>Fifty pages £3,900 + seller account set-up £1,500</strong><p>Amazon sold your tins itself, so Farrah's most likely has no seller account. Setting one up covers the account, Brand Registry link, FBA settings, and VAT and tax setup handed to your accountant, inside the same ten days. If an account already exists, the £1,500 is not charged.</p></div><div class="sum">£5,400<small>ex VAT · £3,900 with an existing account</small></div></div>
+    <div class="total-row"><div><span class="micro">THE WHOLE BUDGET, ON ONE LINE</span><strong>Fifty pages + seller account set-up: £5,400</strong><p>Amazon sold your tins itself, so Farrah's most likely has no seller account. Setting one up covers the account, Brand Registry link, FBA settings, and VAT and tax setup handed to your accountant, inside the same ten days. If an account already exists, the £1,500 is not charged.</p></div><div class="sum">£5,400<small>ex VAT · £3,900 if you already have a seller account</small></div></div>
     <div class="account-row"><p><strong>Not in the price, said up front.</strong> VAT; photography of physical samples if your images are not usable; Amazon's fees and FBA storage; stock; advertising spend; Catalogue Care after launch, from £600 a month, if you want it. Legacy repairs beyond relisting, if the inventory turns any up, are itemised before you commit. Payment: 50% deposit, balance on sign-off.</p><a href="../../v4/#pricing" class="text-link" target="_blank" rel="noopener">Full price list <span aria-hidden="true">↗</span></a></div>
 
     <div class="who">
@@ -542,7 +523,7 @@
   </div></section>
 
   <!-- 8 · NEXT STEP -->
-  <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-grid"><div><p class="eyebrow">07 / NEXT STEP</p><h2 id="contact-title">This page is the free sample. <em class="ln">The next step costs nothing.</em></h2><p>Reply with your trade price list and where you stand with Amazon today. Within one working day you get the first-wave arithmetic on your own numbers, the dates, and the quote fixed in writing. Then you decide on fifty, twenty-five, or not now.</p><div class="contact-benefits"><span>No call needed</span><span>No account access until you say so</span><span>Quote fixed in writing</span></div></div><div class="contact-card"><p class="micro">FOR PETER MARSTON · FARRAH'S OF HARROGATE</p><h3>Your range. <span class="ln">Back on the shelf, on your terms.</span></h3><a class="button button-light" href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20on%20Amazon%20%E2%80%94%20price%20list&body=Hi%20Kevin%2C%0A%0APrice%20list%3A%20attached%0ASeller%20account%3A%20yes%20%2F%20no%20%2F%20not%20sure%0AEarliest%20sign-off%20date%3A%20%0AQuestions%3A%20%0A">Reply with your price list <span aria-hidden="true">↗</span></a><a class="button button-outline light" href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20on%20Amazon%20%E2%80%94%20a%20question">Ask a question first <span aria-hidden="true">↗</span></a><div class="email-row"><a href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a><button type="button" class="copy-email" aria-label="Copy email address" title="Copy email address"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4"/></svg></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div></section>
+  <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-grid"><div><p class="eyebrow">07 / NEXT STEP</p><h2 id="contact-title">This page is the free sample. <em class="ln">The next step costs nothing.</em></h2><p>Reply with your trade price list and where you stand with Amazon today. Within one working day you get the list of fifty, the dates, and the quote fixed in writing. Then you decide on fifty, twenty-five, or not now.</p><div class="contact-benefits"><span>No call needed</span><span>No account access until you say so</span><span>Quote fixed in writing</span></div></div><div class="contact-card"><p class="micro">FOR PETER MARSTON · FARRAH'S OF HARROGATE</p><h3>Your range. <span class="ln">Back on the shelf, on your terms.</span></h3><a class="button button-light" href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20on%20Amazon%20%E2%80%94%20price%20list&body=Hi%20Kevin%2C%0A%0APrice%20list%3A%20attached%0ASeller%20account%3A%20yes%20%2F%20no%20%2F%20not%20sure%0AEarliest%20sign-off%20date%3A%20%0AQuestions%3A%20%0A">Reply with your price list <span aria-hidden="true">↗</span></a><a class="button button-outline light" href="mailto:kevin@shelfandscale.com?subject=Farrah%27s%20on%20Amazon%20%E2%80%94%20a%20question">Ask a question first <span aria-hidden="true">↗</span></a><div class="email-row"><a href="mailto:kevin@shelfandscale.com">kevin@shelfandscale.com</a><button type="button" class="copy-email" aria-label="Copy email address" title="Copy email address"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4"/></svg></button></div><p class="copy-status" role="status" aria-live="polite"></p></div></div></section>
 
   <!-- 9 · APPENDIX -->
   <section class="container" style="padding:36px 0 10px">
