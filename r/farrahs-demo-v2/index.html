@@ -257,6 +257,37 @@
       .ph-toggle{display:flex;gap:0;margin:0 auto 18px;border:1px solid var(--rule);width:max-content}.ph-toggle button{font:inherit;font-size:13px;padding:9px 18px;border:0;background:#fff;color:var(--ink);cursor:pointer}.ph-toggle button.on{background:var(--green);color:#fff}
       .phones[data-show="today"] .phone.after,.phones[data-show="after"] .phone.today{display:none}.phone figcaption{display:none}}
     @media(max-width:560px){.timeline{grid-template-columns:1fr}.timeline div{padding-top:14px;padding-bottom:14px;border-bottom:1px solid var(--rule)}.fifty{grid-template-columns:repeat(2,1fr)}.who{grid-template-columns:1fr}.who-links{grid-column:1;white-space:normal}.hero-art .sheet-checks{font-size:10px}}
+
+    /* ===== type scale: 12 · 13.5 · 15 · 16 · 17 · 19 (nothing below 12px) ===== */
+    :root{--muted:#535e57;--t-xs:12px;--t-sm:13.5px;--t-md:15px;--t-base:16px;--t-lg:17px}
+    body{font-size:var(--t-lg)}
+    .eyebrow,.micro,.header-tag,.sheet-top .micro,.sheet-number,.sheet-product>span,.art-caption .micro,.trust-mark~span,.price-card>.micro,.contact-card>.micro,.found .micro,.after-grid .micro,.timeline .micro,.total-row .micro,.account-row .micro,.cmp th .micro,.tldr li span,.phone figcaption,.concept-tag,.price-ribbon,.serp .you-tag,.demand th,.went th,.found .mini li.head,.page-asin,.hero .eyebrow{font-size:var(--t-xs)}
+    .price-ribbon{height:28px;top:-28px}
+    .sheet-checks,.art-caption>span:last-child,.hero-note,.sheet-product p,.trust-grid p,.shot-figure figcaption,.process-note,.plan-note,.panel .note,.frames div span,.found .obs-src,.example-footer p,.pricing-notes p,.pricing-notes>span,.account-row p,.total-row .sum small,.footer-legal,.footer-main p,.footer-main .back-top,.footer-bottom,.contact-benefits,.email-row,.copy-status,.fifty span,.found .tl li,.went td.r,.tldr li span,.timeline .micro{font-size:var(--t-sm)}
+    .art-caption>span:last-child{white-space:normal;text-align:right}
+    .trust-grid strong{font-size:var(--t-base)}
+    .trust-grid p{line-height:1.55}
+    .found p,.found .so,.found .mini li,.demand td,.went td,.page-delta div,.page-head p,.ledger li,.econ p,.cmp td,.timeline span:last-child,.need li span,.after-grid p,.check-list,.price-card .check-list,.price-description,.total-row p,.who p,.contact-section h2+p,.notes ul,.section-heading>p,.edge-head p:last-child,.frames div span b,.found .tl li b{font-size:var(--t-base)}
+    .frames div span{font-size:var(--t-sm)}.frames div span b{font-size:14.5px}
+    .found .tl li{font-size:var(--t-md)}.found .tl li b{font-size:var(--t-md)}
+    .found .mini li .q,.went td.q{font-size:18px}.demand td.q{font-size:19px}
+    .tldr li{font-size:var(--t-lg)}.hero-description{font-size:20px}
+    .need li,.cmp td:first-child{font-size:var(--t-lg)}
+    .button,.text-link,.price-card .button,.button-small,.header-cta{font-size:var(--t-md)}
+    .hero .button-row .button{font-size:var(--t-base)}
+    .sheet-product h2{font-size:24px}
+    .who h3,.after-grid strong,.total-row strong{font-size:24px}
+    .footer-legal{max-width:86ch}
+    .trust-grid p+p{padding-left:100px}
+    @media(max-width:720px){body{font-size:var(--t-base)}.trust-grid strong{font-size:var(--t-base)}.tldr li{font-size:var(--t-base)}.hero-description{font-size:18px}.hero .button-row .button{font-size:var(--t-md)}}
+    .sheet-checks{font-size:var(--t-md)}
+    .art-caption{align-items:baseline}.art-caption>span:last-child{max-width:70%}
+    .tldr li{grid-template-columns:132px 1fr}
+    .hero{grid-template-columns:1.22fr 1fr}
+    .trust-grid p{font-size:14.5px}
+    .frames div span{font-size:var(--t-sm)}.frames div span b{font-size:var(--t-md)}
+    .demand th,.went th,.found .mini li.head{letter-spacing:.06em}
+    @media(max-width:720px){.tldr li{grid-template-columns:1fr}.sheet-checks{font-size:var(--t-sm)}}
     html,body{overflow-x:hidden}
     #example{overflow-x:hidden}
   </style>
