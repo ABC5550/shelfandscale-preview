@@ -303,3 +303,5 @@
 .trust-grid .trust-text span{font-size:15.5px;line-height:1.5}
 @media(max-width:1000px){.trust-grid p,.trust-grid p+p{padding:20px 0}.trust-grid .trust-mark,.trust-grid p+p .trust-mark{min-width:84px}}
 .shelf-logo small{font-size:12px}
+
+.footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:3px}
