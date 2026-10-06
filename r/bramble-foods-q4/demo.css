@@ -305,3 +305,10 @@
 .shelf-logo small{font-size:12px}
 
 .footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* ===== wordmark as on shelfandscale.com (05.10.2026): small caps, red ampersand ===== */
+.wordmark{font-family:var(--display);font-size:17px;letter-spacing:.13em;text-transform:uppercase;white-space:nowrap;color:var(--ink);line-height:1.1}
+.wordmark span{font-style:normal;margin:0}
+.wordmark .amp{color:#8E3120;font-style:italic}
+.footer .wordmark.foot-mark{font-size:26px;letter-spacing:.12em}
+@media(max-width:720px){.wordmark{font-size:15px}.footer .wordmark.foot-mark{font-size:22px}}
