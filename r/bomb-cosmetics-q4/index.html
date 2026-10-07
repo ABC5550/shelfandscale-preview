@@ -296,6 +296,17 @@
     </div>
   </section>
 </main>
+<div class="mail-modal" id="mail-modal" hidden role="dialog" aria-modal="true" aria-labelledby="mail-modal-title">
+  <div class="mail-modal-backdrop" data-mail-close></div>
+  <div class="mail-modal-card">
+    <button class="mail-modal-close" type="button" aria-label="Close" data-mail-close>×</button>
+    <h3 id="mail-modal-title">Reply to Kevin Stekhin</h3>
+    <p>Email Kevin with your trade price list attached. The list of fifty, the dates and the quote come back fixed, in writing, within one working day.</p>
+    <div class="mail-modal-address"><code>kevin@shelfandscale.com</code><button type="button" class="mail-modal-copy" data-email="kevin@shelfandscale.com">Copy</button></div>
+    <a class="text-link mail-modal-open" href="mailto:kevin@shelfandscale.com">Open in my mail app <span aria-hidden="true">→</span></a>
+    <p class="mail-modal-note">Or message Kevin on <a href="https://www.linkedin.com/in/kevinstekhin/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+  </div>
+</div>
 <footer class="footer"><div class="container"><div class="footer-main"><a class="wordmark foot-mark" href="https://shelfandscale.com/">Shelf <span class="amp">&amp;</span> Scale</a><p>Amazon catalogue &amp; brand management.<br>Built for the whole range.</p><a class="back-top text-link" href="#">Back to top <span aria-hidden="true">↑</span></a></div><p class="footer-legal">Prepared for Get Fresh Cosmetics Ltd, trading as Bomb Cosmetics in October 2026 from public Amazon UK product data and our own search base. Relisted pages and gallery images are concepts built from Bomb Cosmetics' public product data and photography; Bomb Cosmetics, Body Buffer and its product names are trade marks of their owner. Shelf &amp; Scale is a trading name of Shopcienty Limited, registered in England and Wales, company number 14960765, registered office 7 Bell Yard, London WC2A 2JR. <a href="https://shelfandscale.com/privacy">Privacy notice</a>.</p><div class="footer-bottom"><span>© 2026 Shelf &amp; Scale · United Kingdom</span><span>Private link · opens are recorded · <a href="https://shelfandscale.com/privacy">privacy notice</a></span><span>All prices exclude VAT</span></div></div></footer>
 <script>
 (function(){
@@ -308,6 +319,17 @@
   });
   var c=document.querySelector('.copy-email');
   if(c){c.addEventListener('click',async function(){var s=document.querySelector('.copy-status');try{await navigator.clipboard.writeText('kevin@shelfandscale.com');s.textContent='Email address copied.'}catch(e){s.textContent='Select the email address to copy it.'}})}
+  // Reply modal: every mailto link opens a window with the address, a Copy button and a mail-app link.
+  var m=document.getElementById('mail-modal');
+  if(m){
+    var openLink=m.querySelector('.mail-modal-open'),copyBtn=m.querySelector('.mail-modal-copy'),last=null,timer=null;
+    function show(href,from){if(href){openLink.setAttribute('href',href)}last=from||null;m.hidden=false;document.body.classList.add('modal-open');copyBtn.textContent='Copy';(m.querySelector('.mail-modal-close')).focus()}
+    function hide(){m.hidden=true;document.body.classList.remove('modal-open');if(last&&last.focus){last.focus()}}
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){if(m.contains(a))return;a.addEventListener('click',function(e){e.preventDefault();show(a.getAttribute('href'),a)})});
+    m.querySelectorAll('[data-mail-close]').forEach(function(x){x.addEventListener('click',hide)});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!m.hidden)hide()});
+    copyBtn.addEventListener('click',async function(){try{await navigator.clipboard.writeText(copyBtn.dataset.email);copyBtn.textContent='Copied'}catch(e){var r=document.createRange();r.selectNodeContents(m.querySelector('code'));var s=window.getSelection();s.removeAllRanges();s.addRange(r);copyBtn.textContent='Select and copy'}clearTimeout(timer);timer=setTimeout(function(){copyBtn.textContent='Copy'},2200)});
+  }
 })();
 </script>
 </body>

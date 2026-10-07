@@ -312,3 +312,26 @@
 .wordmark .amp{color:#8E3120;font-style:italic}
 .footer .wordmark.foot-mark{font-size:26px;letter-spacing:.12em}
 @media(max-width:720px){.wordmark{font-size:15px}.footer .wordmark.foot-mark{font-size:22px}}
+
+/* ===== reply modal (07.10.2026): mailto links open a window with the address, Copy and a mail-app link ===== */
+.mail-modal{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:20px}
+.mail-modal[hidden]{display:none}
+.mail-modal-backdrop{position:absolute;inset:0;background:rgba(18,38,30,.55)}
+.mail-modal-card{position:relative;background:#fff;color:var(--ink);width:min(540px,100%);padding:34px 38px 30px;border:1px solid #cdd5c7;box-shadow:12px 12px 0 #e5e9df}
+.mail-modal-close{position:absolute;top:12px;right:14px;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:var(--muted);padding:6px 10px}
+.mail-modal-close:hover{color:var(--ink)}
+.mail-modal-card h3{font-family:var(--display);font-size:30px;letter-spacing:-.03em;line-height:1.2;margin:0 36px 12px 0}
+.mail-modal-card p{font-size:var(--t-md);color:#526056;line-height:1.6}
+.mail-modal-address{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:22px 0 18px;padding:14px 16px;background:#f3f4ee;border:1px solid var(--rule)}
+.mail-modal-address code{font-size:16px;font-family:ui-monospace,Menlo,Consolas,monospace;word-break:break-all}
+.mail-modal-copy{font:inherit;font-size:14px;font-weight:500;border:1px solid var(--green);background:#fff;color:var(--green);padding:9px 18px;cursor:pointer;white-space:nowrap;min-width:92px}
+.mail-modal-copy:hover{background:#e8ece2}
+.mail-modal-open{display:inline-flex;font-size:15px;color:var(--green)}
+.mail-modal-note{margin-top:18px;font-size:var(--t-sm);color:var(--muted)}
+.mail-modal-note a{text-decoration:underline;text-underline-offset:3px}
+body.modal-open{overflow:hidden}
+@media(max-width:560px){.mail-modal{padding:14px;align-items:flex-end}.mail-modal-card{padding:26px 22px 24px;box-shadow:none}.mail-modal-card h3{font-size:24px}.mail-modal-address{flex-direction:column;align-items:stretch}.mail-modal-copy{width:100%}}
+/* 07.10.2026: long second h1 lines (Cocoba "Not one of them yours.") overflowed 390px because h1 em is nowrap; allow wrapping on phones */
+@media(max-width:560px){h1 em{white-space:normal}}
+/* 07.10.2026: line 247 (.hero{grid-template-columns:1.22fr 1fr}) is unconditional and re-split the hero on phones; keep one column under 900px */
+@media(max-width:900px){.hero{grid-template-columns:1fr;column-gap:0}}
