@@ -317,7 +317,7 @@
 .mail-modal{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:20px}
 .mail-modal[hidden]{display:none}
 .mail-modal-backdrop{position:absolute;inset:0;background:rgba(18,38,30,.55)}
-.mail-modal-card{position:relative;background:#fff;color:var(--ink);width:min(540px,100%);padding:34px 38px 30px;border:1px solid #cdd5c7;box-shadow:12px 12px 0 #e5e9df}
+.mail-modal-card{position:relative;background:#fff;color:var(--ink);width:min(540px,100%);padding:34px 38px 30px;border:1px solid #cdd5c7;box-shadow:0 24px 60px rgba(18,38,30,.28)}
 .mail-modal-close{position:absolute;top:12px;right:14px;border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:var(--muted);padding:6px 10px}
 .mail-modal-close:hover{color:var(--ink)}
 .mail-modal-card h3{font-family:var(--display);font-size:30px;letter-spacing:-.03em;line-height:1.2;margin:0 36px 12px 0}
